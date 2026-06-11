@@ -28,7 +28,7 @@ Final Production Workflows (Version 2)
 
 Following the validation of Version 2 as the most stable and efficient framework, the implementation was split into two primary operational folders to handle specific ansatz configurations and physics corrections:
 
-1. PennyLane Version 2/UCCSD/
+PennyLane Version 2/UCCSD/
 
 Contains the core production benchmarking code using the standard Unitary Coupled Cluster Singles and Doubles (UCCSD) ansatz.
 
@@ -39,7 +39,8 @@ Cross-Platform Comparison Suites: Includes identical codebases written for Penny
 1. Numerical results and energy outputs remain virtually identical across PennyLane and Qiskit.
 2. Scaling metrics accurately reflect the speedups achieved by offloading exact adjoint gradients to the GPU.
 
-2. PennyLane Version 2/qUCCSD/
+
+PennyLane Version 2/qUCCSD/
    
 An alternative workflow evaluating the quadratic UCCSD (qUCCSD) ansatz variant to study ansatz-dependent convergence behaviors.
 
