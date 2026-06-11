@@ -4,36 +4,6 @@ QDFT (VQE + DFT) Simulation Framework
 This repository contains the core implementations, ansatz configurations, profiling utilities, and convergence mechanics for a hybrid Quantum-Classical DFT Embedding (QDFT) framework. The codebase bridges Variational Quantum Eigensolver (VQE) workflows with self-consistent field (SCF) classical density functional theory (DFT) loops.
 
 
-Repository Architecture
-
-
-└── VQE+DFT(QDFT)/
-    ├── Energy+Density/
-    │   ├── LDA-RS_MP2_spin.py          # LDA-RS (with ω) + Spin Penalty + MP2 Init
-    │   ├── OtherFunctional_MP2_spin.py # Standard Functionals + Spin Penalty + MP2 Init
-    │   ├── tuned_MP2.py                # Tuned CAM-B3LYP + MP2 Init (No Spin Penalty)
-    │   └── tuned_MP2_spin.py           # Tuned CAM-B3LYP + Spin Penalty + MP2 Init
-    └── Energy/
-        ├── IITB Ansatz/
-        │   ├── IITB_Ansatz.py          # IITB Compass Ansatz + Custom Init (Standard Functional)
-        │   └── VQE_camb3lyp_tuned.py   # IITB Compass Ansatz + Custom Init (Tuned CAM-B3LYP)
-        ├── Profiling/
-        │   ├── ProfiledCode_old_Basic.py     # v1 Profiling Baseline + Linear Adaptive Damping
-        │   └── ProfiledCode_new_Advanced.py  # v2 Bug-Fixed Profiling + Linear Adaptive Damping
-        └── UCCSD Ansatz/
-            ├── HomoLumo/
-            │   ├── HomoLumo_v1.py      # Standard Eigenvalue Solver (Orthogonal Assumption)
-            │   └── HomoLumo_v2.py      # Overlap Matrix [S] Integrated via scipy.linalg.eigh
-            ├── MP2init/
-            │   └── DFT+VQE_MP2_Init.py # Energy-only SCF Convergence with MP2 Initialization
-            └── ROKS_RKS/
-                ├── LDA-RS_RKS.py       # RKS + LDA-RS (with Range-Separation Parameter ω)
-                ├── LDA-RS_ROKS.py      # ROKS (Open-Shell $O_2$) + LDA-RS (with ω)
-                ├── OtherFunctional_RKS.py  # RKS + Standard Functionals (No ω)
-                └── OtherFunctionals_ROKS.py# ROKS (Open-Shell $O_2$) + Standard Functionals (No ω)
-
-
-
 Core Modules & Functional Breakdown
 
 
@@ -80,7 +50,7 @@ Homo-Lumo Gap Analysis (/HomoLumo/): Scripts dedicated to extracting ground-stat
 HomoLumo_v1.py: Employs a standard hermitian solver (numpy.linalg.eigvalsh). This assumes a mathematically orthogonal basis set where atomic orbitals do not spatially overlap.
 
 HomoLumo_v2.py: Incorporates non-orthogonal atomic orbital basis math. It retrieves the non-local overlap matrix from the classical driver (mf.get_ovlp()) and passes it as a metric to a generalized eigensolver:
-$$\text{scipy.linalg.eigh(fock\_total, b=overlap\_matrix, eigvals\_only=True)}$$
+scipy.linalg.eigh(fock_total, b=overlap_matrix, eigvals_only=True)
 
 
 MP2 Initialization Baseline (/MP2init/):
