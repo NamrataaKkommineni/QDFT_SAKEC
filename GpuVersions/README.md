@@ -2,21 +2,6 @@ Quantum Embedding Benchmarking Framework
 
 This repository contains the progressive development, optimization, and benchmarking of a hybrid quantum-classical embedding simulation framework utilizing PennyLane and Qiskit. The project tracks the evolution of implementing Variational Quantum Eigensolver (VQE) workflows optimized for high-performance GPU acceleration, culminating in an architectural analysis of JIT compilation limits and a rigorous CPU vs. GPU performance comparison.
 
-├── PennyLane Version 1/
-│   └── PLgpu_v1.py [GPU Implementation]
-├── PennyLane Version 2/
-│   ├── UCCSD/
-│   │   ├── PLgpu_v2_spin.py (with Active Space Spin Penalty Patch)
-│   │   ├── PLcpu_v2_spin.py (with Active Space Spin Penalty Patch)
-│   │   ├── Qkit_v2_spin.py  (with Active Space Spin Penalty Patch)
-│   │   └── PLgpu_v2.py      (without Active Space Spin Penalty Patch)        
-│   └── qUCCSD/
-│       ├── PLgpu_qUCCSD_spin.py (with Active Space Spin Penalty Patch)
-│       ├── PLcpu_qUCCSD_spin.py (with Active Space Spin Penalty Patch)
-│       └── Qkit_qUCCSD_spin.py  (with Active Space Spin Penalty Patch)
-└── PennyLane Version 3/
-    └── PLgpu_v3.py [JAX-JIT GPU Implementation]
-
 Architectural Evolution & Iterations
 
 Version 1: Naive Hybrid Framework (Baseline GPU)
