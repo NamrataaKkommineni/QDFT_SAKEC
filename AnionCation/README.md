@@ -1,19 +1,180 @@
-QDFT Anion Embedding Module (Doublet Open-Shell Framework)
+# QDFT Anion Embedding Module
 
-This directory contains production-grade implementations of a hybrid Quantum-Classical DFT Embedding (QDFT) framework explicitly tailored for anion molecular states (open-shell doublet configurations, $S = 1/2$). These scripts integrate Qiskit Nature (using a native UCCSD ansatz optimized via L_BFGS_B) with a classical PySCF driver. Rather than checking energy alone, self-consistency is governed by a dual-metric convergence suite: Energy and Density Criterion.
+## Doublet Open-Shell Framework
 
+This directory contains production-grade implementations of a hybrid **Quantum-Classical Density Functional Theory (QDFT) Embedding Framework** designed for **anion molecular systems** with **open-shell doublet electronic configurations** (`S = 1/2`).
 
-While this module is explicitly configured for open-shell anion configurations, the underlying framework is fully compatible with cation molecular runs as well. Transitioning the code to model a cation requires modifying a few key physical and electronic parameters within the simulation setup of the _main() execution block. Specifically, you must reduce the total electron count to reflect the positive charge state by adjusting active_num_electrons, along with updating the specific alpha and beta spin counts (num_alpha, num_beta) and the num_particles tuple to match the target doublet or singlet state. Additionally, within the PySCF driver initialization, the charge argument must be toggled to 1 (or the appropriate positive integer), and the overall system spin must be updated to align with the new electron distribution.
+The framework combines:
 
-Folder Contents & Functional Distinctions
+* **Qiskit Nature** quantum workflows
+* Native **UCCSD Ansatz**
+* **L-BFGS-B** variational optimization
+* **PySCF** classical electronic structure calculations
+* Self-consistent quantum-classical embedding loops
 
+Unlike conventional embedding implementations that monitor total energy alone, self-consistency is determined through a **dual-convergence criterion**:
 
-This folder contains two main executable scripts, separated by how they construct the classical exchange-correlation (XC) functional matrix and handle spin contamination:
+1. **Total Energy Convergence**
+2. **Electron Density Matrix Convergence**
 
+Both criteria must be simultaneously satisfied before convergence is declared.
 
-anion_otherFunctional.py: Configured for standard exchange-correlation functionals via PySCF (B3LYP, lrc_wpbe, etc). It utilizes the ROKS (Restricted Open-Shell Kohn-Sham) method to manage the open-shell system.
+---
 
+# Framework Compatibility
 
-anion_tuned_spin.py: Features a fully manual, universally parameterized Tuned CAM-B3LYP string initialization. It explicitly bypasses the standard LibXC driver limits by dynamically injecting custom short-range/long-range Hartree-Fock fractions and Becke88 weights directly into the PySCF kernel. Integrates an active-space Spin Penalty Hamiltonian Patch. Because doublet anions are highly prone to artificial spin-state contamination, this script evaluates the total spin angular momentum operator ($\hat{S}^2$) and appends an energy penalty to the Hamiltonian for excited spin states. The penalty is offset by an identity shift ($s(s+1) = 0.75$) so the true doublet ground state experiences zero penalty. 
+Although this module is configured for **open-shell anion calculations**, the underlying framework is fully compatible with **cationic molecular systems**.
 
+Converting an anion workflow to a cation workflow requires modifying the physical system parameters within the `main()` execution block.
 
+## Required Parameter Adjustments
+
+### Electron Count
+
+Reduce the total number of electrons by updating:
+
+```python
+active_num_electrons
+```
+
+### Spin Configuration
+
+Update the alpha and beta electron populations:
+
+```python
+num_alpha
+num_beta
+```
+
+and ensure the particle specification reflects the desired charge and spin state:
+
+```python
+num_particles
+```
+
+### Molecular Charge
+
+Within the PySCF driver initialization, modify:
+
+```python
+charge = 1
+```
+
+(or the appropriate positive integer charge state).
+
+### System Spin
+
+Update the spin quantum number to remain consistent with the modified electron configuration and target multiplicity.
+
+---
+
+# Directory Contents
+
+This module contains two primary production workflows that differ in their treatment of exchange-correlation functionals and spin-state management.
+
+---
+
+## `anion_otherFunctional.py`
+
+General-purpose implementation for standard exchange-correlation functionals supported through PySCF.
+
+Supported examples include:
+
+* B3LYP
+* LRC-ωPBE
+* Other LibXC-compatible functionals
+
+### Features
+
+* Restricted Open-Shell Kohn-Sham (ROKS) formalism
+* Open-shell doublet support
+* Standard PySCF exchange-correlation handling
+* Dual energy-density convergence monitoring
+* Native UCCSD VQE workflow
+* L-BFGS-B optimization
+
+### Purpose
+
+Recommended for benchmarking and production calculations using established exchange-correlation functionals without custom parameter tuning.
+
+---
+
+## `anion_tuned_spin.py`
+
+Advanced implementation featuring a fully customizable **Tuned CAM-B3LYP** exchange-correlation framework.
+
+Rather than relying on predefined LibXC functional definitions, this workflow directly constructs the exchange-correlation functional by injecting user-defined parameters into the PySCF kernel.
+
+### Custom Functional Features
+
+* User-defined short-range Hartree-Fock exchange
+* User-defined long-range Hartree-Fock exchange
+* Custom Becke88 exchange weights
+* Dynamic CAM-B3LYP parameter tuning
+* Direct PySCF kernel injection
+* Bypasses standard LibXC parameterization constraints
+
+### Spin Penalty Hamiltonian Patch
+
+This implementation additionally incorporates an **Active-Space Spin Penalty Hamiltonian** designed to suppress spin contamination.
+
+Open-shell doublet anions are particularly susceptible to artificial mixing with higher-spin states during variational optimization. To mitigate this effect, the script evaluates the total spin operator:
+
+```math
+\hat{S}^2
+```
+
+and augments the active-space Hamiltonian with a spin-dependent penalty term.
+
+The penalty is constructed such that the target doublet state remains energetically unaffected.
+
+For a doublet state:
+
+```math
+S(S+1) = \frac{1}{2}\left(\frac{1}{2}+1\right)=0.75
+```
+
+An identity offset corresponding to this value is included in the penalty operator, ensuring:
+
+* The physical doublet ground state receives zero penalty.
+* Higher-spin contaminants incur an energetic cost.
+* Variational optimization is biased toward the correct spin manifold.
+
+### Features
+
+* Tuned CAM-B3LYP implementation
+* Custom exchange-correlation parameterization
+* Active-space spin penalty correction
+* Open-shell doublet stabilization
+* UCCSD-based VQE workflow
+* L-BFGS-B optimization
+* Dual energy-density convergence monitoring
+
+---
+
+# Recommended Usage
+
+| Workflow                   | Recommended Use Case                                                                                                               |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `anion_otherFunctional.py` | Standard exchange-correlation functional studies and benchmarking                                                                  |
+| `anion_tuned_spin.py`      | Tuned CAM-B3LYP calculations requiring enhanced control over exchange-correlation parameters and suppression of spin contamination |
+
+---
+
+# Production Notes
+
+For open-shell anion systems, the preferred production workflow is:
+
+```text
+anion_tuned_spin.py
+```
+
+due to its explicit spin-contamination mitigation strategy and flexible tuned CAM-B3LYP implementation.
+
+For validation studies, benchmarking, and comparisons against conventional exchange-correlation functionals, use:
+
+```text
+anion_otherFunctional.py
+```
+
+which provides a cleaner reference implementation using standard PySCF-supported functionals.
