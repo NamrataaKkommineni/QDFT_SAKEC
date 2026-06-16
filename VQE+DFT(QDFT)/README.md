@@ -1,72 +1,216 @@
-QDFT (VQE + DFT) Simulation Framework
+# QDFT (VQE + DFT) Simulation Framework
 
+A hybrid **Quantum-Classical Density Functional Theory (QDFT)** framework that combines **Variational Quantum Eigensolver (VQE)** workflows with self-consistent **Density Functional Theory (DFT)** embedding loops.
 
-This repository contains the core implementations, ansatz configurations, profiling utilities, and convergence mechanics for a hybrid Quantum-Classical DFT Embedding (QDFT) framework. The codebase bridges Variational Quantum Eigensolver (VQE) workflows with self-consistent field (SCF) classical density functional theory (DFT) loops.
+This repository contains production implementations, and convergence strategies for performing quantum-enhanced electronic structure calculations within a DFT embedding framework.
 
+---
 
-Core Modules & Functional Breakdown
+# Framework Overview
 
+The QDFT framework integrates:
 
-1. Energy + Density Convergence (/Energy+Density/)
+* **Classical DFT calculations** for environment and embedding potentials.
+* **Quantum VQE solvers** for active-space electronic structure problems.
+* **Self-Consistent Field (SCF) iterations** to achieve convergence between quantum and classical subsystems.
+* Multiple convergence schemes, and initialization strategies.
 
-All production-grade scripts in this directory utilize the UCCSD Ansatz and enforce a strict dual-convergence metric, checking both Total Energy and the Electron Density Matrix Convergence (via Frobenius Norm) to establish self-consistency.
+---
 
-LDA-RS_MP2_spin.py: Implements the Local Density Approximation with Range Separation (LDA-RS). Incorporates the range-separation parameter $\omega$, a custom active-space spin Hamiltonian penalty patch, and Second-Order Møller–Plesset (MP2) state initialization.
+# Repository Structure
 
-OtherFunctional_MP2_spin.py: General pipeline for standard exchange-correlation functionals (e.g., B3LYP, CAM-B3LYP, LRC_wPBE, PBE, standard LDA). Includes the spin penalty patch and MP2 initialization. No range-separation parameter $\omega$ is required.
+```text
+├── Energy+Density/
+├── Energy/
+│   ├── HomoLumo/
+│   ├── MP2init/
+│   └── ROKS_RKS/
+```
 
-tuned_MP2_spin.py: Specifically optimized for a tuned CAM-B3LYP functional, leveraging the spin penalty patch and MP2 initialization.
+---
 
-tuned_MP2.py: A control baseline variant using tuned CAM-B3LYP with MP2 initialization, but without the active-space spin penalty constraints.
+# 1. Energy + Density Convergence (`/Energy+Density`)
 
+Production-grade implementations using the **UCCSD Ansatz** and a **dual-convergence criterion**:
 
+1. Total Energy convergence
+2. Electron Density Matrix convergence (Frobenius norm)
 
-2. Energy-Only Convergence Suites (/Energy/)
+Both conditions must be satisfied before self-consistency is declared.
 
-Scripts within this directory execute self-consistent embedding loops that track and check only Total Energy for SCF convergence criteria.
+## `LDA-RS_MP2_spin.py`
 
-A. IITB Ansatz (/Energy/IITB Ansatz/)
+Implements the **Local Density Approximation with Range Separation (LDA-RS)**.
 
-Departs from standard unitary coupled cluster expansions to implement the hardware-efficient IITB Compass Ansatz combined with a custom spatial state initialization workflow.
+Features:
 
-IITB_Ansatz.py: Framework configured for standard exchange-correlation functionals.
+* Explicit range-separation parameter `ω`
+* Active-space spin Hamiltonian penalty correction
+* MP2-based state initialization
+* Energy + density convergence monitoring
 
-VQE_camb3lyp_tuned.py: Framework configured specifically for the tuned CAM-B3LYP range-separated hybrid functional.
+## `OtherFunctional_MP2_spin.py`
 
+General workflow for standard exchange-correlation functionals, including:
 
+* B3LYP
+* CAM-B3LYP
+* LRC-ωPBE
+* PBE
+* LDA
 
-B. Runtime Performance Profiling (/Energy/Profiling/)
+Features:
 
-Dedicated benchmarking scripts using the UCCSD Ansatz and standard random parameter initialization. These track wall-clock time and memory consumption profiles across individual components: Classical DFT, Embedding Matrix Operations, and Quantum VQE steps. Both files utilize Linear Adaptive Damping to smooth out optimization steps.
+* Active-space spin penalty correction
+* MP2 initialization
+* Energy + density convergence
 
-ProfiledCode_old_Basic.py (v1 Baseline): Original tracking script. Contains a known profiling bug resulting in time reporting discrepancies between stdout/out files and cluster .err logs.
+No explicit `ω` parameter is required.
 
-ProfiledCode_new_Advanced.py (v2 Advanced): Upgraded implementation. Resolves log synchronization errors and introduces granular tracking metrics to accurately balance CPU-to-GPU timeline logs.
+## `tuned_MP2_spin.py`
 
-C. UCCSD Ansatz Sub-Suites (/Energy/UCCSD Ansatz/)
+Implementation for a tuned **CAM-B3LYP** functional.
 
-Homo-Lumo Gap Analysis (/HomoLumo/): Scripts dedicated to extracting ground-state energies alongside the Highest Occupied / Lowest Unoccupied Molecular Orbital gap.
+Features:
 
-HomoLumo_v1.py: Employs a standard hermitian solver (numpy.linalg.eigvalsh). This assumes a mathematically orthogonal basis set where atomic orbitals do not spatially overlap.
+* Active-space spin penalty correction
+* MP2 initialization
+* Energy + density convergence
 
-HomoLumo_v2.py: Incorporates non-orthogonal atomic orbital basis math. It retrieves the non-local overlap matrix from the classical driver (mf.get_ovlp()) and passes it as a metric to a generalized eigensolver:
-scipy.linalg.eigh(fock_total, b=overlap_matrix, eigvals_only=True)
+## `tuned_MP2.py`
 
+Control/baseline implementation using:
 
-MP2 Initialization Baseline (/MP2init/):
+* Tuned CAM-B3LYP
+* MP2 initialization
 
-DFT+VQE_MP2_Init.py: A clean implementation testing the baseline impact of MP2 state initialization on convergence speeds when tracking energy metrics exclusively.
+Unlike `tuned_MP2_spin.py`, this version does **not** apply active-space spin penalties.
 
+---
 
-Restricted vs. Restricted Open-Shell Drivers (/ROKS_RKS/):
+# 2. Energy-Only Convergence (`/Energy`)
 
-Handles operational modes for spin-restricted closed-shell systems (RKS) and spin-restricted open-shell configurations (ROKS), specifically tailored for open-shell systems like molecular Oxygen ($O_2$).Functional Constraints (Strict Rule): For all LDA-RS variations, the range-separation parameter $\omega$ must be explicitly passed. For standard alternative functionals (B3LYP, PBE, etc.), $\omega$ is excluded.
+Scripts in this directory perform self-consistent embedding calculations while monitoring **total energy only** as the SCF convergence criterion. Collection of specialized workflows built around the UCCSD Ansatz.
 
+---
 
-Critical Algorithmic Notes
+## A. HOMO-LUMO Gap Analysis (`/HomoLumo`)
 
+Tools for extracting:
 
-VQE Callbacks & Damping Mechanics
-The repository contains varied implementations of VQE callback functions and mathematical damping algorithms distributed across older scripts and testing directories.
+* Ground-state energies
+* HOMO-LUMO energy gaps
 
-Important Deployment Guardrail: For the most accurate, stable, and up-to-date VQE callback definitions and density matrix/energy damping mechanics, always reference the production codes located in the Energy+Density folder. These scripts contain the optimized convergence routines developed for this framework.
+### `HomoLumo_v1.py`
+
+Uses a standard Hermitian eigensolver:
+
+```python
+numpy.linalg.eigvalsh()
+```
+
+Assumes:
+
+* Orthogonal basis functions
+* Negligible atomic orbital overlap
+
+### `HomoLumo_v2.py`
+
+Extends the workflow to non-orthogonal atomic orbital basis sets.
+
+Retrieves the overlap matrix:
+
+```python
+mf.get_ovlp()
+```
+
+and solves the generalized eigenvalue problem:
+
+```python
+scipy.linalg.eigh(
+    fock_total,
+    b=overlap_matrix,
+    eigvals_only=True
+)
+```
+
+---
+
+## B. MP2 Initialization Baseline (`/MP2init`)
+
+### `DFT+VQE_MP2_Init.py`
+
+Reference implementation used to evaluate the impact of MP2-based initialization on convergence behavior when only energy convergence is monitored.
+
+---
+
+## C. Restricted vs Restricted Open-Shell Drivers (`/ROKS_RKS`)
+
+Support for:
+
+* Restricted Kohn-Sham (RKS) calculations
+* Restricted Open-Shell Kohn-Sham (ROKS) calculations
+
+Designed primarily for open-shell systems such as molecular oxygen (`O₂`).
+
+---
+
+# Functional Constraints
+
+## LDA-RS Workflows
+
+All LDA-RS implementations require explicit specification of the range-separation parameter:
+
+```python
+ω
+```
+
+## Standard Functional Workflows
+
+For conventional exchange-correlation functionals such as:
+
+* B3LYP
+* PBE
+* LDA
+* CAM-B3LYP
+
+the range-separation parameter `ω` should **not** be provided unless explicitly required by the functional definition.
+
+---
+
+# Convergence and Damping Reference
+
+## VQE Callbacks
+
+Several callback implementations exist throughout the repository due to historical development and testing workflows.
+
+## Production Reference
+
+For the most stable and up-to-date implementations of:
+
+* VQE callbacks
+* Density matrix damping
+* Energy damping
+* Dual-convergence logic
+
+always refer to the production scripts located in:
+
+```text
+Energy+Density/
+```
+
+These files contain the current validated convergence infrastructure used throughout the QDFT framework.
+
+---
+
+# Recommended Production Workflow
+
+For all new developments and benchmark studies:
+
+1. Use implementations in `Energy+Density/`.
+2. Prefer dual energy-density convergence over energy-only convergence.
+3. Use MP2 initialization when available.
+4. Reference production callback and damping implementations from the `Energy+Density` directory.
+
+```
+```
