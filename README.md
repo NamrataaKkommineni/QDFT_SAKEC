@@ -1,5 +1,3 @@
-### Repository Structure
-
 ```mermaid
 graph LR
     Root["Computational Chemistry & Quantum Computing Research Repository"]
@@ -10,9 +8,6 @@ graph LR
     A --- A1["anion_otherFunctional.py"]
     A --- A2["anion_tuned_spin.py"]
     A --- A3("Purpose: Anion/Cation calculations using different functionals and spin tuning approaches")
-
-
-
 
     %% DFT+FCI Calculations (Blue)
     Root --- B["DFT+FCI Calculations"]
@@ -52,36 +47,38 @@ graph LR
     E1 --- E1_2["OtherFunctional_MP2_spin.py"]
     E1 --- E1_3["tuned_MP2.py"]
     E1 --- E1_4["tuned_MP2_spin.py"]
-    E1 --- E1_5("Purpose: Functional benchmarking")
+    E1 --- E1_5("Purpose: Functional benchmarking with spin-related corrections and Hamiltonian modifications")
     
     E --- E2["B. Energy"]
-    E2 --- E2_1["IITB Ansatz"]
-    E2_1 --- E2_1a["IITB_Ansatz.py"]
-    E2_1 --- E2_1b["VQE_camB3lyp_tuned.py"]
-    E2_1 --- E2_1c("Purpose: Custom VQE ansatz implementation")
-    E2 --- E2_2["UCCSD Ansatz"]
-    E2_2 --- E2_2a("Purpose: UCCSD-based VQE calculations")
+    E2 --- E2_1["MP2Init"]
+    E2_1 --- E2_1a["DFT+VQE_MP2_Init.py"]
+    E2_1 --- E2_1b("Purpose: MP2 initialization for VQE workflows")
     
-    E --- E3["C. MP2Init"]
-    E3 --- E3_1["DFT+VQE_MP2_init.py"]
-    E3 --- E3_2("Purpose: MP2 initialization for VQE workflows")
+    E2 --- E2_2["HomoLumo"]
+    E2_2 --- E2_2a["HomoLumo_v1.py"]
+    E2_2 --- E2_2b["HomoLumo_v2.py"]
+    E2_2 --- E2_2c("Purpose: HOMO-LUMO gap calculations")
     
-    E --- E4["D. HomoLumo"]
-    E4 --- E4_1["HomoLumo_v1.py"]
-    E4 --- E4_2["HomoLumo_v2.py"]
-    E4 --- E4_3("Purpose: HOMO-LUMO gap calculations")
+    E2 --- E2_3["ROKS_RKS"]
+    E2_3 --- E2_3a["LDA-RS_RKS.py"]
+    E2_3 --- E2_3b["LDA-RS_ROKS.py"]
+    E2_3 --- E2_3c["OtherFunctional_RKS.py"]
+    E2_3 --- E2_3d["OtherFunctionals_ROKS.py"]
+    E2_3 --- E2_3e("Purpose: RKS and ROKS calculations Functional comparisons")
     
-    E --- E5["E. Profiling"]
-    E5 --- E5_1["ProfiledCode_old_Basic.py"]
-    E5 --- E5_2["ProfiledCode_new_Advanced.py"]
-    E5 --- E5_3("Purpose: Runtime profiling")
+    %% IITB Ansatz (Brown)
+    Root --- G["IITB Ansatz"]
+    style G stroke:#92400E,stroke-width:3px
+    G --- G1["IITB_Ansatz.py"]
+    G --- G2["VQE_camB3lyp_tuned.py"]
+    G --- G3("Purpose: Custom VQE ansatz implementation")
     
-    E --- E6["F. ROKS_RKS"]
-    E6 --- E6_1["LDA-RS_RKS.py"]
-    E6 --- E6_2["LDA-RS_ROKS.py"]
-    E6 --- E6_3["OtherFunctional_RKS.py"]
-    E6 --- E6_4["OtherFunctionals_ROKS.py"]
-    E6 --- E6_5("Purpose: RKS and ROKS calculations Functional comparisons")
+    %% Profiling (Teal)
+    Root --- H["Profiling"]
+    style H stroke:#0D9488,stroke-width:3px
+    H --- H1["ProfiledCode_old_Basic.py"]
+    H --- H2["ProfiledCode_new_Advanced.py"]
+    H --- H3("Purpose: Runtime profiling")
     
     %% Quantum IBM (Purple)
     Root --- F["Quantum IBM"]
@@ -99,7 +96,5 @@ graph LR
     F2 --- F2_1["FE_Quantum_v1.py"]
     F2 --- F2_2["FE_Quantum_v2.py"]
     F2 --- F2_3("Purpose: Quantum hardware codes to run on IBM Quantum Platform")
+
 ```
-
-
-[Structure of Repository](https://whimsical.com/shreyas288/qdft-sakec-WutykcUTYDzyrQFXDtghrp)
