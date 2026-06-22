@@ -103,4 +103,10 @@ graph LR
     F2 --- F2_2["FE_Quantum_v2.py"]
     F2 --- F2_3("Purpose: Quantum hardware codes to run on IBM Quantum Platform")
 
+    F --- F3["NoisyClassicalEstimation"]
+    F3 --- F3_1["Noisy_Embed.py"]
+
+    %% SpinHamiltonian (Yellow)
+    G --- G1["spin_beta.py"]
+
 ```
