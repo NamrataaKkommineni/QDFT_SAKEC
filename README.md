@@ -77,8 +77,14 @@ graph LR
     Root --- H["Profiling"]
     style H stroke:#0D9488,stroke-width:3px
     H --- H1["ProfiledCode_old_Basic.py"]
-    H --- H2["ProfiledCode_new_Advanced.py"]
-    H --- H3("Purpose: Runtime profiling")
+    H --- H2["ProfiledCode_v2_Advanced.py"]
+    H --- H3["UCCSD"]
+    H3 --- H3_1["profilev3.py"]
+    H3 --- H3_2["profilev3_otherfunc.py"]
+    H  --- H4["IITB"]
+    H4 --- H4_1["profileIITB.py"]
+    H4 --- H4_2["profile_otherfunc.py"]
+    H --- H5("Purpose: Runtime profiling")
     
     %% Quantum IBM (Purple)
     Root --- F["Quantum IBM"]
