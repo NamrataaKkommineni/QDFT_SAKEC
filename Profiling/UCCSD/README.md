@@ -59,3 +59,30 @@ Iter |    Energy (Ha) |  EnergyEval |   GradEval |  Optimizer |  Callback |  Ite
 ------------------------------------------------------------------------------------------
  SUM |                |      12.3ms |     85.0ms |      3.0ms |     0.0ms |    100.3ms
 ==========================================================================================
+
+```
+---
+
+## 🧪 Alternative Functionals: `profilev3_otherfunc.py`
+
+While the primary `profilev3.py` script is explicitly designed for range-separated functionals that require the `omega` parameter (e.g., `ldaerf + lr_hf(omega)` via the `xcfun` library), this repository also includes a dedicated version for standard exchange-correlation functionals: **`profilev3_otherfunc.py`**.
+
+### Why a separate file?
+Many popular functionals (such as **B3LYP**, **CAM-B3LYP**, or **LRC-wPBE**) manage their own parameters internally or do not require PySCF's `with_range_coulomb(omega=...)` context manager to evaluate the Hamiltonian. Passing an explicit `omega` to these functionals can cause setup failures or physical inaccuracies. 
+
+### Key Differences
+This alternate script retains **100% of the granular VQE profiling and custom `TimingEstimator`** introduced in v3, but simplifies the classical DFT pipeline:
+
+1. **No `omega` Injection:** The `omega` variable is completely removed from the `DFTEmbeddingSolver.solve()` method.
+2. **Direct Problem Setup:** The script skips the `with_range_coulomb` block, directly building the active space problem from the driver (`problem = driver.to_problem(...)`).
+3. **Flexible Functional Usage:** In the `PySCFDriver` configuration, you can easily plug in standard strings like `"b3lyp"`, `"camb3lyp"`, or `"lrc_wpbe"` directly into the `xc_functional` argument without string interpolation.
+
+### Usage
+If you are benchmarking standard hybrid or standard range-separated functionals that don't need manual `omega` injection, run:
+
+**Note** 
+* This specific script utilizes the UCCSD (Unitary Coupled Cluster Singles and Doubles) ansatz.
+* Also for lrc_wpbe functional comment out xcf_library="xcfun" from the code.
+```bash
+python profilev3_otherfunc.py
+
