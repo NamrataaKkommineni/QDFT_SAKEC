@@ -108,12 +108,12 @@ Maintained primarily for historical benchmarking comparisons.
 
 Enhanced profiling framework designed to address limitations identified in the original implementation.
 
-### Improvements
+### Improvements/Additions
 
 * Corrected log synchronization behavior
 * Improved runtime accounting
-* Fine-grained timing instrumentation
-* Enhanced CPU/GPU workload tracking
+* Added more decomposition like Ansatz build Time,Classical Qiskit Overhead,Solver Total Time.
+* Additions helped reduce unprofiled Time.
 
 ### Features
 
@@ -155,3 +155,5 @@ Energy+Density/
 which contain the most up-to-date convergence logic, callback definitions, damping mechanics, and spin-state management routines.
 
 The profiling scripts are best viewed as diagnostic tools for understanding and optimizing the computational performance of the broader QDFT framework.
+
+Latest version v3 in folder UCCSD and IITB.
