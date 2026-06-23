@@ -156,4 +156,8 @@ which contain the most up-to-date convergence logic, callback definitions, dampi
 
 The profiling scripts are best viewed as diagnostic tools for understanding and optimizing the computational performance of the broader QDFT framework.
 
-Latest version v3 in folder UCCSD and IITB.
+> 🚨 **IMPORTANT UPDATE: VERSION 3 IS NOW LIVE!** 🚨
+> 
+> **You are currently reading the documentation for v1 and v2.** > The latest, most advanced version of this profiler (**v3**) has been released! 
+> 
+> 👉 **Please navigate to the `IITB/` and `UCCSD/` folders to access the v3 scripts and their dedicated documentation.**
