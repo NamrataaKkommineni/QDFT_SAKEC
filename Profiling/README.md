@@ -102,7 +102,7 @@ Maintained primarily for historical benchmarking comparisons.
 
 ---
 
-## `ProfiledCode_new_Advanced.py`
+## `ProfiledCode_v2.py`
 
 ### Version 2 Advanced
 
@@ -134,9 +134,9 @@ Recommended profiling implementation for all future benchmarking studies.
 | Objective                         | Recommended Script             |
 | --------------------------------- | ------------------------------ |
 | Historical comparison studies     | `ProfiledCode_old_Basic.py`    |
-| Accurate performance benchmarking | `ProfiledCode_new_Advanced.py` |
-| CPU/GPU workload analysis         | `ProfiledCode_new_Advanced.py` |
-| Runtime scaling studies           | `ProfiledCode_new_Advanced.py` |
+| Accurate performance benchmarking | `ProfiledCode_v2.py` |
+| CPU/GPU workload analysis         | `ProfiledCode_v2.py` |
+| Runtime scaling studies           | `ProfiledCode_v2.py` |
 
 ---
 
