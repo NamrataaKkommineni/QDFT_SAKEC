@@ -2,9 +2,14 @@
 
 This directory contains implementations of the **IITB Compass Ansatz** within the hybrid Quantum-Classical Density Functional Theory (QDFT) embedding framework.
 
-Unlike conventional UCCSD-based workflows that include the complete excitation manifold from the outset, these implementations employ an **adaptive excitation-screening and ranking procedure** to construct a compact, chemically motivated ansatz. By identifying and prioritizing the most energetically significant excitations before the final Variational Quantum Eigensolver (VQE) optimization, the framework reduces the effective parameter space while preserving the dominant correlation effects of the active-space electronic structure.
+Unlike conventional UCCSD-based workflows that optimize the complete excitation manifold simultaneously, the IITB framework employs an **adaptive excitation-selection strategy** to construct compact, chemically motivated variational circuits. The methodology first identifies the most energetically significant excitations through a sequence of screening VQE calculations before assembling the final ansatz.
 
-The IITB Ansatz workflows operate within the same self-consistent DFT embedding framework used throughout the broader QDFT ecosystem and utilize **energy-only convergence criteria** during embedding iterations.
+The framework has since evolved into two complementary implementations:
+
+* **Singles–Doubles (SD) Ansatz**, based on adaptive excitation pruning and ranking.
+* **Pseudo-Triples Ansatz**, which approximates triple excitations through the coupling of carefully selected double excitations.
+
+Both workflows operate within the same self-consistent DFT embedding framework and employ **energy-only convergence** during embedding iterations.
 
 ---
 
@@ -19,133 +24,135 @@ The IITB Ansatz framework combines:
 * Importance-based excitation ranking
 * Self-consistent embedding cycles
 
-The primary objective of this directory is to investigate whether a reduced, chemically informed ansatz can achieve comparable accuracy while lowering optimization complexity relative to full UCCSD implementations.
+The primary objective of this directory is to investigate whether compact, chemically informed ansatz constructions can reduce optimization complexity while maintaining the dominant electron-correlation effects of conventional UCCSD approaches.
 
 ---
 
 # Convergence Strategy
 
-Unlike the production workflows located in the `VQE+DFT(QDFT)/Energy+Density` directory, IITB Ansatz calculations employ an **energy-only convergence criterion**.
+Unlike the production implementations located in:
 
-Convergence is achieved when successive embedding iterations satisfy the prescribed total energy threshold.
-
-The electron density matrix is not explicitly included in the convergence evaluation.
-
----
-
-# Adaptive Excitation Screening Algorithm
-
-A distinguishing feature of this framework is its automated excitation-selection procedure.
-
-Rather than optimizing all excitations simultaneously, the workflow first evaluates the importance of each double excitation independently before constructing the final ansatz.
-
----
-
-## Stage 1: Double Excitation Pool Generation
-
-The framework begins by generating the complete set of double excitations from a UCC excitation manifold:
-
-```python
-UCC(..., excitations='d')
+```text
+VQE+DFT(QDFT)/Energy+Density/
 ```
 
-These operators form the candidate excitation pool.
+the IITB workflows employ an **energy-only convergence criterion**.
+
+Embedding iterations continue until the prescribed total energy convergence threshold is satisfied. Electron density convergence is not explicitly monitored.
 
 ---
 
-## Stage 2: Individual Excitation Optimization
+# Directory Structure
 
-Each double excitation is optimized independently using a single-parameter VQE calculation.
+```text
+IITB Ansatz/
+│
+├── singles_doubles/
+│   ├── IITB_sd_otherFunctional.py
+│   ├── IITB_sd_lda_rs.py
+│   └── IITB_camb3lyp_tuned.py
+│
+└── Triples/
+    ├── IITB_otherFunctional.py
+    └── IITB_Lda_rs.py
+```
 
-For every excitation, the algorithm evaluates:
+---
+
+# 1. Singles–Doubles Framework (`singles_doubles/`)
+
+This implementation constructs a compact variational ansatz through an adaptive excitation-selection procedure.
+
+Rather than optimizing every double excitation simultaneously, each double excitation is first evaluated independently. Only those that produce meaningful energy lowering are retained for the final variational circuit.
+
+---
+
+## Adaptive Excitation Screening Algorithm
+
+### Stage 1 – Double Excitation Pool Generation
+
+A complete doubles excitation manifold is generated using
+
+```python
+UCC(..., excitations="d")
+```
+
+These operators form the initial candidate pool.
+
+---
+
+### Stage 2 – Individual Excitation Optimization
+
+Each double excitation is optimized independently using a one-parameter VQE calculation.
+
+For every excitation the framework evaluates:
 
 * Initial expectation value
 * Optimized energy
 * Optimal variational parameter
 
-The energy reduction produced by each excitation is then calculated.
-
 ---
 
-## Stage 3: Excitation Pruning
+### Stage 3 – Excitation Pruning
 
-Excitations that provide negligible energy lowering are automatically discarded.
-
-The pruning criterion is based on:
+Excitations producing negligible energy lowering are discarded according to
 
 ```math
-|E_{\mathrm{initial}} - E_{\mathrm{optimized}}|
+|E_{\mathrm{initial}}-E_{\mathrm{optimized}}|
 ```
 
-Only excitations producing a meaningful energetic contribution are retained.
-
-This process eliminates chemically insignificant operators from the final ansatz.
+Only energetically significant operators are retained.
 
 ---
 
-## Stage 4: Importance Ranking
+### Stage 4 – Importance Ranking
 
-The surviving excitations are ranked according to the magnitude of their optimized amplitudes:
+The remaining double excitations are ranked according to
 
 ```math
 |\theta_{\mathrm{optimal}}|
 ```
 
-The rationale is that larger optimized amplitudes generally correspond to more important electron-correlation effects.
+where larger optimized amplitudes indicate greater correlation importance.
 
-The excitation pool is sorted in descending order of parameter magnitude before ansatz construction.
+The excitation pool is sorted before constructing the final variational circuit.
 
 ---
 
-## Stage 5: Singles Recovery
+### Stage 5 – Singles Recovery
 
 Following double-excitation screening, the complete set of single excitations is appended.
 
 This preserves:
 
-* Orbital relaxation effects
-* Reference-state flexibility
-* Variational completeness
+* Orbital relaxation
+* Variational flexibility
+* Reference-state accuracy
 
-while retaining the compactness gained from double-excitation pruning.
-
----
-
-## Stage 6: Final Ansatz Construction
-
-The final variational circuit is constructed using:
-
-1. Ranked double excitations
-2. Complete single-excitation operators
-
-The optimized amplitudes obtained during the screening phase are used as the initial parameter guess for the final VQE optimization.
-
-This provides a physically motivated starting point compared to random initialization strategies.
+while maintaining a reduced doubles space.
 
 ---
 
-# Advantages of the Screening Strategy
+### Stage 6 – Final Ansatz Assembly
 
-Compared with a conventional UCCSD workflow, the excitation-selection framework offers:
+The final ansatz consists of:
 
-* Reduced parameter count
-* Smaller optimization landscape
-* Faster convergence behavior
-* Physically motivated parameter initialization
-* Elimination of chemically insignificant excitations
-* Lower computational overhead during optimization
+* Ranked double excitations
+* Complete single excitations
 
-The resulting ansatz retains the dominant correlation mechanisms while reducing unnecessary variational degrees of freedom.
+The optimized amplitudes obtained during the screening stage are reused as the initial parameter vector for the final VQE optimization.
+
+This provides a physically motivated initial guess and substantially improves convergence compared to random initialization.
 
 ---
 
-# Directory Contents
+## Directory Contents
 
-## `IITB_Ansatz.py`
+### `IITB_sd_otherFunctional.py`
 
-General-purpose implementation of the adaptive IITB Ansatz framework configured for standard exchange-correlation functionals.
+General-purpose adaptive Singles–Doubles implementation for conventional exchange-correlation functionals.
 
-### Supported Functionals
+Supported examples include:
 
 * B3LYP
 * PBE
@@ -153,74 +160,171 @@ General-purpose implementation of the adaptive IITB Ansatz framework configured 
 * CAM-B3LYP
 * Other PySCF-supported functionals
 
-### Features
+---
 
-* IITB Compass Ansatz
+### `IITB_sd_lda_rs.py`
+
+Adaptive Singles–Doubles implementation configured for the range-separated Local Density Approximation (LDA-RS).
+
+This workflow explicitly requires the range-separation parameter
+
+```text
+ω
+```
+
+during Hamiltonian construction.
+
+---
+
+### `IITB_camb3lyp_tuned.py`
+
+Adaptive Singles–Doubles implementation configured for a tuned CAM-B3LYP exchange-correlation functional.
+
+This version combines:
+
 * Adaptive excitation screening
-* Importance-ranked doubles excitations
-* Singles recovery procedure
-* Energy-only convergence
-* Self-consistent DFT embedding
+* Tuned CAM-B3LYP
+* Energy-only embedding convergence
 
-### Purpose
-
-Serves as the primary implementation for evaluating excitation-selected ansatz behavior across conventional exchange-correlation functionals.
+within the same reduced variational framework.
 
 ---
 
-## `VQE_camb3lyp_tuned.py`
+# 2. Pseudo-Triples Framework (`Triples/`)
 
-Specialized implementation configured for a tuned CAM-B3LYP exchange-correlation functional.
+The Triples implementation extends the adaptive Singles–Doubles methodology by introducing an approximate treatment of triple excitations.
 
-### Features
+Instead of explicitly constructing conventional UCC triple excitation operators—which dramatically increase circuit depth and optimization cost—the framework synthesizes the physical effect of triple excitations by coupling carefully selected double excitations.
 
-* IITB Compass Ansatz
-* Adaptive excitation ranking
-* Tuned CAM-B3LYP functional
-* Importance-selected doubles excitations
-* Energy-only convergence
-
-### Purpose
-
-Designed for studies involving tuned range-separated hybrid functionals and direct comparison against equivalent UCCSD-based workflows.
+This approach recovers additional electron correlation while avoiding the computational expense associated with true UCC triples.
 
 ---
 
-# Comparison with Standard UCCSD
+## Pseudo-Triples Construction Algorithm
 
-| Feature                  | UCCSD Workflow           | IITB Framework                      |
-| ------------------------ | ------------------------ | ----------------------------------- |
-| Excitation Pool          | Full excitation manifold | Importance-selected excitation pool |
-| Double Excitations       | All included             | Screened and ranked                 |
-| Parameter Initialization | Zero/random/MP2          | Physically optimized amplitudes     |
-| Optimization Complexity  | Higher                   | Reduced                             |
-| Circuit Compactness      | Lower                    | Higher                              |
-| Convergence Efficiency   | System-dependent         | Improved for many systems           |
+### Stage 1 – Double Excitation Screening
+
+The workflow begins with the same adaptive pruning and ranking procedure employed by the Singles–Doubles implementation.
+
+Only the most energetically important double excitations are retained.
 
 ---
 
-# Recommended Usage
+### Stage 2 – Custom Excitation Generation
 
-Use this directory when:
+Two specialized excitation libraries are constructed:
 
-* Benchmarking alternative ansatz architectures
-* Investigating parameter-reduction techniques
-* Comparing IITB and UCCSD convergence behavior
-* Studying excitation-selection methodologies
-* Evaluating compact ansatz constructions for larger active spaces
+* **Sh operators**
+* **Sp operators**
+
+These custom excitations are represented as additional double excitations and transformed into Pauli operators for subsequent variational optimization.
+
+---
+
+### Stage 3 – Orbital Coupling
+
+Each retained double excitation is compared against the custom Sh and Sp excitation pools.
+
+Coupling is permitted only when predefined occupied- or virtual-orbital overlap conditions are satisfied.
+
+This orbital-overlap criterion produces the effective behavior of triple excitations while maintaining the computational complexity of coupled double excitations.
+
+---
+
+### Stage 4 – Secondary VQE Screening
+
+Every candidate coupled excitation undergoes an additional two-parameter VQE optimization.
+
+Only those combinations that further reduce the total energy beyond the predefined threshold are incorporated into the final ansatz.
+
+This secondary screening prevents unnecessary circuit growth while preserving only beneficial coupled excitations.
+
+---
+
+### Stage 5 – Final Ansatz Assembly
+
+The completed variational circuit consists of:
+
+* Screened double excitations
+* Validated Sh operators
+* Validated Sp operators
+* Complete single excitations
+
+The optimized amplitudes obtained during the screening stages are reused to initialize the final VQE optimization, reducing convergence time and improving optimization stability.
+
+---
+
+## Directory Contents
+
+### `IITB_otherFunctional.py`
+
+Pseudo-Triples implementation configured for standard exchange-correlation functionals.
+
+Supported examples include:
+
+* B3LYP
+* PBE
+* LDA
+* CAM-B3LYP
+* Other PySCF-supported functionals
+
+---
+
+### `IITB_Lda_rs.py`
+
+Pseudo-Triples implementation configured for the LDA-RS exchange-correlation functional.
+
+This workflow explicitly requires the range-separation parameter
+
+```text
+ω
+```
+
+during Hamiltonian construction.
+
+---
+
+# Comparison of Available Frameworks
+
+| Feature                          | Singles–Doubles | Pseudo-Triples |
+| -------------------------------- | :-------------: | :------------: |
+| Adaptive excitation screening    |        ✓        |        ✓       |
+| Double-excitation pruning        |        ✓        |        ✓       |
+| Importance-based ranking         |        ✓        |        ✓       |
+| Singles recovery                 |        ✓        |        ✓       |
+| Sh/Sp custom operators           |        ✗        |        ✓       |
+| Orbital-overlap coupling         |        ✗        |        ✓       |
+| Secondary VQE validation         |        ✗        |        ✓       |
+| Triple-correlation approximation |        ✗        |        ✓       |
+| Circuit depth                    |      Lower      |    Moderate    |
+| Correlation recovery             |       Good      |     Higher     |
+
+---
+
+# Advantages of the IITB Ansatz Framework
+
+Compared with conventional UCCSD workflows, the IITB implementations provide:
+
+* Reduced variational parameter count
+* Smaller optimization landscape
+* Physically motivated parameter initialization
+* Automatic elimination of chemically insignificant excitations
+* Lower circuit complexity
+* Faster convergence behavior
+* Flexible extension toward higher-order correlation through the Pseudo-Triples framework
 
 ---
 
 # Production Notes
 
-The IITB implementations should be viewed as ansatz-development and benchmarking workflows within the broader QDFT framework.
+The IITB implementations are intended as alternative ansatz-development and benchmarking workflows within the broader QDFT ecosystem.
 
-While they can substantially reduce optimization complexity through excitation screening, the production reference implementations for robust energy-density convergence remain those located in:
+While these approaches significantly reduce optimization complexity through adaptive excitation selection, the production reference implementations for robust energy-density convergence remain those located in:
 
 ```text
 VQE+DFT(QDFT)/Energy+Density/
 ```
 
-which contain the most mature convergence protocols, damping schemes, spin-state corrections, and self-consistency procedures currently available within the QDFT ecosystem.
+which contain the most mature convergence protocols, damping strategies, spin-state corrections, and self-consistency procedures.
 
-The IITB framework is best suited for investigating compact variational circuit constructions and importance-selected excitation strategies for quantum embedding calculations.
+The Singles–Doubles implementation is recommended for compact ansatz construction and efficient variational optimization, whereas the Pseudo-Triples framework extends this methodology by recovering additional electron-correlation effects through adaptive coupling of screened double excitations, providing a computationally efficient approximation to higher-order excitation physics.
