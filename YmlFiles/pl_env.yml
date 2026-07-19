@@ -1,4 +1,4 @@
-name: /home/samritm/tejjan/envs/pl_gpu_env
+name: pl_gpu_env
 channels:
   - defaults
   - conda-forge
