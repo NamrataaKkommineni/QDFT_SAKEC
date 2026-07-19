@@ -11,7 +11,7 @@ These YAML files allow users to recreate the exact software environments used du
 # Directory Contents
 
 ```text
-Environment/
+YmlFiles/
 │
 ├── namrataa_backup.yml
 ├── pl_env.yml
