@@ -1,16 +1,165 @@
-# Quantum Chemistry Reference Calculations 
+# Quantum Chemistry Reference Calculations
 
-This repository contains benchmarking scripts for electronic structure methods using PySCF via Qiskit Nature. These scripts calculate reference energies and timings across various methods (HF, MP2, DFT, CCSD, CASSCF, etc.).
+This directory contains benchmarking utilities for generating **reference electronic structure energies and execution times** using the PySCF backend through Qiskit Nature.
 
-## Files Overview
+These scripts provide high-quality classical reference data for validating the hybrid Quantum-Classical Density Functional Theory (QDFT) framework, comparing different electronic structure methods, and evaluating computational scaling across molecular systems.
 
-* **`ExactCode_v1.py` (Basic Restricted Systems)**
-    * Calculates reference energies and timings for restricted (closed-shell) systems.
-    * Pre-configured with multiple linear alkane geometries (H2, propane, pentane, heptane, nonane) for easy scaling tests.
-    * Runs standard methods including HF, MP2, DFT (LDA, VWN), CCSD, CASCI, and CASSCF.
+The generated benchmark tables serve as reference values for assessing the accuracy and computational performance of VQE-based embedding approaches.
 
-* **`ExactCode_v2.py` (Advanced Open-Shell & Custom Systems)**
-    * A more flexible, configurable template that supports open-shell systems.
-    * Dynamically handles charge and spin (switching to ROHF/ROKS when needed).
-    * Includes advanced methods like CCSD(T) and Range-Separated DFT (LDA-RS).
-    * Outputs a summarized benchmark table comparing all methods for easy data collection.
+---
+
+# Framework Overview
+
+The benchmarking framework supports a wide range of wavefunction- and density-functional-based electronic structure methods, including:
+
+- Hartree–Fock (HF)
+- Møller–Plesset Second Order Perturbation Theory (MP2)
+- Coupled Cluster Singles and Doubles (CCSD)
+- Coupled Cluster Singles, Doubles and Perturbative Triples [CCSD(T)]
+- Complete Active Space Configuration Interaction (CASCI)
+- Complete Active Space Self-Consistent Field (CASSCF)
+- Density Functional Theory (DFT)
+  - LDA
+  - PBE
+  - B3LYP
+  - wB97X
+  - Range-Separated LDA (LDA-RS)
+
+Each calculation records both:
+
+- Total electronic energy (Hartree)
+- Wall-clock execution time
+
+allowing direct comparison of computational cost and accuracy across different electronic structure methods.
+
+---
+
+# Directory Contents
+
+## `ExactCode_v1.py`
+
+### Basic Restricted-System Benchmark Suite
+
+A production-ready implementation designed for closed-shell molecular systems.
+
+### Features
+
+- Restricted Hartree-Fock (RHF)
+- Standard DFT calculations
+- MP2
+- CCSD
+- CASCI
+- CASSCF
+- Automatic runtime measurements
+- Energy benchmarking
+
+### Preconfigured Test Systems
+
+Several molecular geometries are included for convenient scaling studies, including:
+
+- H₂
+- Propane
+- Pentane
+- Heptane
+- Nonane
+
+These systems allow straightforward evaluation of computational scaling with molecular size.
+
+---
+
+## `ExactCode_v2.py`
+
+### Advanced Benchmark Framework
+
+A more flexible implementation supporting both closed-shell and open-shell molecular systems.
+
+Unlike Version 1, this framework automatically configures the appropriate reference wavefunction based on molecular charge and spin.
+
+### Features
+
+- Automatic charge handling
+- Automatic spin detection
+- ROHF / ROKS switching
+- CCSD(T)
+- Range-separated DFT (LDA-RS)
+- Comprehensive timing analysis
+- Formatted benchmark table generation
+
+### Purpose
+
+Designed for benchmarking larger molecular systems and generating publication-ready comparison tables.
+
+---
+
+# Supported Electronic Structure Methods
+
+| Method | Description |
+|---------|-------------|
+| HF | Hartree–Fock |
+| MP2 | Second-order Møller–Plesset Perturbation Theory |
+| CCSD | Coupled Cluster Singles and Doubles |
+| CCSD(T) | Coupled Cluster with Perturbative Triples |
+| CASCI | Complete Active Space Configuration Interaction |
+| CASSCF | Complete Active Space Self-Consistent Field |
+| DFT (LDA) | Local Density Approximation |
+| DFT (PBE) | Perdew–Burke–Ernzerhof Functional |
+| DFT (B3LYP) | Hybrid Exchange-Correlation Functional |
+| DFT (wB97X) | Long-Range Corrected Hybrid Functional |
+| DFT (LDA-RS) | Range-Separated Local Density Approximation |
+
+---
+
+# Example Benchmark Output
+
+The framework generates benchmark tables containing both total energies and execution times for each electronic structure method.
+
+Example benchmark systems include **Pentacene** and **Tetracene**.
+
+| Method | Pentacene Energy (Ha) | Pentacene Time (s) | Tetracene Energy (Ha) | Tetracene Time (s) |
+|---------|----------------------:|-------------------:|----------------------:|-------------------:|
+| HF | -841.2668085 | 359.13 | -688.6313077 | 167.74 |
+| MP2 | -844.0880816 | 29.58 | -690.9356229 | 13.59 |
+| CCSD | -844.1622930 | 19459.68 | -691.0016886 | 5592.86 |
+| CCSD(T) | -844.3098043 | 12540.28 | -691.1202864 | 3597.79 |
+| CASCI | -841.2927308 | 14.72 | -688.6599917 | 12.65 |
+| CASSCF | -841.3247765 | 1698.97 | -688.6917668 | 498.94 |
+| DFT (LDA) | -839.0355869 | 434.35 | -686.7983775 | 199.91 |
+| DFT (PBE) | -845.7034939 | 462.20 | -692.2630979 | 230.53 |
+| DFT (B3LYP) | -846.7822014 | 446.77 | -693.1512954 | 221.12 |
+| DFT (wB97X) | -846.5473940 | 525.08 | -692.9593768 | 253.54 |
+| DFT (LDA-RS) | -842.1909222 | 451.01 | -689.3880962 | 230.87 |
+
+These benchmark tables provide a convenient summary of the trade-off between computational cost and electronic structure accuracy across different quantum chemistry methods.
+
+---
+
+# Applications
+
+The benchmark data generated by this framework can be used for:
+
+- Validation of QDFT embedding energies
+- Comparison against VQE-based calculations
+- Active-space selection studies
+- Exchange-correlation functional benchmarking
+- Computational scaling analysis
+- Reference data generation for publications and reports
+
+---
+
+# Recommended Usage
+
+| Objective | Recommended Script |
+|------------|--------------------|
+| Closed-shell benchmark calculations | `ExactCode_v1.py` |
+| Open-shell systems | `ExactCode_v2.py` |
+| Large molecular benchmarks | `ExactCode_v2.py` |
+| CCSD(T) reference calculations | `ExactCode_v2.py` |
+| Benchmark table generation | `ExactCode_v2.py` |
+
+---
+
+# Notes
+
+- All calculations are performed using the PySCF backend through Qiskit Nature.
+- Version 2 is the recommended implementation for new benchmark studies because it supports open-shell systems, additional electronic structure methods, and automatic benchmark table generation.
+- The generated reference energies provide baseline values for validating hybrid quantum-classical embedding methods developed throughout the QDFT framework.
