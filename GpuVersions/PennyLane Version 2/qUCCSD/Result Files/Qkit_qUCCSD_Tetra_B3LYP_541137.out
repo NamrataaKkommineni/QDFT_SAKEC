@@ -1,0 +1,218 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 541137
+SLURM_JOB_NAME = Qkit_qUCCSD_Tetra_B3LYP
+SLURM_JOB_NODELIST = rpcn305
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 2512550
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 2512550
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Sun Jun  7 16:45:30 IST 2026
+Running on node: rpcn305
+Python path:
+/home/samritm/tejjan/envs/cpu_env/bin/python
+/home/samritm/tejjan/envs/cpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.79169842 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.88398078 Ha | Rel ΔE: 0.02375974
+  [VQE] Iteration:    2 | Energy:  -3.93992786 Ha | Rel ΔE: 0.01420003
+  [VQE] Iteration:    3 | Energy:  -3.92614871 Ha | Rel ΔE: 0.00349731
+  [VQE] Iteration:    4 | Energy:  -3.97243536 Ha | Rel ΔE: 0.01165196
+  [VQE] Iteration:    5 | Energy:  -3.98032040 Ha | Rel ΔE: 0.00198101
+  [VQE] Iteration:    6 | Energy:  -3.98779489 Ha | Rel ΔE: 0.00187434
+  [VQE] Iteration:    7 | Energy:  -3.98989942 Ha | Rel ΔE: 0.00052746
+  [VQE] Iteration:    8 | Energy:  -3.99198176 Ha | Rel ΔE: 0.00052163
+  [VQE] Iteration:    9 | Energy:  -3.99371197 Ha | Rel ΔE: 0.00043323
+  [VQE] Iteration:   10 | Energy:  -3.99412147 Ha | Rel ΔE: 0.00010253
+  [VQE] Iteration:   11 | Energy:  -3.99488253 Ha | Rel ΔE: 0.00019051
+  [VQE] Iteration:   12 | Energy:  -3.99498579 Ha | Rel ΔE: 0.00002585
+  [VQE] Iteration:   13 | Energy:  -3.99512430 Ha | Rel ΔE: 0.00003467
+  [VQE] Iteration:   14 | Energy:  -3.99520754 Ha | Rel ΔE: 0.00002084
+  [VQE] Iteration:   15 | Energy:  -3.99520731 Ha | Rel ΔE: 0.00000006
+  [VQE Converged] Rel ΔE (5.927e-08) is below threshold (1e-06)!
+  [VQE] Iteration:   16 | Energy:  -3.99522840 Ha | Rel ΔE: 0.00000528
+  [VQE] Iteration:   17 | Energy:  -3.99523692 Ha | Rel ΔE: 0.00000213
+  [VQE] Iteration:   18 | Energy:  -3.99523953 Ha | Rel ΔE: 0.00000065
+  [VQE Converged] Rel ΔE (6.530e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.530
+[Iteration 1] Embedding total energy = -693.35483649 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.95839287 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.97053434 Ha | Rel ΔE: 0.00305789
+  [VQE] Iteration:    2 | Energy:  -4.02863050 Ha | Rel ΔE: 0.01442082
+  [VQE] Iteration:    3 | Energy:  -4.02977833 Ha | Rel ΔE: 0.00028484
+  [VQE] Iteration:    4 | Energy:  -4.03603724 Ha | Rel ΔE: 0.00155075
+  [VQE] Iteration:    5 | Energy:  -4.03705080 Ha | Rel ΔE: 0.00025107
+  [VQE] Iteration:    6 | Energy:  -4.03756590 Ha | Rel ΔE: 0.00012758
+  [VQE] Iteration:    7 | Energy:  -4.03768224 Ha | Rel ΔE: 0.00002881
+  [VQE] Iteration:    8 | Energy:  -4.03772528 Ha | Rel ΔE: 0.00001066
+  [VQE] Iteration:    9 | Energy:  -4.03774327 Ha | Rel ΔE: 0.00000446
+  [VQE] Iteration:   10 | Energy:  -4.03774744 Ha | Rel ΔE: 0.00000103
+  [VQE] Iteration:   11 | Energy:  -4.03774876 Ha | Rel ΔE: 0.00000033
+  [VQE Converged] Rel ΔE (3.263e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.433
+[Iteration 2] Embedding total energy = -693.29210976 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.91857488 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.93967667 Ha | Rel ΔE: 0.00535623
+  [VQE] Iteration:    2 | Energy:  -3.99576458 Ha | Rel ΔE: 0.01403684
+  [VQE] Iteration:    3 | Energy:  -3.99635752 Ha | Rel ΔE: 0.00014837
+  [VQE] Iteration:    4 | Energy:  -4.00540227 Ha | Rel ΔE: 0.00225814
+  [VQE] Iteration:    5 | Energy:  -4.00923003 Ha | Rel ΔE: 0.00095474
+  [VQE] Iteration:    6 | Energy:  -4.01092404 Ha | Rel ΔE: 0.00042235
+  [VQE] Iteration:    7 | Energy:  -4.01143611 Ha | Rel ΔE: 0.00012765
+  [VQE] Iteration:    8 | Energy:  -4.01166724 Ha | Rel ΔE: 0.00005762
+  [VQE] Iteration:    9 | Energy:  -4.01170283 Ha | Rel ΔE: 0.00000887
+  [VQE] Iteration:   10 | Energy:  -4.01171465 Ha | Rel ΔE: 0.00000295
+  [VQE] Iteration:   11 | Energy:  -4.01171579 Ha | Rel ΔE: 0.00000028
+  [VQE Converged] Rel ΔE (2.837e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.375
+[Iteration 3] Embedding total energy = -693.27237517 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.92837372 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.94412123 Ha | Rel ΔE: 0.00399265
+  [VQE] Iteration:    2 | Energy:  -4.00222925 Ha | Rel ΔE: 0.01451891
+  [VQE] Iteration:    3 | Energy:  -4.00207258 Ha | Rel ΔE: 0.00003915
+  [VQE] Iteration:    4 | Energy:  -4.01123761 Ha | Rel ΔE: 0.00228484
+  [VQE] Iteration:    5 | Energy:  -4.01467543 Ha | Rel ΔE: 0.00085631
+  [VQE] Iteration:    6 | Energy:  -4.01646770 Ha | Rel ΔE: 0.00044623
+  [VQE] Iteration:    7 | Energy:  -4.01690687 Ha | Rel ΔE: 0.00010933
+  [VQE] Iteration:    8 | Energy:  -4.01711701 Ha | Rel ΔE: 0.00005231
+  [VQE] Iteration:    9 | Energy:  -4.01713782 Ha | Rel ΔE: 0.00000518
+  [VQE] Iteration:   10 | Energy:  -4.01715070 Ha | Rel ΔE: 0.00000320
+  [VQE] Iteration:   11 | Energy:  -4.01715166 Ha | Rel ΔE: 0.00000024
+  [VQE Converged] Rel ΔE (2.406e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.335
+[Iteration 4] Embedding total energy = -693.27157735 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.92948821 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.94464007 Ha | Rel ΔE: 0.00384113
+  [VQE] Iteration:    2 | Energy:  -4.00317213 Ha | Rel ΔE: 0.01462142
+  [VQE] Iteration:    3 | Energy:  -4.00301293 Ha | Rel ΔE: 0.00003977
+  [VQE] Iteration:    4 | Energy:  -4.01222985 Ha | Rel ΔE: 0.00229720
+  [VQE] Iteration:    5 | Energy:  -4.01571784 Ha | Rel ΔE: 0.00086859
+  [VQE] Iteration:    6 | Energy:  -4.01758097 Ha | Rel ΔE: 0.00046374
+  [VQE] Iteration:    7 | Energy:  -4.01803462 Ha | Rel ΔE: 0.00011291
+  [VQE] Iteration:    8 | Energy:  -4.01825623 Ha | Rel ΔE: 0.00005515
+  [VQE] Iteration:    9 | Energy:  -4.01827811 Ha | Rel ΔE: 0.00000545
+  [VQE] Iteration:   10 | Energy:  -4.01829215 Ha | Rel ΔE: 0.00000349
+  [VQE] Iteration:   11 | Energy:  -4.01829321 Ha | Rel ΔE: 0.00000026
+  [VQE Converged] Rel ΔE (2.646e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.306
+[Iteration 5] Embedding total energy = -693.27151413 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93021794 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.94498819 Ha | Rel ΔE: 0.00374405
+  [VQE] Iteration:    2 | Energy:  -4.00377175 Ha | Rel ΔE: 0.01468204
+  [VQE] Iteration:    3 | Energy:  -4.00360793 Ha | Rel ΔE: 0.00004092
+  [VQE] Iteration:    4 | Energy:  -4.01283694 Ha | Rel ΔE: 0.00229987
+  [VQE] Iteration:    5 | Energy:  -4.01633947 Ha | Rel ΔE: 0.00087207
+  [VQE] Iteration:    6 | Energy:  -4.01823267 Ha | Rel ΔE: 0.00047115
+  [VQE] Iteration:    7 | Energy:  -4.01869159 Ha | Rel ΔE: 0.00011420
+  [VQE] Iteration:    8 | Energy:  -4.01891746 Ha | Rel ΔE: 0.00005620
+  [VQE] Iteration:    9 | Energy:  -4.01893971 Ha | Rel ΔE: 0.00000554
+  [VQE] Iteration:   10 | Energy:  -4.01895417 Ha | Rel ΔE: 0.00000360
+  [VQE] Iteration:   11 | Energy:  -4.01895528 Ha | Rel ΔE: 0.00000028
+  [VQE Converged] Rel ΔE (2.774e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.283
+[Iteration 6] Embedding total energy = -693.27149879 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93065318 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.94519652 Ha | Rel ΔE: 0.00368634
+  [VQE] Iteration:    2 | Energy:  -4.00412791 Ha | Rel ΔE: 0.01471766
+  [VQE] Iteration:    3 | Energy:  -4.00396224 Ha | Rel ΔE: 0.00004137
+  [VQE] Iteration:    4 | Energy:  -4.01319354 Ha | Rel ΔE: 0.00230024
+  [VQE] Iteration:    5 | Energy:  -4.01670200 Ha | Rel ΔE: 0.00087347
+  [VQE] Iteration:    6 | Energy:  -4.01860994 Ha | Rel ΔE: 0.00047477
+  [VQE] Iteration:    7 | Energy:  -4.01907145 Ha | Rel ΔE: 0.00011483
+  [VQE] Iteration:    8 | Energy:  -4.01929918 Ha | Rel ΔE: 0.00005666
+  [VQE] Iteration:    9 | Energy:  -4.01932161 Ha | Rel ΔE: 0.00000558
+  [VQE] Iteration:   10 | Energy:  -4.01933625 Ha | Rel ΔE: 0.00000364
+  [VQE] Iteration:   11 | Energy:  -4.01933740 Ha | Rel ΔE: 0.00000029
+  [VQE Converged] Rel ΔE (2.851e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.265
+[Iteration 7] Embedding total energy = -693.27149412 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93091933 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.94532397 Ha | Rel ΔE: 0.00365107
+  [VQE] Iteration:    2 | Energy:  -4.00434531 Ha | Rel ΔE: 0.01473932
+  [VQE] Iteration:    3 | Energy:  -4.00417896 Ha | Rel ΔE: 0.00004154
+  [VQE] Iteration:    4 | Energy:  -4.01340990 Ha | Rel ΔE: 0.00230002
+  [VQE] Iteration:    5 | Energy:  -4.01692114 Ha | Rel ΔE: 0.00087411
+  [VQE] Iteration:    6 | Energy:  -4.01883698 Ha | Rel ΔE: 0.00047672
+  [VQE] Iteration:    7 | Energy:  -4.01929991 Ha | Rel ΔE: 0.00011518
+  [VQE] Iteration:    8 | Energy:  -4.01952855 Ha | Rel ΔE: 0.00005688
+  [VQE] Iteration:    9 | Energy:  -4.01955107 Ha | Rel ΔE: 0.00000560
+  [VQE] Iteration:   10 | Energy:  -4.01956580 Ha | Rel ΔE: 0.00000366
+  [VQE] Iteration:   11 | Energy:  -4.01956696 Ha | Rel ΔE: 0.00000029
+  [VQE Converged] Rel ΔE (2.899e-07) is below threshold (1e-06)!
+[Damping] Linear mix with alpha=0.250
+[Iteration 8] Embedding total energy = -693.27149249 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93108718 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.94540435 Ha | Rel ΔE: 0.00362882
+  [VQE] Iteration:    2 | Energy:  -4.00448226 Ha | Rel ΔE: 0.01475295
+  [VQE] Iteration:    3 | Energy:  -4.00431570 Ha | Rel ΔE: 0.00004159
+  [VQE] Iteration:    4 | Energy:  -4.01354567 Ha | Rel ΔE: 0.00229970
+  [VQE] Iteration:    5 | Energy:  -4.01705832 Ha | Rel ΔE: 0.00087443
+  [VQE] Iteration:    6 | Energy:  -4.01897870 Ha | Rel ΔE: 0.00047783
+  [VQE] Iteration:    7 | Energy:  -4.01944247 Ha | Rel ΔE: 0.00011538
+  [VQE] Iteration:    8 | Energy:  -4.01967157 Ha | Rel ΔE: 0.00005699
+  [VQE] Iteration:    9 | Energy:  -4.01969415 Ha | Rel ΔE: 0.00000562
+  [VQE] Iteration:   10 | Energy:  -4.01970892 Ha | Rel ΔE: 0.00000367
+  [VQE] Iteration:   11 | Energy:  -4.01971010 Ha | Rel ΔE: 0.00000029
+  [VQE Converged] Rel ΔE (2.931e-07) is below threshold (1e-06)!
+[DIIS] Extrapolating density (coeffs: [-0.31  0.63  1.18 -0.5 ])
+[Iteration 9] Embedding total energy = -693.27149185 Ha
+[Converged] change 6.324e-07 < 1e-06
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1805.962016336839
+  - computed part:      -4.019710097582
+  - ActiveSpaceTransformer extracted energy part: -1801.942306239257
+~ Nuclear repulsion energy (Hartree): 1112.690524483842
+> Total ground state energy (Hartree): -693.271491852997
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.000 S^2: 0.000 M: 0.000
+
+================ PROFILING SUMMARY ================
+DFT reference (SCF) time     : 50.40 s
+DFT energy evaluations time : 70.74 s
+DFT Fock build time         : 67.82 s
+Hybrid embedding overhead  : 3887.99 s
+Quantum VQE time           : 5748.52 s
+--------------------------------------------------
+Total measured time        : 9825.46 s
+
+Memory snapshots (RSS, MB):
+DFT_reference_start_MB        :   140.64 MB
+DFT_reference_end_MB          :   567.88 MB
+Embedding_loop_total_start_MB :   567.88 MB
+DFT_energy_start_MB           :  7720.64 MB
+DFT_energy_end_MB             :  7720.64 MB
+DFT_fock_start_MB             :  7720.64 MB
+DFT_fock_end_MB               :  7720.64 MB
+Quantum_VQE_start_MB          :  7720.64 MB
+Quantum_VQE_end_MB            :  7882.74 MB
+Embedding_loop_total_end_MB   :  7883.01 MB
+==================================================
+Job finished at: Sun Jun  7 17:54:28 IST 2026
