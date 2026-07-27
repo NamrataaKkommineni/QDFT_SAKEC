@@ -381,7 +381,7 @@ class DFTEmbeddingSolver:
 
     # === damping helper ===
     @staticmethod
-    def damp_active_density(density_history, base_alpha=0.75, diis_start=10, diis_space=4):
+    def damp_active_density(density_history, base_alpha=0.75, diis_start=9, diis_space=3):
         """
         Simplified, customizable damping for DFT embedding.
         - base_alpha: The starting mixing value for early iterations.
