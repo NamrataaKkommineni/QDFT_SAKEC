@@ -1,0 +1,85 @@
+==========================================
+SLURM_SUBMIT_DIR = /home/namrata.manglani.sakec/tejjan/Exact
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+==========================================
+Job started at: Fri Apr 17 11:56:28 IST 2026
+Running on node: rscn431
+Python path:
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/bin/python
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+=== Benchmark: PySCF Electronic Structure Methods ===
+
+Geometry:
+C  0.000000  1.397532  0.000000;C  1.209441  0.698476  0.000000;C  1.209441 -0.698476  0.000000;C  0.000000  -1.397532  0.000000;C  -1.209441  -0.698476  0.000000;C  -1.209441  0.698476  0.000000;H  0.000000  2.484546  0.000000; H  2.150927  1.241781  0.000000; H  2.150927  -1.241781  0.000000; H  0.000000  -2.484546  0.000000;H  -2.150927  -1.241781  0.000000;H  -2.150927  1.241781  0.000000
+
+Basis: 6-31g*, Charge: 0, Spin: 0, Omega: 5.0
+
+=== 1. HF Calculation ===
+RHF/ROHF Energy: -230.70121065 Ha
+Time (HF): 5.613 s
+
+=== 2. MP2 Calculation ===
+MP2 Correlation Energy: -0.76334104 Ha
+MP2 Total Energy:       -231.46455170 Ha
+Time (MP2): 2.035 s
+
+=== 3.1 DFT(LDA) ===
+DFT(LDA) Energy: -230.07405468 Ha
+Time (DFT-LDA): 7.564 s
+
+=== 3.2 DFT(PBE) ===
+DFT(PBE) Energy: -231.92938751 Ha
+Time (DFT-PBE): 8.452 s
+
+=== 3.3 DFT(B3LYP) ===
+DFT(B3LYP) Energy: -232.24382828 Ha
+Time (DFT-B3LYP): 8.543 s
+
+=== 3.4 DFT(wB97X) ===
+DFT(wB97X) Energy: -232.17606393 Ha
+Time (DFT-wB97X): 14.932 s
+
+=== 3.5 DFT(LDA-RS) - Range Separated ===
+DFT(LDA-RS, ω=5.0) Energy: -230.95592349 Ha
+Time (DFT-LDA-RS): 15.447 s
+
+=== 4. CCSD Calculation ===
+CCSD Correlation Energy: -0.80098761 Ha
+CCSD Total Energy:       -231.50219827 Ha
+Time (CCSD): 12.733 s
+
+=== 5. CCSD(T) Calculation ===
+CCSD(T) T-correction:    -0.03499565 Ha
+CCSD(T) Total Energy:    -231.53719391 Ha
+Time (CCSD(T)): 10.848 s
+
+=== 6. Active Space: 6e in 6o ===
+=== 7. CASCI Calculation ===
+CASCI(6e, 6o) Energy: -230.73709062 Ha
+Time (CASCI): 0.328 s
+
+=== 8. CASSCF Calculation ===
+CASSCF(6e, 6o) Energy: -230.76732976 Ha
+Time (CASSCF): 101.156 s
+
+=== SUMMARY ===
+Method       Energy (Ha)      Time (s)  
+----------------------------------------
+HF           -230.70121065    5.613     
+MP2          -231.46455170    2.035     
+CCSD         -231.50219827    12.733    
+CCSD(T)      -231.53719391    10.848    
+CASCI        -230.73709062    0.328     
+CASSCF       -230.76732976    101.156   
+
+DFT Results:
+  DFT(LDA): -230.07405468 Ha (7.564 s)
+  DFT(PBE): -231.92938751 Ha (8.452 s)
+  DFT(B3LYP): -232.24382828 Ha (8.543 s)
+  DFT(wB97X): -232.17606393 Ha (14.932 s)
+  DFT(LDA-RS): -230.95592349 Ha (15.447 s)
+
+✓ All calculations completed using your PySCFDriver style!
+Job finished at: Fri Apr 17 12:00:37 IST 2026

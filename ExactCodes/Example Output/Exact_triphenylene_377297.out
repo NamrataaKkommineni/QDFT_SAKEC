@@ -1,0 +1,116 @@
+==========================================
+SLURM_SUBMIT_DIR = /home/namrata.manglani.sakec/tejjan/Exact
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+==========================================
+Job started at: Wed Apr  8 18:10:27 IST 2026
+Running on node: rscn354
+Python path:
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/bin/python
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+=== Benchmark: PySCF Electronic Structure Methods ===
+
+Geometry:
+
+C  3.124238  -0.429150  0.000000 
+C  3.857750  0.841751  0.000000
+C  3.835371  -1.660274  0.000000
+C  5.279498  0.841956  0.000000
+C  5.302739  -1.660063  0.000000 
+C  6.013448  -0.428691  0.000000 
+C  1.711302  -0.468092  0.000000
+C  3.184522  2.084621  0.000000
+C  3.095695  -2.864747  0.000000 
+C  5.952395  2.084999  0.000000
+C  6.042844  -2.864278  0.000000 
+C  7.426400  -0.467123  0.000000 
+C  1.011304  -1.661670  0.000000
+C  3.867838  3.287808  0.000000
+C  1.712068  -2.874784  0.000000 
+C  5.268795  3.288004  0.000000
+C  7.426483  -2.873794  0.000000
+C  8.126820  -1.660441  0.000000 
+H  1.144977  0.455533  0.000000
+H  2.101471  2.112857  0.000000
+H  3.612840  -3.816783  0.000000 
+H  7.035443  2.113506  0.000000
+H  5.526079  -3.816520  0.000000 
+H  7.992418  0.456692  0.000000
+H  -0.075145  -1.652780  0.000000
+H  3.316605  4.224075  0.000000
+H  1.176973  -3.820373  0.000000 
+H  5.819751  4.224434  0.000000
+H  7.961906  -3.819196  0.000000
+H  9.213265  -1.651184  0.000000
+
+
+Basis: 6-31g*, Charge: 0, Spin: 0, Omega: 5.0
+
+=== 1. HF Calculation ===
+RHF/ROHF Energy: -688.65463415 Ha
+Time (HF): 177.919 s
+
+=== 2. MP2 Calculation ===
+MP2 Correlation Energy: -2.30234672 Ha
+MP2 Total Energy:       -690.95698087 Ha
+Time (MP2): 13.700 s
+
+=== 3.1 DFT(LDA) ===
+DFT(LDA) Energy: -686.81544685 Ha
+Time (DFT-LDA): 213.245 s
+
+=== 3.2 DFT(PBE) ===
+DFT(PBE) Energy: -692.27639080 Ha
+Time (DFT-PBE): 223.313 s
+
+=== 3.3 DFT(B3LYP) ===
+DFT(B3LYP) Energy: -693.16663285 Ha
+Time (DFT-B3LYP): 218.504 s
+
+=== 3.4 DFT(wB97X) ===
+DFT(wB97X) Energy: -692.98451846 Ha
+Time (DFT-wB97X): 270.371 s
+
+=== 3.5 DFT(LDA-RS) - Range Separated ===
+DFT(LDA-RS, ω=5.0) Energy: -689.41161001 Ha
+Time (DFT-LDA-RS): 244.557 s
+
+=== 4. CCSD Calculation ===
+CCSD Correlation Energy: -2.36732602 Ha
+CCSD Total Energy:       -691.02196017 Ha
+Time (CCSD): 5655.157 s
+
+=== 5. CCSD(T) Calculation ===
+CCSD(T) T-correction:    -0.11649875 Ha
+CCSD(T) Total Energy:    -691.13845892 Ha
+Time (CCSD(T)): 3611.806 s
+
+=== 6. Active Space: 6e in 6o ===
+=== 7. CASCI Calculation ===
+CASCI(6e, 6o) Energy: -688.67201718 Ha
+Time (CASCI): 13.687 s
+
+=== 8. CASSCF Calculation ===
+CASSCF(6e, 6o) Energy: -688.70794673 Ha
+Time (CASSCF): 1828.287 s
+
+=== SUMMARY ===
+Method       Energy (Ha)      Time (s)  
+----------------------------------------
+HF           -688.65463415    177.919   
+MP2          -690.95698087    13.700    
+CCSD         -691.02196017    5655.157  
+CCSD(T)      -691.13845892    3611.806  
+CASCI        -688.67201718    13.687    
+CASSCF       -688.70794673    1828.287  
+
+DFT Results:
+  DFT(LDA): -686.81544685 Ha (213.245 s)
+  DFT(PBE): -692.27639080 Ha (223.313 s)
+  DFT(B3LYP): -693.16663285 Ha (218.504 s)
+  DFT(wB97X): -692.98451846 Ha (270.371 s)
+  DFT(LDA-RS): -689.41161001 Ha (244.557 s)
+
+✓ All calculations completed using your PySCFDriver style!
+Job finished at: Wed Apr  8 21:39:25 IST 2026

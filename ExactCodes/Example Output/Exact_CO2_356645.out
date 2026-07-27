@@ -1,0 +1,89 @@
+==========================================
+SLURM_SUBMIT_DIR = /home/namrata.manglani.sakec/tejjan/Exact
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+==========================================
+Job started at: Thu Mar 26 12:06:11 IST 2026
+Running on node: rscn063
+Python path:
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/bin/python
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+=== Benchmark: PySCF Electronic Structure Methods ===
+
+Geometry:
+
+O   0.000000   0.000000  -1.169590
+C   0.000000   0.000000   0.000000
+O   0.000000   0.000000   1.169590
+
+
+Basis: 6-31g*, Charge: 0, Spin: 0, Omega: 6.75
+
+=== 1. HF Calculation ===
+RHF/ROHF Energy: -187.63029767 Ha
+Time (HF): 2.778 s
+
+=== 2. MP2 Calculation ===
+MP2 Correlation Energy: -0.47616808 Ha
+MP2 Total Energy:       -188.10646575 Ha
+Time (MP2): 1.895 s
+
+=== 3.1 DFT(LDA) ===
+DFT(LDA) Energy: -187.17363814 Ha
+Time (DFT-LDA): 3.393 s
+
+=== 3.2 DFT(PBE) ===
+DFT(PBE) Energy: -188.38970365 Ha
+Time (DFT-PBE): 3.820 s
+
+=== 3.3 DFT(B3LYP) ===
+DFT(B3LYP) Energy: -188.57756867 Ha
+Time (DFT-B3LYP): 3.923 s
+
+=== 3.4 DFT(wB97X) ===
+DFT(wB97X) Energy: -188.53230633 Ha
+Time (DFT-wB97X): 4.302 s
+
+=== 3.5 DFT(LDA-RS) - Range Separated ===
+DFT(LDA-RS, ω=6.75) Energy: -187.75491110 Ha
+Time (DFT-LDA-RS): 4.139 s
+
+=== 4. CCSD Calculation ===
+CCSD Correlation Energy: -0.47192895 Ha
+CCSD Total Energy:       -188.10222662 Ha
+Time (CCSD): 4.097 s
+
+=== 5. CCSD(T) Calculation ===
+CCSD(T) T-correction:    -0.01793506 Ha
+CCSD(T) Total Energy:    -188.12016167 Ha
+Time (CCSD(T)): 1.541 s
+
+=== 6. Active Space: 2e in 6o ===
+=== 7. CASCI Calculation ===
+CASCI(2e, 6o) Energy: -187.64039815 Ha
+Time (CASCI): 0.093 s
+
+=== 8. CASSCF Calculation ===
+CASSCF(2e, 6o) Energy: -187.65614740 Ha
+Time (CASSCF): 79.478 s
+
+=== SUMMARY ===
+Method       Energy (Ha)      Time (s)  
+----------------------------------------
+HF           -187.63029767    2.778     
+MP2          -188.10646575    1.895     
+CCSD         -188.10222662    4.097     
+CCSD(T)      -188.12016167    1.541     
+CASCI        -187.64039815    0.093     
+CASSCF       -187.65614740    79.478    
+
+DFT Results:
+  DFT(LDA): -187.17363814 Ha (3.393 s)
+  DFT(PBE): -188.38970365 Ha (3.820 s)
+  DFT(B3LYP): -188.57756867 Ha (3.923 s)
+  DFT(wB97X): -188.53230633 Ha (4.302 s)
+  DFT(LDA-RS): -187.75491110 Ha (4.139 s)
+
+✓ All calculations completed using your PySCFDriver style!
+Job finished at: Thu Mar 26 12:09:04 IST 2026

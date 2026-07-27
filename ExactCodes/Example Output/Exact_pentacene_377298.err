@@ -1,0 +1,6 @@
+/home/namrata.manglani.sakec/miniconda3/envs/Qiskit-1.0.2/lib/python3.8/site-packages/pyscf/dft/libxc.py:512: UserWarning: Since PySCF-2.3, B3LYP (and B3P86) are changed to the VWN-RPA variant, corresponding to the original definition by Stephens et al. (issue 1480) and the same as the B3LYP functional in Gaussian. To restore the VWN5 definition, you can put the setting "B3LYP_WITH_VWN5 = True" in pyscf_conf.py
+  warnings.warn('Since PySCF-2.3, B3LYP (and B3P86) are changed to the VWN-RPA variant, '
+
+real	607m53.138s
+user	9045m32.595s
+sys	2059m44.306s
