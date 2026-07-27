@@ -109,11 +109,16 @@ Designed for benchmarking larger molecular systems and generating publication-re
 
 ---
 
-# Example Benchmark Output
+# Example Benchmark Results
 
-The framework generates benchmark tables containing both total energies and execution times for each electronic structure method.
+The tables below present representative benchmark results generated using `ExactCode_v2.py`.
 
-Example benchmark systems include **Pentacene** and **Tetracene**.
+These examples illustrate the format of the generated benchmark summaries and demonstrate the range of electronic structure methods supported by the framework.
+
+### Example Systems
+
+- Pentacene
+- Tetracene
 
 | Method | Pentacene Energy (Ha) | Pentacene Time (s) | Tetracene Energy (Ha) | Tetracene Time (s) |
 |---------|----------------------:|-------------------:|----------------------:|-------------------:|
@@ -129,7 +134,28 @@ Example benchmark systems include **Pentacene** and **Tetracene**.
 | DFT (wB97X) | -846.5473940 | 525.08 | -692.9593768 | 253.54 |
 | DFT (LDA-RS) | -842.1909222 | 451.01 | -689.3880962 | 230.87 |
 
-These benchmark tables provide a convenient summary of the trade-off between computational cost and electronic structure accuracy across different quantum chemistry methods.
+These representative results illustrate the trade-off between computational cost and electronic structure accuracy across different quantum chemistry methods.
+
+---
+
+# Complete Benchmark Database
+
+The examples above represent only a small subset of the benchmark calculations performed with this framework.
+
+A comprehensive benchmark database containing additional molecular systems, electronic structure methods, timing analyses, and reference energies is maintained separately and is available through the Google Sheets link below.
+
+The complete dataset includes:
+
+- Closed-shell and open-shell molecular systems
+- Reference energies from HF, MP2, CCSD, CCSD(T), CASCI, and CASSCF
+- Multiple DFT exchange-correlation functionals
+- Runtime measurements
+- Method-to-method comparisons
+- Data used for validating the QDFT framework
+
+**Quantum Chemistry Benchmark Database (Google Sheets)**
+
+📊 https://docs.google.com/spreadsheets/d/1jqu6-lq_od3toY4zbfOZyQ7kjna7TH3r5ojPXu2AEIE
 
 ---
 
