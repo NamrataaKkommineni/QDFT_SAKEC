@@ -1,46 +1,46 @@
 # Quantum Embedding Benchmarking Framework
 
-This repository documents the development, optimization, and benchmarking of a hybrid **Quantum-Classical Embedding Framework** implemented using **PennyLane**, **Qiskit Nature**, and GPU-accelerated quantum simulation backends.
+This repository documents the development, optimization, and benchmarking of a **Hybrid Quantum-Classical Embedding Framework** implemented using **PennyLane**, **Qiskit Nature**, and GPU-accelerated quantum simulation backends.
 
-The project investigates the practical performance limits of Variational Quantum Eigensolver (VQE) workflows for quantum embedding calculations, focusing on:
+The project investigates the practical performance limits of **Variational Quantum Eigensolver (VQE)** workflows for quantum embedding calculations, with particular emphasis on:
 
 * Ansatz construction strategies
-* Fermion-to-qubit mappings
-* Gradient evaluation methods
+* Fermion-to-qubit mapping techniques
+* Analytical versus numerical gradient evaluation
 * GPU acceleration
-* JIT compilation performance
+* JAX Just-In-Time (JIT) compilation
 * Cross-platform validation between PennyLane and Qiskit
 
-The repository captures the complete architectural evolution from an initial proof-of-concept implementation to a production-grade GPU workflow and an exploration of JAX-based acceleration limits.
+The repository captures the complete architectural evolution from an initial proof-of-concept implementation to a production-grade GPU workflow, together with an extensive investigation into the limitations of JIT compilation for self-consistent quantum embedding calculations.
 
 ---
 
 # Project Objectives
 
-The primary goals of this framework are:
+The primary objectives of this framework are to:
 
 * Develop scalable VQE-based embedding workflows.
 * Evaluate GPU acceleration for quantum chemistry simulations.
 * Compare PennyLane and Qiskit implementations under identical physical conditions.
-* Quantify performance gains from analytical gradient methods.
-* Investigate the applicability of JIT compilation to self-consistent embedding calculations.
-* Establish benchmark datasets for future quantum embedding research.
+* Quantify performance improvements obtained from analytical adjoint gradients.
+* Investigate the applicability of JAX JIT compilation to self-consistent embedding calculations.
+* Establish reproducible benchmark datasets for future quantum embedding research.
 
 ---
 
 # Architectural Evolution
 
-The framework evolved through three major development stages.
+The framework evolved through three major development stages, with each version addressing specific computational bottlenecks.
 
 ---
 
-# Version 1: Naive Hybrid Framework
+# Version 1 — Naive Hybrid Framework
 
 ## Overview
 
-The initial implementation combined Qiskit Nature circuit generation with PennyLane execution.
+The initial implementation combined **Qiskit Nature** for ansatz generation with **PennyLane** for circuit execution.
 
-While functional, the architecture suffered from substantial translation and optimization overhead.
+Although scientifically correct, this architecture introduced substantial overhead arising from repeated circuit translation during every embedding iteration.
 
 ---
 
@@ -48,61 +48,41 @@ While functional, the architecture suffered from substantial translation and opt
 
 ### Ansatz
 
-Constructed using Qiskit Nature:
-
-```python
-QiskitUCCSD
-```
+* Qiskit Nature `QiskitUCCSD`
 
 ### Fermion-to-Qubit Mapping
 
-```python
-ParityMapper
-```
+* `ParityMapper`
 
-The parity mapping was selected to reduce qubit counts and memory consumption.
+Selected to reduce qubit count and memory overhead.
+
+### Gradient Evaluation
+
+* Numerical finite differences (SciPy)
+* More than **150 circuit evaluations** per optimization step
 
 ---
 
 ## Execution Bottleneck
 
-At every iteration of the embedding loop, the workflow required:
+At every iteration of the embedding loop, the workflow executed
 
 ```python
 bound_circuit.decompose()
 qml.from_qiskit(...)
 ```
 
-to convert a Qiskit circuit object into a PennyLane-compatible representation.
+to translate Qiskit circuits into native PennyLane circuits.
 
-This conversion occurred repeatedly inside the self-consistent optimization cycle and became a major computational bottleneck.
-
----
-
-## Gradient Evaluation
-
-Optimization relied on numerical finite differences through SciPy.
-
-Characteristics:
-
-* Numerical gradient approximation
-* More than 150 circuit evaluations per optimization step
-* Significant computational overhead
-* Poor GPU utilization
+Because this conversion occurred inside every SCF iteration, significant communication overhead was introduced between the classical optimization loop and the quantum backend, severely limiting GPU utilization.
 
 ---
 
-## Outcome
-
-While scientifically correct, the implementation was not computationally viable for large-scale molecular systems.
-
----
-
-# Version 2: Native PennyLane Execution
+# Version 2 — Native PennyLane Execution (Production Baseline)
 
 ## Overview
 
-Version 2 replaced the hybrid circuit construction pipeline with a fully native PennyLane implementation.
+Version 2 replaced the hybrid execution pipeline with a fully native PennyLane implementation.
 
 This architecture became the production baseline for all subsequent developments.
 
@@ -112,302 +92,259 @@ This architecture became the production baseline for all subsequent developments
 
 ### Ansatz
 
-Implemented directly through PennyLane:
-
 ```python
 qml.UCCSD
 ```
 
 ### Fermion-to-Qubit Mapping
 
-```python
+```text
 JordanWignerMapper
 ```
 
-This mapping was adopted to satisfy PennyLane's template requirements:
+using the standard mapping
 
 ```text
-1 spatial orbital = 2 qubits
+1 Spatial Orbital = 2 Qubits
 ```
 
----
+### Execution Backend
 
-## Execution Backend
-
-All circuits execute directly on:
-
-```python
+```text
 lightning.gpu
 ```
 
-Advantages:
-
-* No circuit translation overhead
-* No repeated decomposition steps
-* Direct GPU execution
-* Reduced memory consumption
+allowing direct GPU execution without intermediate circuit translation.
 
 ---
 
-## Analytical Gradients
+## Analytical Gradient Evaluation
 
-Version 2 replaced numerical differentiation with exact analytical gradients.
-
-Configuration:
+Version 2 replaced numerical finite differences with exact analytical gradients using
 
 ```python
 diff_method="adjoint"
-```
-
-Gradient evaluation:
-
-```python
 gradient_fn = qml.grad(cost_fn)
 ```
 
-The analytical gradient function is passed directly to SciPy optimizers.
+This reduced optimization cost dramatically while improving convergence stability.
 
 ---
 
-## Advantages
+## Physics Improvements
 
-Compared with Version 1:
+### Active-Space Spin Penalty
 
-* Elimination of finite-difference overhead
-* Exact gradient evaluation
-* Improved optimization stability
-* Dramatically reduced circuit executions
-* Substantially improved GPU utilization
+A dynamic active-space spin penalty Hamiltonian
 
----
+```math
+H = H_{0} + \beta \hat{S}^{2}
+```
 
-## Production Status
-
-Version 2 was identified as the optimal architecture and became the foundation for all subsequent:
-
-* Physics corrections
-* Spin penalty implementations
-* Scaling studies
-* Benchmarking workflows
+was introduced to suppress spin contamination and enforce convergence toward the target singlet state.
 
 ---
 
-# Version 3: JAX-JIT Acceleration Study
+### Spin Ordering Alignment
+
+Additional patches aligned:
+
+* Qiskit block orbital ordering
+* PennyLane Hartree-Fock state preparation
+* Wire indexing conventions
+
+allowing consistent cross-framework comparisons.
+
+---
+
+# Version 3 — JAX-JIT Compilation Study
 
 ## Objective
 
-The third development phase investigated whether Just-In-Time (JIT) compilation could further accelerate embedding calculations.
-
-The framework integrated:
-
-```python
-jax
-jax.numpy
-```
-
-with computational kernels wrapped in:
-
-```python
-@jax.jit
-```
-
-decorators.
-
----
-
-## Design Strategy
-
-JAX tensors were interfaced with SciPy optimization routines through conversion bridges:
-
-```python
-scipy_cost(...)
-scipy_grad(...)
-```
-
-The objective was to maximize GPU graph execution efficiency.
-
----
-
-## Observed Behavior
-
-For large molecular systems such as tetracene:
-
-| Metric            | Result    |
-| ----------------- | --------- |
-| Peak Memory Usage | ~62 GB    |
-| Runtime           | > 7 Hours |
-
-Performance degraded dramatically compared with the production Version 2 workflow.
+The third development phase investigated whether **JAX Just-In-Time (JIT)** compilation could further accelerate embedding calculations by compiling large sections of the computational graph.
 
 ---
 
 ## Root Cause Analysis
 
-The failure was traced to a fundamental incompatibility between JIT compilation and self-consistent embedding loops.
+The investigation demonstrated a fundamental incompatibility between JIT compilation and self-consistent embedding algorithms.
 
-At each SCF iteration:
+During every embedding iteration:
 
-1. The embedding environment updates.
+1. The classical DFT environment changes.
 2. The molecular Hamiltonian changes.
-3. The quantum circuit representation changes.
-4. The JIT graph becomes invalid.
+3. The quantum circuit changes.
+4. The compiled execution graph becomes invalid.
 
-As a consequence, JAX was forced to:
+Consequently, JAX repeatedly discarded and reconstructed the compiled execution graph.
 
-* Discard the compiled execution graph
-* Reconstruct the graph
-* Recompile the entire quantum circuit
+For large molecular systems containing more than **3,500 quantum gates**, this resulted in:
 
-for every embedding iteration.
-
-For circuits exceeding:
-
-```text
-3,500+ quantum gates
-```
-
-the recompilation overhead outweighed any potential acceleration benefits.
+* Repeated graph recompilation
+* Memory usage approaching **62 GB**
+* Longer execution times than the native GPU implementation
 
 ---
 
 ## Conclusion
 
-JIT compilation was determined to be unsuitable for large-scale self-consistent quantum embedding workflows where the Hamiltonian changes at every iteration.
+JIT compilation was determined to be unsuitable for self-consistent hybrid quantum embedding calculations where the Hamiltonian changes every iteration.
+
+Version 2 therefore remains the production architecture.
 
 ---
 
-# Production Framework (Version 2)
+# Hardware Performance Benchmarks
 
-Following the architectural evaluation, Version 2 was adopted as the production framework.
+## Version 1 vs Version 2 (Pyrene, CAS(6e,6o))
 
-The repository is organized into two primary benchmarking suites.
+| Metric              |          Version 1 |   Version 2 |
+| ------------------- | -----------------: | ----------: |
+| Execution Time      |         ~9.2 Hours | ~52 Minutes |
+| Gradient Method     | Finite Differences |     Adjoint |
+| GPU Utilization     |               0–5% |      25–78% |
+| Circuit Translation |           Required |  Eliminated |
 
 ---
 
-# UCCSD Benchmark Suite
+## Native GPU vs JAX-JIT (Tetracene, CAS(6e,6o))
+
+| Metric             |  Native GPU |           JAX-JIT |
+| ------------------ | ----------: | ----------------: |
+| Runtime            |  ~6.1 Hours |        ~7.1 Hours |
+| Gradient Method    |     Adjoint |           Adjoint |
+| Peak Memory        |     ~531 MB |            ~62 GB |
+| Primary Bottleneck | Python Loop | Graph Compilation |
+
+---
+
+## Framework Comparison (Tetracene)
+
+| Framework     | Hardware    |     Runtime | Final Energy (Ha) |
+| ------------- | ----------- | ----------: | ----------------: |
+| Qiskit CPU    | Intel Xeon  | ~5.23 Hours |     -693.34300886 |
+| PennyLane CPU | Intel Xeon  | ~6.06 Hours |     -693.18847956 |
+| PennyLane GPU | NVIDIA A100 | ~6.14 Hours |     -693.18844498 |
+
+---
+
+# Recent Cluster Benchmark Results
+
+Recent benchmarking was performed on the **ParamPrabha Supercomputing Cluster** equipped with:
+
+* Intel Xeon Gold 6240R CPUs
+* NVIDIA A100 Tensor Core GPUs
+
+| Framework     | Ansatz    | Runtime | Final Energy (Ha) | ⟨S²⟩  |
+| ------------- | --------- | ------  | -----------------:|  ---: |
+| Qiskit CPU    | UCCSD     | 2.39 h  | -693.271466       | 0.000 |
+| Qiskit CPU    | q-UCCSD   | 2.73 h  | -693.271491       | 0.000 |
+| PennyLane GPU | q-UCCSD   | 4.95 h  | -693.057367       | 0.531 |
+| PennyLane GPU | UCCSD     | 5.80 h  | -693.190032       | 0.005 |
+| PennyLane CPU | q-UCCSD   | 9.46 h  | -692.550228       | 0.940 |
+
+---
+
+# Documented Issues
+
+## PennyLane Wire Ordering Limitation
+
+### Error
+
+```text
+expected at least two wires representing the unoccupied orbitals; got 0
+```
+
+### Cause
+
+Jordan-Wigner Z-string construction becomes invalid when directly applied to Qiskit's block-ordered orbitals, producing empty wire ranges.
+
+---
+
+## Qiskit AerEstimator Primitive Failure
+
+### Error
+
+```text
+The primitive job failed!
+```
+
+### Cause
+
+The Rust implementation underlying Qiskit Nature expects CPU-resident NumPy arrays.
+
+Passing GPU-resident CuPy arrays across the Rust interface resulted in incompatible memory layouts and primitive execution failures.
+
+---
+
+# Benchmark Suites
+
+The repository is organized into two complementary benchmarking suites.
+
+---
+
+## UCCSD Benchmark Suite
 
 ```text
 PennyLane Version 2/UCCSD/
 ```
 
-Production benchmarking framework using the standard **Unitary Coupled Cluster Singles and Doubles (UCCSD)** ansatz.
+Provides the baseline implementation using the conventional **Unitary Coupled Cluster Singles and Doubles (UCCSD)** ansatz.
+
+Primary objectives include:
+
+* Circuit depth benchmarking
+* Energy convergence
+* GPU performance characterization
+* Cross-framework validation
 
 ---
 
-## Features
-
-### Native GPU Execution
-
-```python
-lightning.gpu
-```
-
-### Active-Space Spin Penalty Patch
-
-Custom Hamiltonian modification used to enforce spin-state constraints throughout embedding convergence.
-
-### Cross-Platform Validation
-
-Equivalent implementations are provided for:
-
-* PennyLane GPU
-* PennyLane CPU
-* Qiskit CPU
-
----
-
-## Benchmarking Goals
-
-The suite is designed to verify:
-
-### Numerical Consistency
-
-Identical physical systems should produce equivalent:
-
-* Ground-state energies
-* Convergence trajectories
-* Electronic properties
-
-across PennyLane and Qiskit implementations.
-
-### Performance Scaling
-
-Measure acceleration achieved through:
-
-* Analytical adjoint gradients
-* GPU execution
-* Native PennyLane workflows
-
----
-
-# qUCCSD Benchmark Suite
+## q-UCCSD Benchmark Suite
 
 ```text
 PennyLane Version 2/qUCCSD/
 ```
 
-Alternative benchmarking framework based on the **quadratic UCCSD (qUCCSD)** ansatz.
+Implements the **Quadratic UCCSD (q-UCCSD)** ansatz.
 
----
+Unlike conventional UCCSD, q-UCCSD removes the long Jordan-Wigner Z-string ladders, enabling:
 
-## Purpose
-
-Evaluate the influence of ansatz design on:
-
-* Convergence behavior
-* Optimization stability
-* Computational scaling
-* Embedding performance
-
----
-
-## Features
-
-* Native PennyLane GPU implementation
-* PennyLane CPU implementation
-* Qiskit CPU implementation
-* Active-space spin penalty patch
-* Cross-platform benchmarking support
-
-The spin penalty implementation is identical to that used in the UCCSD framework, ensuring consistent physical constraints across all comparative studies.
+* Reduced circuit depth
+* Lower CNOT count
+* Consistent parameter layouts between PennyLane and Qiskit
+* Elimination of wire-ordering inconsistencies
 
 ---
 
 # Current Project Status
 
-## Development Status
-
-⚠️ **Work in Progress**
-
-The framework remains under active development.
-
----
-
 ## Completed
 
-* Native PennyLane UCCSD implementation
-* GPU-enabled execution workflows
-* Analytical adjoint gradient integration
-* Active-space spin penalty framework
-* UCCSD and qUCCSD benchmarking infrastructure
-* JAX-JIT architectural evaluation
+* Native PennyLane GPU implementation
+* Native PennyLane CPU implementation
+* Exact adjoint gradient integration
+* Active-space spin penalty Hamiltonian
+* Cross-platform benchmarking infrastructure
+* JAX-JIT architectural analysis
+* q-UCCSD implementation
+* Large-scale molecular benchmarking
 
 ---
 
 ## Ongoing Work
 
-* Large-scale GPU acceleration studies
-* Cross-platform validation between PennyLane and Qiskit
-* Numerical consistency verification
-* qUCCSD convergence benchmarking
-* Extended molecular scaling analyses
+* Additional GPU optimization
+* Larger molecular benchmarks
+* Cross-framework numerical validation
+* Improved q-UCCSD convergence studies
 
 ---
 
-## Current Assessment
+# Future Outlook
 
-Although Version 2 represents the most efficient architecture identified to date, the ultimate objective of achieving substantial GPU acceleration for large-scale quantum embedding calculations remains unresolved.
+The current implementation is constrained primarily by CPU–GPU communication overhead during self-consistent embedding iterations.
 
-Furthermore, cross-framework verification is still ongoing, and definitive confirmation that PennyLane and Qiskit produce numerically identical results across all benchmark systems has not yet been established.
+Future development will investigate deployment on the **NVIDIA GH200 Grace Hopper Superchip**, whose unified NVLink-C2C memory architecture removes the PCIe communication bottleneck between CPU and GPU.
 
-Future development efforts will focus on addressing these outstanding validation and performance objectives.
+This architecture is expected to substantially improve hybrid quantum-classical embedding performance by allowing both processors to share a unified memory space, reducing data-transfer latency during iterative embedding calculations.
