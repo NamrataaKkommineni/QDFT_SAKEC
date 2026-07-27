@@ -1,0 +1,6 @@
+/home/samritm/tejjan/PLv2/JuneRuns/PL_Tetracene_CPU_B3LYP.py:626: DeprecationWarning: The class ``qiskit.primitives.estimator.Estimator`` is deprecated as of qiskit 1.2. It will be removed no earlier than 3 months after the release date. All implementations of the `BaseEstimatorV1` interface have been deprecated in favor of their V2 counterparts. The V2 alternative for the `Estimator` class is `StatevectorEstimator`.
+  estimator=ReferenceEstimator(),
+
+real	357m12.674s
+user	699m48.884s
+sys	40m35.262s

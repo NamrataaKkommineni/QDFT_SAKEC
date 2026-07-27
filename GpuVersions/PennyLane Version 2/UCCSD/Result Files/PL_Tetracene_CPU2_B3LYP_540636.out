@@ -1,0 +1,54 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 540636
+SLURM_JOB_NAME = PL_Tetracene_CPU_B3LYP
+SLURM_JOB_NODELIST = rpcn483
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 1444890
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 1444890
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Sat Jun  6 23:10:11 IST 2026
+Running on node: rpcn483
+Python path:
+/home/samritm/tejjan/envs/pl_gpu_env/bin/python
+/home/samritm/tejjan/envs/pl_gpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+
+>> [PennyLane] Initiating Native CPU Pipeline...
+  [*] Bridged 963 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73049039 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73049039 Ha
+  [*] Bypassing Qiskit Primitives to construct duck-typed result object...
+[Warning] VQE encountered issue ('numpy.ndarray' object has no attribute 'keys'); continuing with last results.
+
+================ PROFILING SUMMARY ================
+DFT (Energy Evaluator) time   : 7.00 s
+Classical Embedding Overhead  : 182.43 s
+Active Space (Quantum) time   : 0.00 s
+--------------------------------------------------
+Total measured time           : 189.42 s
+
+Memory snapshots (RSS, MB):
+DFT_start_MB                  :  6864.41 MB
+DFT_end_MB                    :  6864.41 MB
+Embedding_start_MB            :  6864.41 MB
+Embedding_end_MB              :  7981.22 MB
+Active Space_start_MB         :  7981.66 MB
+==================================================
+Job finished at: Sat Jun  6 23:18:37 IST 2026

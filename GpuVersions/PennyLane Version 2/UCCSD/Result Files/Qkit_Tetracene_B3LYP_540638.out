@@ -1,0 +1,94 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 540638
+SLURM_JOB_NAME = Qkit_Tetracene_B3LYP
+SLURM_JOB_NODELIST = rpcn489
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 2158415
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 2158415
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Sat Jun  6 23:10:11 IST 2026
+Running on node: rpcn489
+Python path:
+/home/samritm/tejjan/envs/cpu_env/bin/python
+/home/samritm/tejjan/envs/cpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.79169842 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.530
+[Iteration 1] Embedding total energy = -693.36139247 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.97115997 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.433
+[Iteration 2] Embedding total energy = -693.30799208 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.92160999 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.375
+[Iteration 3] Embedding total energy = -693.27366111 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93526406 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.335
+[Iteration 4] Embedding total energy = -693.27163698 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93132066 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.306
+[Iteration 5] Embedding total energy = -693.27147046 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93153299 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.283
+[Iteration 6] Embedding total energy = -693.27146699 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.93151629 Ha | Rel ΔE: N/A
+[Damping] Linear mix with alpha=0.265
+[Iteration 7] Embedding total energy = -693.27146635 Ha
+[Converged] change 6.367e-07 < 1e-06
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1805.96199083374
+  - computed part:      -4.019926764892
+  - ActiveSpaceTransformer extracted energy part: -1801.942064068848
+~ Nuclear repulsion energy (Hartree): 1112.690524483842
+> Total ground state energy (Hartree): -693.271466349898
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.000 S^2: 0.000 M: 0.000
+
+================ PROFILING SUMMARY ================
+DFT reference (SCF) time     : 51.13 s
+DFT energy evaluations time : 58.02 s
+DFT Fock build time         : 54.21 s
+Hybrid embedding overhead  : 3427.27 s
+Quantum VQE time           : 5083.38 s
+--------------------------------------------------
+Total measured time        : 8674.00 s
+
+Memory snapshots (RSS, MB):
+DFT_reference_start_MB        :   145.36 MB
+DFT_reference_end_MB          :   474.48 MB
+Embedding_loop_total_start_MB :   474.48 MB
+DFT_energy_start_MB           :  7673.60 MB
+DFT_energy_end_MB             :  7673.60 MB
+DFT_fock_start_MB             :  7673.60 MB
+DFT_fock_end_MB               :  7673.60 MB
+Quantum_VQE_start_MB          :  7673.60 MB
+Quantum_VQE_end_MB            :  7672.34 MB
+Embedding_loop_total_end_MB   :  7672.34 MB
+==================================================
+Job finished at: Sun Jun  7 00:10:57 IST 2026

@@ -1,0 +1,6 @@
+Tetracene_4GPU_v2.py:342: DeprecationWarning: The class ``qiskit.primitives.estimator.Estimator`` is deprecated as of qiskit 1.2. It will be removed no earlier than 3 months after the release date. All implementations of the `BaseEstimatorV1` interface have been deprecated in favor of their V2 counterparts. The V2 alternative for the `Estimator` class is `StatevectorEstimator`.
+  estimator = Estimator()
+
+real	313m57.366s
+user	721m9.521s
+sys	105m34.565s

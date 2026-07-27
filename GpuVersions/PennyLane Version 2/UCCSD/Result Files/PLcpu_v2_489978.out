@@ -1,0 +1,701 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 489978
+SLURM_JOB_NAME = Tetracene_4GPU_v2
+SLURM_JOB_NODELIST = rpcn383
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 1763064
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 1763064
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Tue Apr 28 03:26:19 IST 2026
+Running on node: rpcn383
+Python path:
+/home/samritm/tejjan/envs/cpu_env/bin/python
+/home/samritm/tejjan/envs/cpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+  [VQE] Eval   1  Energy = -3.79172167 Ha
+  [VQE] Eval   2  Energy = -3.88451741 Ha
+  [VQE] Eval   3  Energy = -3.94030396 Ha
+  [VQE] Eval   4  Energy = -3.95088701 Ha
+  [VQE] Eval   5  Energy = -3.99200620 Ha
+  [VQE] Eval   6  Energy = -3.99681262 Ha
+  [VQE] Eval   7  Energy = -3.99947763 Ha
+  [VQE] Eval   8  Energy = -4.00084681 Ha
+  [VQE] Eval   9  Energy = -4.00157198 Ha
+  [VQE] Eval  10  Energy = -4.00195245 Ha
+  [VQE] Eval  11  Energy = -4.00205812 Ha
+  [VQE] Eval  12  Energy = -4.00209190 Ha
+  [VQE] Eval  13  Energy = -4.00211402 Ha
+  [VQE] Eval  14  Energy = -4.00213374 Ha
+  [VQE] Eval  15  Energy = -4.00214525 Ha
+  [VQE] Eval  16  Energy = -4.00215225 Ha
+  [VQE] Eval  17  Energy = -4.00215462 Ha
+[Damping] Linear mix with alpha=0.283
+[Iteration 1] Embedding total energy = -693.36175159 Ha
+  [VQE] Eval   1  Energy = -3.88801048 Ha
+  [VQE] Eval   2  Energy = -3.92811097 Ha
+  [VQE] Eval   3  Energy = -3.97679198 Ha
+  [VQE] Eval   4  Energy = -3.98830040 Ha
+  [VQE] Eval   5  Energy = -3.99274810 Ha
+  [VQE] Eval   6  Energy = -3.99373059 Ha
+  [VQE] Eval   7  Energy = -3.99436183 Ha
+  [VQE] Eval   8  Energy = -3.99436362 Ha
+  [VQE] Eval   9  Energy = -3.99442201 Ha
+  [VQE] Eval  10  Energy = -3.99444157 Ha
+  [VQE] Eval  11  Energy = -3.99444381 Ha
+[Damping] Linear mix with alpha=0.231
+[Iteration 2] Embedding total energy = -693.27807421 Ha
+  [VQE] Eval   1  Energy = -3.90563610 Ha
+  [VQE] Eval   2  Energy = -3.93553979 Ha
+  [VQE] Eval   3  Energy = -3.98806519 Ha
+  [VQE] Eval   4  Energy = -3.99807228 Ha
+  [VQE] Eval   5  Energy = -4.00193060 Ha
+  [VQE] Eval   6  Energy = -4.00278685 Ha
+  [VQE] Eval   7  Energy = -4.00325584 Ha
+  [VQE] Eval   8  Energy = -4.00325943 Ha
+  [VQE] Eval   9  Energy = -4.00330528 Ha
+  [VQE] Eval  10  Energy = -4.00331695 Ha
+  [VQE] Eval  11  Energy = -4.00331931 Ha
+[Damping] Linear mix with alpha=0.200
+[Iteration 3] Embedding total energy = -693.27369793 Ha
+  [VQE] Eval   1  Energy = -3.91405530 Ha
+  [VQE] Eval   2  Energy = -3.93912584 Ha
+  [VQE] Eval   3  Energy = -3.99384491 Ha
+  [VQE] Eval   4  Energy = -4.00339130 Ha
+  [VQE] Eval   5  Energy = -4.00709191 Ha
+  [VQE] Eval   6  Energy = -4.00794033 Ha
+  [VQE] Eval   7  Energy = -4.00838297 Ha
+  [VQE] Eval   8  Energy = -4.00841061 Ha
+  [VQE] Eval   9  Energy = -4.00846822 Ha
+  [VQE] Eval  10  Energy = -4.00848020 Ha
+  [VQE] Eval  11  Energy = -4.00851682 Ha
+  [VQE] Eval  12  Energy = -4.00855558 Ha
+  [VQE] Eval  13  Energy = -4.00858656 Ha
+  [VQE] Eval  14  Energy = -4.00863076 Ha
+  [VQE] Eval  15  Energy = -4.00864248 Ha
+  [VQE] Eval  16  Energy = -4.00868674 Ha
+  [VQE] Eval  17  Energy = -4.00315729 Ha
+  [VQE] Eval  18  Energy = -4.00869554 Ha
+  [VQE] Eval  19  Energy = -4.00857329 Ha
+  [VQE] Eval  20  Energy = -4.00872210 Ha
+  [VQE] Eval  21  Energy = -4.00874443 Ha
+  [VQE] Eval  22  Energy = -4.00875904 Ha
+  [VQE] Eval  23  Energy = -4.00877897 Ha
+  [VQE] Eval  24  Energy = -4.00878626 Ha
+  [VQE] Eval  25  Energy = -4.00878864 Ha
+[Damping] Linear mix with alpha=0.179
+[Iteration 4] Embedding total energy = -693.27299688 Ha
+  [VQE] Eval   1  Energy = -3.92137125 Ha
+  [VQE] Eval   2  Energy = -3.97369460 Ha
+  [VQE] Eval   3  Energy = -4.03378927 Ha
+  [VQE] Eval   4  Energy = -4.06089492 Ha
+  [VQE] Eval   5  Energy = -4.06731264 Ha
+  [VQE] Eval   6  Energy = -4.07248661 Ha
+  [VQE] Eval   7  Energy = -4.07436737 Ha
+  [VQE] Eval   8  Energy = -4.07640932 Ha
+  [VQE] Eval   9  Energy = -4.07411835 Ha
+  [VQE] Eval  10  Energy = -4.07662843 Ha
+  [VQE] Eval  11  Energy = -4.07688785 Ha
+  [VQE] Eval  12  Energy = -4.07702291 Ha
+  [VQE] Eval  13  Energy = -4.07703831 Ha
+  [VQE] Eval  14  Energy = -4.07712573 Ha
+  [VQE] Eval  15  Energy = -4.07713784 Ha
+  [VQE] Eval  16  Energy = -4.07714959 Ha
+  [VQE] Eval  17  Energy = -4.07715570 Ha
+  [VQE] Eval  18  Energy = -4.07716057 Ha
+  [VQE] Eval  19  Energy = -4.07716158 Ha
+[Damping] Linear mix with alpha=0.163
+[Iteration 5] Embedding total energy = -693.34056271 Ha
+  [VQE] Eval   1  Energy = -3.93569158 Ha
+  [VQE] Eval   2  Energy = -3.96341432 Ha
+  [VQE] Eval   3  Energy = -4.02377318 Ha
+  [VQE] Eval   4  Energy = -4.04406589 Ha
+  [VQE] Eval   5  Energy = -4.04965692 Ha
+  [VQE] Eval   6  Energy = -4.05344712 Ha
+  [VQE] Eval   7  Energy = -4.05612757 Ha
+  [VQE] Eval   8  Energy = -4.05711387 Ha
+  [VQE] Eval   9  Energy = -4.05793989 Ha
+  [VQE] Eval  10  Energy = -4.05806082 Ha
+  [VQE] Eval  11  Energy = -4.05819081 Ha
+  [VQE] Eval  12  Energy = -4.05825512 Ha
+  [VQE] Eval  13  Energy = -4.05824154 Ha
+  [VQE] Eval  14  Energy = -4.05827262 Ha
+  [VQE] Eval  15  Energy = -4.05828579 Ha
+  [VQE] Eval  16  Energy = -4.05828800 Ha
+[Damping] Linear mix with alpha=0.151
+[Iteration 6] Embedding total energy = -693.31053461 Ha
+  [VQE] Eval   1  Energy = -3.94290752 Ha
+  [VQE] Eval   2  Energy = -3.97087728 Ha
+  [VQE] Eval   3  Energy = -4.03334595 Ha
+  [VQE] Eval   4  Energy = -4.05581789 Ha
+  [VQE] Eval   5  Energy = -4.06166522 Ha
+  [VQE] Eval   6  Energy = -4.06542449 Ha
+  [VQE] Eval   7  Energy = -4.06753609 Ha
+  [VQE] Eval   8  Energy = -4.06843657 Ha
+  [VQE] Eval   9  Energy = -4.06874901 Ha
+  [VQE] Eval  10  Energy = -4.06886027 Ha
+  [VQE] Eval  11  Energy = -4.06894324 Ha
+  [VQE] Eval  12  Energy = -4.06899082 Ha
+  [VQE] Eval  13  Energy = -4.06900364 Ha
+  [VQE] Eval  14  Energy = -4.06901717 Ha
+  [VQE] Eval  15  Energy = -4.06902026 Ha
+[Damping] Linear mix with alpha=0.141
+[Iteration 7] Embedding total energy = -693.31725081 Ha
+  [VQE] Eval   1  Energy = -3.94836251 Ha
+  [VQE] Eval   2  Energy = -3.96587542 Ha
+  [VQE] Eval   3  Energy = -4.02922994 Ha
+  [VQE] Eval   4  Energy = -4.04514260 Ha
+  [VQE] Eval   5  Energy = -4.05053837 Ha
+  [VQE] Eval   6  Energy = -4.05363145 Ha
+  [VQE] Eval   7  Energy = -4.05658898 Ha
+  [VQE] Eval   8  Energy = -4.05718191 Ha
+  [VQE] Eval   9  Energy = -4.05832780 Ha
+  [VQE] Eval  10  Energy = -4.05844218 Ha
+  [VQE] Eval  11  Energy = -4.05856629 Ha
+  [VQE] Eval  12  Energy = -4.05860063 Ha
+  [VQE] Eval  13  Energy = -4.05861547 Ha
+  [VQE] Eval  14  Energy = -4.05861801 Ha
+[Damping] Linear mix with alpha=0.133
+[Iteration 8] Embedding total energy = -693.30273024 Ha
+  [VQE] Eval   1  Energy = -3.95083990 Ha
+  [VQE] Eval   2  Energy = -3.96836578 Ha
+  [VQE] Eval   3  Energy = -4.03267357 Ha
+  [VQE] Eval   4  Energy = -4.04998620 Ha
+  [VQE] Eval   5  Energy = -4.05545576 Ha
+  [VQE] Eval   6  Energy = -4.05871351 Ha
+  [VQE] Eval   7  Energy = -4.06158422 Ha
+  [VQE] Eval   8  Energy = -4.06204218 Ha
+  [VQE] Eval   9  Energy = -4.06306581 Ha
+  [VQE] Eval  10  Energy = -4.06315493 Ha
+  [VQE] Eval  11  Energy = -4.06325763 Ha
+  [VQE] Eval  12  Energy = -4.06328704 Ha
+  [VQE] Eval  13  Energy = -4.06329756 Ha
+  [VQE] Eval  14  Energy = -4.06330044 Ha
+[DIIS] Extrapolating density (coeffs: [-0.61  1.    0.79 -0.18])
+[Iteration 9] Embedding total energy = -693.30597727 Ha
+  [VQE] Eval   1  Energy = -3.95014522 Ha
+  [VQE] Eval   2  Energy = -3.98255060 Ha
+  [VQE] Eval   3  Energy = -4.04654018 Ha
+  [VQE] Eval   4  Energy = -4.07147698 Ha
+  [VQE] Eval   5  Energy = -4.07800510 Ha
+  [VQE] Eval   6  Energy = -4.08171308 Ha
+  [VQE] Eval   7  Energy = -4.08242810 Ha
+  [VQE] Eval   8  Energy = -4.08347650 Ha
+  [VQE] Eval   9  Energy = -4.08360983 Ha
+  [VQE] Eval  10  Energy = -4.08377893 Ha
+  [VQE] Eval  11  Energy = -4.08384975 Ha
+  [VQE] Eval  12  Energy = -4.08389319 Ha
+  [VQE] Eval  13  Energy = -4.08390346 Ha
+  [VQE] Eval  14  Energy = -4.08390739 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.24  0.49  0.34 -0.07])
+[Iteration 10] Embedding total energy = -693.32895938 Ha
+  [VQE] Eval   1  Energy = -3.94758998 Ha
+  [VQE] Eval   2  Energy = -3.99349359 Ha
+  [VQE] Eval   3  Energy = -4.05718342 Ha
+  [VQE] Eval   4  Energy = -4.08446014 Ha
+  [VQE] Eval   5  Energy = -4.09054115 Ha
+  [VQE] Eval   6  Energy = -4.09417839 Ha
+  [VQE] Eval   7  Energy = -4.09583852 Ha
+  [VQE] Eval   8  Energy = -4.09699107 Ha
+  [VQE] Eval   9  Energy = -4.09683297 Ha
+  [VQE] Eval  10  Energy = -4.09720775 Ha
+  [VQE] Eval  11  Energy = -4.09728121 Ha
+  [VQE] Eval  12  Energy = -4.09739432 Ha
+  [VQE] Eval  13  Energy = -4.09741662 Ha
+  [VQE] Eval  14  Energy = -4.09744983 Ha
+  [VQE] Eval  15  Energy = -4.09745531 Ha
+  [VQE] Eval  16  Energy = -4.09745952 Ha
+  [VQE] Eval  17  Energy = -4.09746291 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.62  0.55 -0.14 -0.04])
+[Iteration 11] Embedding total energy = -693.34566939 Ha
+  [VQE] Eval   1  Energy = -3.94933475 Ha
+  [VQE] Eval   2  Energy = -3.99015312 Ha
+  [VQE] Eval   3  Energy = -4.05407571 Ha
+  [VQE] Eval   4  Energy = -4.08070511 Ha
+  [VQE] Eval   5  Energy = -4.08731462 Ha
+  [VQE] Eval   6  Energy = -4.09050965 Ha
+  [VQE] Eval   7  Energy = -4.09221807 Ha
+  [VQE] Eval   8  Energy = -4.09305014 Ha
+  [VQE] Eval   9  Energy = -4.09319097 Ha
+  [VQE] Eval  10  Energy = -4.09333343 Ha
+  [VQE] Eval  11  Energy = -4.09339274 Ha
+  [VQE] Eval  12  Energy = -4.09345102 Ha
+  [VQE] Eval  13  Energy = -4.09347902 Ha
+  [VQE] Eval  14  Energy = -4.09347937 Ha
+  [VQE] Eval  15  Energy = -4.09348814 Ha
+  [VQE] Eval  16  Energy = -4.09349012 Ha
+[DIIS] Extrapolating density (coeffs: [0.22 0.42 0.34 0.02])
+[Iteration 12] Embedding total energy = -693.34007406 Ha
+  [VQE] Eval   1  Energy = -3.94942074 Ha
+  [VQE] Eval   2  Energy = -3.98116817 Ha
+  [VQE] Eval   3  Energy = -4.04503680 Ha
+  [VQE] Eval   4  Energy = -4.06978957 Ha
+  [VQE] Eval   5  Energy = -4.07626334 Ha
+  [VQE] Eval   6  Energy = -4.07988354 Ha
+  [VQE] Eval   7  Energy = -4.08095191 Ha
+  [VQE] Eval   8  Energy = -4.08181716 Ha
+  [VQE] Eval   9  Energy = -4.08198590 Ha
+  [VQE] Eval  10  Energy = -4.08216750 Ha
+  [VQE] Eval  11  Energy = -4.08225299 Ha
+  [VQE] Eval  12  Energy = -4.08229756 Ha
+  [VQE] Eval  13  Energy = -4.08230670 Ha
+  [VQE] Eval  14  Energy = -4.08231088 Ha
+  [VQE] Eval  15  Energy = -4.08231288 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.06  0.5   0.46 -0.02])
+[Iteration 13] Embedding total energy = -693.32762298 Ha
+  [VQE] Eval   1  Energy = -3.94848661 Ha
+  [VQE] Eval   2  Energy = -3.99970977 Ha
+  [VQE] Eval   3  Energy = -4.06357043 Ha
+  [VQE] Eval   4  Energy = -4.09181727 Ha
+  [VQE] Eval   5  Energy = -4.09744851 Ha
+  [VQE] Eval   6  Energy = -4.10107365 Ha
+  [VQE] Eval   7  Energy = -4.10266909 Ha
+  [VQE] Eval   8  Energy = -4.10383589 Ha
+  [VQE] Eval   9  Energy = -4.10372640 Ha
+  [VQE] Eval  10  Energy = -4.10401591 Ha
+  [VQE] Eval  11  Energy = -4.10413841 Ha
+  [VQE] Eval  12  Energy = -4.10423215 Ha
+  [VQE] Eval  13  Energy = -4.10427073 Ha
+  [VQE] Eval  14  Energy = -4.10430421 Ha
+  [VQE] Eval  15  Energy = -4.10431244 Ha
+  [VQE] Eval  16  Energy = -4.10431649 Ha
+[DIIS] Extrapolating density (coeffs: [0.2  0.37 0.43 0.  ])
+[Iteration 14] Embedding total energy = -693.35281959 Ha
+  [VQE] Eval   1  Energy = -3.94900822 Ha
+  [VQE] Eval   2  Energy = -3.99045538 Ha
+  [VQE] Eval   3  Energy = -4.05432404 Ha
+  [VQE] Eval   4  Energy = -4.08101906 Ha
+  [VQE] Eval   5  Energy = -4.08758434 Ha
+  [VQE] Eval   6  Energy = -4.09082082 Ha
+  [VQE] Eval   7  Energy = -4.09252400 Ha
+  [VQE] Eval   8  Energy = -4.09339823 Ha
+  [VQE] Eval   9  Energy = -4.09352790 Ha
+  [VQE] Eval  10  Energy = -4.09367987 Ha
+  [VQE] Eval  11  Energy = -4.09373507 Ha
+  [VQE] Eval  12  Energy = -4.09380023 Ha
+  [VQE] Eval  13  Energy = -4.09383097 Ha
+  [VQE] Eval  14  Energy = -4.09382784 Ha
+  [VQE] Eval  15  Energy = -4.09383914 Ha
+  [VQE] Eval  16  Energy = -4.09384105 Ha
+[DIIS] Extrapolating density (coeffs: [0.12 0.36 0.51 0.  ])
+[Iteration 15] Embedding total energy = -693.34068609 Ha
+  [VQE] Eval   1  Energy = -3.94892886 Ha
+  [VQE] Eval   2  Energy = -3.99159474 Ha
+  [VQE] Eval   3  Energy = -4.05546117 Ha
+  [VQE] Eval   4  Energy = -4.08231110 Ha
+  [VQE] Eval   5  Energy = -4.08874706 Ha
+  [VQE] Eval   6  Energy = -4.09208259 Ha
+  [VQE] Eval   7  Energy = -4.09376996 Ha
+  [VQE] Eval   8  Energy = -4.09471949 Ha
+  [VQE] Eval   9  Energy = -4.09482311 Ha
+  [VQE] Eval  10  Energy = -4.09500873 Ha
+  [VQE] Eval  11  Energy = -4.09505674 Ha
+  [VQE] Eval  12  Energy = -4.09513507 Ha
+  [VQE] Eval  13  Energy = -4.09516328 Ha
+  [VQE] Eval  14  Energy = -4.09516725 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.09  0.33  0.58 -0.  ])
+[Iteration 16] Embedding total energy = -693.34222359 Ha
+  [VQE] Eval   1  Energy = -3.94887467 Ha
+  [VQE] Eval   2  Energy = -3.99249522 Ha
+  [VQE] Eval   3  Energy = -4.05636158 Ha
+  [VQE] Eval   4  Energy = -4.08333483 Ha
+  [VQE] Eval   5  Energy = -4.08965673 Ha
+  [VQE] Eval   6  Energy = -4.09307633 Ha
+  [VQE] Eval   7  Energy = -4.09475173 Ha
+  [VQE] Eval   8  Energy = -4.09575906 Ha
+  [VQE] Eval   9  Energy = -4.09581867 Ha
+  [VQE] Eval  10  Energy = -4.09605230 Ha
+  [VQE] Eval  11  Energy = -4.09609641 Ha
+  [VQE] Eval  12  Energy = -4.09618386 Ha
+  [VQE] Eval  13  Energy = -4.09620653 Ha
+  [VQE] Eval  14  Energy = -4.09621866 Ha
+  [VQE] Eval  15  Energy = -4.09622141 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.24  0.39  0.38 -0.  ])
+[Iteration 17] Embedding total energy = -693.34343974 Ha
+  [VQE] Eval   1  Energy = -3.94885670 Ha
+  [VQE] Eval   2  Energy = -3.99264673 Ha
+  [VQE] Eval   3  Energy = -4.05651164 Ha
+  [VQE] Eval   4  Energy = -4.08350705 Ha
+  [VQE] Eval   5  Energy = -4.08980826 Ha
+  [VQE] Eval   6  Energy = -4.09324308 Ha
+  [VQE] Eval   7  Energy = -4.09491648 Ha
+  [VQE] Eval   8  Energy = -4.09593420 Ha
+  [VQE] Eval   9  Energy = -4.09598296 Ha
+  [VQE] Eval  10  Energy = -4.09622754 Ha
+  [VQE] Eval  11  Energy = -4.09627112 Ha
+  [VQE] Eval  12  Energy = -4.09636007 Ha
+  [VQE] Eval  13  Energy = -4.09638149 Ha
+  [VQE] Eval  14  Energy = -4.09639487 Ha
+  [VQE] Eval  15  Energy = -4.09639712 Ha
+[DIIS] Extrapolating density (coeffs: [0.26 0.38 0.36 0.  ])
+[Iteration 18] Embedding total energy = -693.34364878 Ha
+  [VQE] Eval   1  Energy = -3.94893017 Ha
+  [VQE] Eval   2  Energy = -3.99164882 Ha
+  [VQE] Eval   3  Energy = -4.05551603 Ha
+  [VQE] Eval   4  Energy = -4.08237303 Ha
+  [VQE] Eval   5  Energy = -4.08880267 Ha
+  [VQE] Eval   6  Energy = -4.09214287 Ha
+  [VQE] Eval   7  Energy = -4.09382953 Ha
+  [VQE] Eval   8  Energy = -4.09478228 Ha
+  [VQE] Eval   9  Energy = -4.09488415 Ha
+  [VQE] Eval  10  Energy = -4.09507188 Ha
+  [VQE] Eval  11  Energy = -4.09511963 Ha
+  [VQE] Eval  12  Energy = -4.09519850 Ha
+  [VQE] Eval  13  Energy = -4.09522647 Ha
+  [VQE] Eval  14  Energy = -4.09523092 Ha
+  [VQE] Eval  15  Energy = -4.09523843 Ha
+  [VQE] Eval  16  Energy = -4.09523930 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.32  0.34  0.34 -0.  ])
+[Iteration 19] Embedding total energy = -693.34230229 Ha
+  [VQE] Eval   1  Energy = -3.94888538 Ha
+  [VQE] Eval   2  Energy = -3.99228702 Ha
+  [VQE] Eval   3  Energy = -4.05615310 Ha
+  [VQE] Eval   4  Energy = -4.08309793 Ha
+  [VQE] Eval   5  Energy = -4.08944676 Ha
+  [VQE] Eval   6  Energy = -4.09284695 Ha
+  [VQE] Eval   7  Energy = -4.09452510 Ha
+  [VQE] Eval   8  Energy = -4.09551913 Ha
+  [VQE] Eval   9  Energy = -4.09559137 Ha
+  [VQE] Eval  10  Energy = -4.09581200 Ha
+  [VQE] Eval  11  Energy = -4.09585687 Ha
+  [VQE] Eval  12  Energy = -4.09594233 Ha
+  [VQE] Eval  13  Energy = -4.09596652 Ha
+  [VQE] Eval  14  Energy = -4.09597693 Ha
+  [VQE] Eval  15  Energy = -4.09598053 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 20] Embedding total energy = -693.34316261 Ha
+  [VQE] Eval   1  Energy = -3.94888731 Ha
+  [VQE] Eval   2  Energy = -3.99224147 Ha
+  [VQE] Eval   3  Energy = -4.05610744 Ha
+  [VQE] Eval   4  Energy = -4.08304611 Ha
+  [VQE] Eval   5  Energy = -4.08940076 Ha
+  [VQE] Eval   6  Energy = -4.09279675 Ha
+  [VQE] Eval   7  Energy = -4.09447550 Ha
+  [VQE] Eval   8  Energy = -4.09546666 Ha
+  [VQE] Eval   9  Energy = -4.09554143 Ha
+  [VQE] Eval  10  Energy = -4.09575941 Ha
+  [VQE] Eval  11  Energy = -4.09580445 Ha
+  [VQE] Eval  12  Energy = -4.09588947 Ha
+  [VQE] Eval  13  Energy = -4.09591397 Ha
+  [VQE] Eval  14  Energy = -4.09592399 Ha
+  [VQE] Eval  15  Energy = -4.09592780 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 21] Embedding total energy = -693.34310224 Ha
+  [VQE] Eval   1  Energy = -3.94889093 Ha
+  [VQE] Eval   2  Energy = -3.99219920 Ha
+  [VQE] Eval   3  Energy = -4.05606534 Ha
+  [VQE] Eval   4  Energy = -4.08299807 Ha
+  [VQE] Eval   5  Energy = -4.08935824 Ha
+  [VQE] Eval   6  Energy = -4.09275014 Ha
+  [VQE] Eval   7  Energy = -4.09442946 Ha
+  [VQE] Eval   8  Energy = -4.09541781 Ha
+  [VQE] Eval   9  Energy = -4.09549497 Ha
+  [VQE] Eval  10  Energy = -4.09571042 Ha
+  [VQE] Eval  11  Energy = -4.09575563 Ha
+  [VQE] Eval  12  Energy = -4.09584023 Ha
+  [VQE] Eval  13  Energy = -4.09586501 Ha
+  [VQE] Eval  14  Energy = -4.09587466 Ha
+  [VQE] Eval  15  Energy = -4.09587869 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 22] Embedding total energy = -693.34304478 Ha
+  [VQE] Eval   1  Energy = -3.94890088 Ha
+  [VQE] Eval   2  Energy = -3.99205998 Ha
+  [VQE] Eval   3  Energy = -4.05592639 Ha
+  [VQE] Eval   4  Energy = -4.08283992 Ha
+  [VQE] Eval   5  Energy = -4.08921798 Ha
+  [VQE] Eval   6  Energy = -4.09259670 Ha
+  [VQE] Eval   7  Energy = -4.09427787 Ha
+  [VQE] Eval   8  Energy = -4.09525718 Ha
+  [VQE] Eval   9  Energy = -4.09534159 Ha
+  [VQE] Eval  10  Energy = -4.09554924 Ha
+  [VQE] Eval  11  Energy = -4.09559504 Ha
+  [VQE] Eval  12  Energy = -4.09567823 Ha
+  [VQE] Eval  13  Energy = -4.09570391 Ha
+  [VQE] Eval  14  Energy = -4.09571230 Ha
+  [VQE] Eval  15  Energy = -4.09571709 Ha
+  [VQE] Eval  16  Energy = -4.09571807 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 23] Embedding total energy = -693.34285805 Ha
+  [VQE] Eval   1  Energy = -3.94888790 Ha
+  [VQE] Eval   2  Energy = -3.99223915 Ha
+  [VQE] Eval   3  Energy = -4.05610519 Ha
+  [VQE] Eval   4  Energy = -4.08304348 Ha
+  [VQE] Eval   5  Energy = -4.08939846 Ha
+  [VQE] Eval   6  Energy = -4.09279418 Ha
+  [VQE] Eval   7  Energy = -4.09447297 Ha
+  [VQE] Eval   8  Energy = -4.09546394 Ha
+  [VQE] Eval   9  Energy = -4.09553887 Ha
+  [VQE] Eval  10  Energy = -4.09575668 Ha
+  [VQE] Eval  11  Energy = -4.09580173 Ha
+  [VQE] Eval  12  Energy = -4.09588673 Ha
+  [VQE] Eval  13  Energy = -4.09591124 Ha
+  [VQE] Eval  14  Energy = -4.09592124 Ha
+  [VQE] Eval  15  Energy = -4.09592507 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 24] Embedding total energy = -693.34309878 Ha
+  [VQE] Eval   1  Energy = -3.94889305 Ha
+  [VQE] Eval   2  Energy = -3.99216870 Ha
+  [VQE] Eval   3  Energy = -4.05603489 Ha
+  [VQE] Eval   4  Energy = -4.08296342 Ha
+  [VQE] Eval   5  Energy = -4.08932752 Ha
+  [VQE] Eval   6  Energy = -4.09271654 Ha
+  [VQE] Eval   7  Energy = -4.09439626 Ha
+  [VQE] Eval   8  Energy = -4.09538264 Ha
+  [VQE] Eval   9  Energy = -4.09546144 Ha
+  [VQE] Eval  10  Energy = -4.09567514 Ha
+  [VQE] Eval  11  Energy = -4.09572048 Ha
+  [VQE] Eval  12  Energy = -4.09580477 Ha
+  [VQE] Eval  13  Energy = -4.09582976 Ha
+  [VQE] Eval  14  Energy = -4.09583913 Ha
+  [VQE] Eval  15  Energy = -4.09584332 Ha
+  [VQE] Eval  16  Energy = -4.09584434 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 25] Embedding total energy = -693.34300475 Ha
+  [VQE] Eval   1  Energy = -3.94889323 Ha
+  [VQE] Eval   2  Energy = -3.99216593 Ha
+  [VQE] Eval   3  Energy = -4.05603212 Ha
+  [VQE] Eval   4  Energy = -4.08296027 Ha
+  [VQE] Eval   5  Energy = -4.08932473 Ha
+  [VQE] Eval   6  Energy = -4.09271349 Ha
+  [VQE] Eval   7  Energy = -4.09439324 Ha
+  [VQE] Eval   8  Energy = -4.09537945 Ha
+  [VQE] Eval   9  Energy = -4.09545839 Ha
+  [VQE] Eval  10  Energy = -4.09567194 Ha
+  [VQE] Eval  11  Energy = -4.09571729 Ha
+  [VQE] Eval  12  Energy = -4.09580155 Ha
+  [VQE] Eval  13  Energy = -4.09582656 Ha
+  [VQE] Eval  14  Energy = -4.09583591 Ha
+  [VQE] Eval  15  Energy = -4.09584011 Ha
+  [VQE] Eval  16  Energy = -4.09584113 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 26] Embedding total energy = -693.34300103 Ha
+  [VQE] Eval   1  Energy = -3.94889395 Ha
+  [VQE] Eval   2  Energy = -3.99215535 Ha
+  [VQE] Eval   3  Energy = -4.05602156 Ha
+  [VQE] Eval   4  Energy = -4.08294826 Ha
+  [VQE] Eval   5  Energy = -4.08931407 Ha
+  [VQE] Eval   6  Energy = -4.09270183 Ha
+  [VQE] Eval   7  Energy = -4.09438173 Ha
+  [VQE] Eval   8  Energy = -4.09536725 Ha
+  [VQE] Eval   9  Energy = -4.09544676 Ha
+  [VQE] Eval  10  Energy = -4.09565970 Ha
+  [VQE] Eval  11  Energy = -4.09570509 Ha
+  [VQE] Eval  12  Energy = -4.09578925 Ha
+  [VQE] Eval  13  Energy = -4.09581433 Ha
+  [VQE] Eval  14  Energy = -4.09582358 Ha
+  [VQE] Eval  15  Energy = -4.09582784 Ha
+  [VQE] Eval  16  Energy = -4.09582885 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 27] Embedding total energy = -693.34298680 Ha
+  [VQE] Eval   1  Energy = -3.94889139 Ha
+  [VQE] Eval   2  Energy = -3.99219162 Ha
+  [VQE] Eval   3  Energy = -4.05605776 Ha
+  [VQE] Eval   4  Energy = -4.08298946 Ha
+  [VQE] Eval   5  Energy = -4.08935060 Ha
+  [VQE] Eval   6  Energy = -4.09274180 Ha
+  [VQE] Eval   7  Energy = -4.09442121 Ha
+  [VQE] Eval   8  Energy = -4.09540908 Ha
+  [VQE] Eval   9  Energy = -4.09548665 Ha
+  [VQE] Eval  10  Energy = -4.09570167 Ha
+  [VQE] Eval  11  Energy = -4.09574691 Ha
+  [VQE] Eval  12  Energy = -4.09583143 Ha
+  [VQE] Eval  13  Energy = -4.09585627 Ha
+  [VQE] Eval  14  Energy = -4.09586585 Ha
+  [VQE] Eval  15  Energy = -4.09586991 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 28] Embedding total energy = -693.34303464 Ha
+  [VQE] Eval   1  Energy = -3.94889341 Ha
+  [VQE] Eval   2  Energy = -3.99216321 Ha
+  [VQE] Eval   3  Energy = -4.05602941 Ha
+  [VQE] Eval   4  Energy = -4.08295719 Ha
+  [VQE] Eval   5  Energy = -4.08932199 Ha
+  [VQE] Eval   6  Energy = -4.09271050 Ha
+  [VQE] Eval   7  Energy = -4.09439029 Ha
+  [VQE] Eval   8  Energy = -4.09537631 Ha
+  [VQE] Eval   9  Energy = -4.09545541 Ha
+  [VQE] Eval  10  Energy = -4.09566880 Ha
+  [VQE] Eval  11  Energy = -4.09571416 Ha
+  [VQE] Eval  12  Energy = -4.09579839 Ha
+  [VQE] Eval  13  Energy = -4.09582342 Ha
+  [VQE] Eval  14  Energy = -4.09583274 Ha
+  [VQE] Eval  15  Energy = -4.09583696 Ha
+  [VQE] Eval  16  Energy = -4.09583798 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 29] Embedding total energy = -693.34299738 Ha
+  [VQE] Eval   1  Energy = -3.94889286 Ha
+  [VQE] Eval   2  Energy = -3.99217086 Ha
+  [VQE] Eval   3  Energy = -4.05603704 Ha
+  [VQE] Eval   4  Energy = -4.08296588 Ha
+  [VQE] Eval   5  Energy = -4.08932970 Ha
+  [VQE] Eval   6  Energy = -4.09271893 Ha
+  [VQE] Eval   7  Energy = -4.09439862 Ha
+  [VQE] Eval   8  Energy = -4.09538514 Ha
+  [VQE] Eval   9  Energy = -4.09546382 Ha
+  [VQE] Eval  10  Energy = -4.09567765 Ha
+  [VQE] Eval  11  Energy = -4.09572298 Ha
+  [VQE] Eval  12  Energy = -4.09580729 Ha
+  [VQE] Eval  13  Energy = -4.09583227 Ha
+  [VQE] Eval  14  Energy = -4.09584166 Ha
+  [VQE] Eval  15  Energy = -4.09584584 Ha
+  [VQE] Eval  16  Energy = -4.09584686 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 30] Embedding total energy = -693.34300770 Ha
+  [VQE] Eval   1  Energy = -3.94889292 Ha
+  [VQE] Eval   2  Energy = -3.99217011 Ha
+  [VQE] Eval   3  Energy = -4.05603629 Ha
+  [VQE] Eval   4  Energy = -4.08296502 Ha
+  [VQE] Eval   5  Energy = -4.08932894 Ha
+  [VQE] Eval   6  Energy = -4.09271810 Ha
+  [VQE] Eval   7  Energy = -4.09439780 Ha
+  [VQE] Eval   8  Energy = -4.09538427 Ha
+  [VQE] Eval   9  Energy = -4.09546300 Ha
+  [VQE] Eval  10  Energy = -4.09567678 Ha
+  [VQE] Eval  11  Energy = -4.09572211 Ha
+  [VQE] Eval  12  Energy = -4.09580642 Ha
+  [VQE] Eval  13  Energy = -4.09583140 Ha
+  [VQE] Eval  14  Energy = -4.09584078 Ha
+  [VQE] Eval  15  Energy = -4.09584496 Ha
+  [VQE] Eval  16  Energy = -4.09584598 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 31] Embedding total energy = -693.34300668 Ha
+  [VQE] Eval   1  Energy = -3.94889256 Ha
+  [VQE] Eval   2  Energy = -3.99217518 Ha
+  [VQE] Eval   3  Energy = -4.05604135 Ha
+  [VQE] Eval   4  Energy = -4.08297078 Ha
+  [VQE] Eval   5  Energy = -4.08933404 Ha
+  [VQE] Eval   6  Energy = -4.09272368 Ha
+  [VQE] Eval   7  Energy = -4.09440332 Ha
+  [VQE] Eval   8  Energy = -4.09539012 Ha
+  [VQE] Eval   9  Energy = -4.09546857 Ha
+  [VQE] Eval  10  Energy = -4.09568264 Ha
+  [VQE] Eval  11  Energy = -4.09572795 Ha
+  [VQE] Eval  12  Energy = -4.09581231 Ha
+  [VQE] Eval  13  Energy = -4.09583726 Ha
+  [VQE] Eval  14  Energy = -4.09584669 Ha
+  [VQE] Eval  15  Energy = -4.09585084 Ha
+  [VQE] Eval  16  Energy = -4.09585186 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 32] Embedding total energy = -693.34301351 Ha
+  [VQE] Eval   1  Energy = -3.94889307 Ha
+  [VQE] Eval   2  Energy = -3.99216803 Ha
+  [VQE] Eval   3  Energy = -4.05603422 Ha
+  [VQE] Eval   4  Energy = -4.08296266 Ha
+  [VQE] Eval   5  Energy = -4.08932685 Ha
+  [VQE] Eval   6  Energy = -4.09271581 Ha
+  [VQE] Eval   7  Energy = -4.09439554 Ha
+  [VQE] Eval   8  Energy = -4.09538187 Ha
+  [VQE] Eval   9  Energy = -4.09546071 Ha
+  [VQE] Eval  10  Energy = -4.09567437 Ha
+  [VQE] Eval  11  Energy = -4.09571971 Ha
+  [VQE] Eval  12  Energy = -4.09580400 Ha
+  [VQE] Eval  13  Energy = -4.09582899 Ha
+  [VQE] Eval  14  Energy = -4.09583836 Ha
+  [VQE] Eval  15  Energy = -4.09584255 Ha
+  [VQE] Eval  16  Energy = -4.09584357 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 33] Embedding total energy = -693.34300388 Ha
+  [VQE] Eval   1  Energy = -3.94889278 Ha
+  [VQE] Eval   2  Energy = -3.99217204 Ha
+  [VQE] Eval   3  Energy = -4.05603822 Ha
+  [VQE] Eval   4  Energy = -4.08296722 Ha
+  [VQE] Eval   5  Energy = -4.08933088 Ha
+  [VQE] Eval   6  Energy = -4.09272022 Ha
+  [VQE] Eval   7  Energy = -4.09439990 Ha
+  [VQE] Eval   8  Energy = -4.09538650 Ha
+  [VQE] Eval   9  Energy = -4.09546512 Ha
+  [VQE] Eval  10  Energy = -4.09567901 Ha
+  [VQE] Eval  11  Energy = -4.09572434 Ha
+  [VQE] Eval  12  Energy = -4.09580866 Ha
+  [VQE] Eval  13  Energy = -4.09583363 Ha
+  [VQE] Eval  14  Energy = -4.09584303 Ha
+  [VQE] Eval  15  Energy = -4.09584720 Ha
+  [VQE] Eval  16  Energy = -4.09584822 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 34] Embedding total energy = -693.34300928 Ha
+  [VQE] Eval   1  Energy = -3.94889285 Ha
+  [VQE] Eval   2  Energy = -3.99217107 Ha
+  [VQE] Eval   3  Energy = -4.05603726 Ha
+  [VQE] Eval   4  Energy = -4.08296612 Ha
+  [VQE] Eval   5  Energy = -4.08932991 Ha
+  [VQE] Eval   6  Energy = -4.09271916 Ha
+  [VQE] Eval   7  Energy = -4.09439885 Ha
+  [VQE] Eval   8  Energy = -4.09538539 Ha
+  [VQE] Eval   9  Energy = -4.09546406 Ha
+  [VQE] Eval  10  Energy = -4.09567790 Ha
+  [VQE] Eval  11  Energy = -4.09572322 Ha
+  [VQE] Eval  12  Energy = -4.09580754 Ha
+  [VQE] Eval  13  Energy = -4.09583251 Ha
+  [VQE] Eval  14  Energy = -4.09584191 Ha
+  [VQE] Eval  15  Energy = -4.09584608 Ha
+  [VQE] Eval  16  Energy = -4.09584710 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 35] Embedding total energy = -693.34300798 Ha
+  [VQE] Eval   1  Energy = -3.94889280 Ha
+  [VQE] Eval   2  Energy = -3.99217172 Ha
+  [VQE] Eval   3  Energy = -4.05603790 Ha
+  [VQE] Eval   4  Energy = -4.08296686 Ha
+  [VQE] Eval   5  Energy = -4.08933057 Ha
+  [VQE] Eval   6  Energy = -4.09271988 Ha
+  [VQE] Eval   7  Energy = -4.09439956 Ha
+  [VQE] Eval   8  Energy = -4.09538614 Ha
+  [VQE] Eval   9  Energy = -4.09546477 Ha
+  [VQE] Eval  10  Energy = -4.09567865 Ha
+  [VQE] Eval  11  Energy = -4.09572397 Ha
+  [VQE] Eval  12  Energy = -4.09580830 Ha
+  [VQE] Eval  13  Energy = -4.09583326 Ha
+  [VQE] Eval  14  Energy = -4.09584266 Ha
+  [VQE] Eval  15  Energy = -4.09584684 Ha
+  [VQE] Eval  16  Energy = -4.09584786 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 36] Embedding total energy = -693.34300886 Ha
+[Converged] change 8.766e-07 < 1e-06
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1806.033533342633
+  - computed part:      -4.095847856245
+  - ActiveSpaceTransformer extracted energy part: -1801.937685486389
+~ Nuclear repulsion energy (Hartree): 1112.690524483842
+> Total ground state energy (Hartree): -693.343008858791
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.878 S^2: 1.649 M: -0.000
+
+================ PROFILING SUMMARY ================
+DFT reference (SCF) time     : 49.88 s
+DFT energy evaluations time : 280.46 s
+DFT Fock build time         : 268.67 s
+Hybrid embedding overhead  : 18202.63 s
+Quantum VQE time           : 11695.36 s
+--------------------------------------------------
+Total measured time        : 30497.00 s
+
+Memory snapshots (RSS, MB):
+DFT_reference_start_MB        :   146.07 MB
+DFT_reference_end_MB          :   471.42 MB
+Embedding_loop_total_start_MB :   471.42 MB
+DFT_energy_start_MB           :  7930.05 MB
+DFT_energy_end_MB             :  7930.05 MB
+DFT_fock_start_MB             :  7930.05 MB
+DFT_fock_end_MB               :  7930.05 MB
+Quantum_VQE_start_MB          :  7930.05 MB
+Quantum_VQE_end_MB            :  7929.80 MB
+Embedding_loop_total_end_MB   :  7929.80 MB
+==================================================
+Job finished at: Tue Apr 28 08:40:28 IST 2026
