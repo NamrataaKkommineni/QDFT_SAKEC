@@ -4,12 +4,13 @@ This directory contains implementations of the **IITB Compass Ansatz** within th
 
 Unlike conventional UCCSD-based workflows that optimize the complete excitation manifold simultaneously, the IITB framework employs an **adaptive excitation-selection strategy** to construct compact, chemically motivated variational circuits. The methodology first identifies the most energetically significant excitations through a sequence of screening VQE calculations before assembling the final ansatz.
 
-The framework has since evolved into two complementary implementations:
+The framework has since evolved into three complementary implementations:
 
+* **Core Framework**, providing reusable ansatz construction and embedding utilities.
 * **Singles–Doubles (SD) Ansatz**, based on adaptive excitation pruning and ranking.
 * **Pseudo-Triples Ansatz**, which approximates triple excitations through the coupling of carefully selected double excitations.
 
-Both workflows operate within the same self-consistent DFT embedding framework and employ **energy-only convergence** during embedding iterations.
+These workflows operate within the same self-consistent DFT embedding framework and employ **energy-only convergence** during embedding iterations.
 
 ---
 
@@ -47,6 +48,10 @@ Embedding iterations continue until the prescribed total energy convergence thre
 ```text
 IITB Ansatz/
 │
+├── Core/
+│   ├── iitb_ansatz.py
+│   └── IITB_Embedding.py
+│
 ├── singles_doubles/
 │   ├── IITB_sd_otherFunctional.py
 │   ├── IITB_sd_lda_rs.py
@@ -59,7 +64,53 @@ IITB Ansatz/
 
 ---
 
-# 1. Singles–Doubles Framework (`singles_doubles/`)
+# 1. Core Framework (`Core/`)
+
+The `Core` directory contains reusable components that decouple ansatz generation from the DFT embedding workflow. These modules provide a common interface for constructing adaptive IITB ansätze and executing self-consistent embedding calculations, allowing the same implementation to be shared across multiple exchange-correlation functionals and ansatz variants.
+
+---
+
+## `iitb_ansatz.py`
+
+This module implements the reusable ansatz-construction algorithms used throughout the IITB framework.
+
+### Implemented Builders
+
+- Adaptive Singles–Doubles (SD) Ansatz
+- Adaptive Pseudo-Triples Ansatz
+
+The module performs:
+
+- Double-excitation generation
+- Independent VQE screening
+- Energy-based excitation pruning
+- Importance ranking
+- Construction of the final variational circuit
+- Initialization of variational parameters
+
+Both ansatz builders return a fully constructed `EvolvedOperatorAnsatz` together with a physically motivated initial parameter vector for the production VQE optimization.
+
+---
+
+## `IITB_Embedding.py`
+
+A generic embedding driver demonstrating how the reusable ansatz builders are integrated into the self-consistent DFT embedding framework.
+
+The implementation includes:
+
+- Self-consistent DFT embedding
+- Active-space transformation
+- VQE optimization
+- Dual support for SD and Pseudo-Triples ansätze
+- HOMO–LUMO analysis
+- Participation Ratio (PR) analysis
+- Runtime and memory profiling
+
+The ansatz can be selected by changing a single configuration option, allowing identical embedding workflows to be executed with different adaptive ansatz constructions.
+
+---
+
+# 2. Singles–Doubles Framework (`singles_doubles/`)
 
 This implementation constructs a compact variational ansatz through an adaptive excitation-selection procedure.
 
@@ -190,7 +241,7 @@ within the same reduced variational framework.
 
 ---
 
-# 2. Pseudo-Triples Framework (`Triples/`)
+# 3. Pseudo-Triples Framework (`Triples/`)
 
 The Triples implementation extends the adaptive Singles–Doubles methodology by introducing an approximate treatment of triple excitations.
 
