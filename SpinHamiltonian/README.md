@@ -226,6 +226,73 @@ The resulting output can be copied directly into reports, notebooks, or benchmar
 
 ---
 
+# Reference β Coefficients
+
+The following β coefficients were computed using this utility following the
+Kuroiwa–Nakagawa parameterization methodology with CAM-B3LYP as the reference
+exchange-correlation functional.
+
+These values are intended for use with the active-space spin-penalty Hamiltonian
+implemented throughout the QDFT framework.
+
+## Polycyclic Aromatic Hydrocarbons (PAHs)
+
+| Molecule | Recommended β |
+|----------|--------------:|
+| Benzene | **0.33828** |
+| Naphthalene | **0.21432** |
+| Anthracene | **0.14648** |
+| Tetracene | **0.10110** |
+| Pentacene | **0.06941** |
+| Pyrene | **0.16656** |
+| Chrysene | **0.20187** |
+| Triphenylene | **0.27670** |
+| Phenanthrene | **0.21763** |
+| Perylene | **0.12863** |
+| Benz[a]anthracene | **0.16708** |
+
+---
+
+## Heterocyclic & Extended Systems
+
+| Molecule | Recommended β |
+|----------|--------------:|
+| Pyridine | **0.31311** |
+| Porphyrin | **0.11540** |
+
+---
+
+## Small Molecular Benchmarks
+
+| Molecule | Recommended β |
+|----------|--------------:|
+| H₂ | **0.72423** |
+| H₂O | **0.50489** |
+
+---
+
+### Observed Trend
+
+The computed β coefficients exhibit a systematic decrease with increasing
+π-conjugation in linear acene systems:
+
+| Molecule | β |
+|----------|---:|
+| Benzene | 0.33828 |
+| Naphthalene | 0.21432 |
+| Anthracene | 0.14648 |
+| Tetracene | 0.10110 |
+| Pentacene | 0.06941 |
+
+This trend reflects the reduction in singlet-triplet energy separation as the
+conjugated π-system becomes larger, resulting in a correspondingly smaller
+spin-penalty coefficient.
+
+For non-linear PAHs and heterocyclic systems, the β value depends on the
+underlying electronic structure and should be determined individually using this
+utility.
+---
+
 # Integration with Production Workflows
 
 The calculated coefficient should be transferred into production active-space embedding codes that implement spin-constrained Hamiltonians.
@@ -247,15 +314,14 @@ within the filename, including:
 
 # Recommended Usage
 
-For each molecular system:
+For each new molecular system:
 
-1. Run this utility prior to production simulations.
-2. Record the generated `β` value.
-3. Update the corresponding spin-penalty parameter within the production workflow.
-4. Execute the hybrid embedding calculation using the calibrated coefficient.
+1. Check whether a recommended β value already exists in the reference table above.
+2. If unavailable, execute this utility to compute a molecule-specific coefficient.
+3. Update the corresponding spin-penalty parameter in the production active-space workflow.
+4. Run the hybrid embedding calculation using the calibrated β value.
 
-Because spin splittings are molecule-dependent, a unique `β` value should generally be determined for every molecular system under investigation.
-
+Because spin splittings are molecule-dependent, β values should generally not be transferred between chemically unrelated systems.
 ---
 
 # Notes
@@ -264,5 +330,6 @@ Because spin splittings are molecule-dependent, a unique `β` value should gener
 * The generated coefficient is molecule-specific and should not be assumed transferable across unrelated systems.
 * CAM-B3LYP serves as the default reference functional but can be replaced when alternative exchange-correlation treatments are desired.
 * The resulting `β` values are designed for use with the active-space spin-penalty Hamiltonian implementations deployed throughout the QDFT framework.
+* The reference β coefficients listed above were computed using CAM-B3LYP and are intended for the corresponding production QDFT workflows.
 
 By automating spin-gap analysis and coefficient generation, this utility provides a consistent and reproducible approach for configuring spin-constrained quantum embedding calculations across a wide range of open-shell molecular systems.
