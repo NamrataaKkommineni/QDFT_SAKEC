@@ -1,0 +1,466 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 475469
+SLURM_JOB_NAME = PL_Tetracene_v3_B3LYP
+SLURM_JOB_NODELIST = rpgpu027
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = gpu
+SLURM_TASK_PID = 925799
+SLURM_SUBMIT_DIR = /home/samritm/tejjan
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 925799
+==========================================
+Job started at: Wed Apr 15 19:17:22 IST 2026
+Node: rpgpu027
+CUDA_VISIBLE_DEVICES: 0
+>> Building PySCF molecule...
+>> Intercepting Qiskit Nature: Running gpu4pyscf on GPU...
+converged SCF energy = -693.151295379201
+>> Transferring GPU matrices back to CPU for Qiskit Mapper...
+
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 903 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94369700 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87634641 Ha | ΔE: 0.06735059
+  [VQE] Iteration:    2 | Energy:  -3.94370135 Ha | ΔE: 0.06735494
+  [VQE] Iteration:    3 | Energy:  -3.94370196 Ha | ΔE: 0.00000061
+  [VQE Converged] ΔE (6.130e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94370196 Ha
+[Damping] Linear mix with alpha=0.283
+[Iteration 1] Embedding total energy = -693.24396039 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94564842 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87667152 Ha | ΔE: 0.06897690
+  [VQE] Iteration:    2 | Energy:  -3.94565283 Ha | ΔE: 0.06898131
+  [VQE] Iteration:    3 | Energy:  -3.94565345 Ha | ΔE: 0.00000062
+  [VQE Converged] ΔE (6.174e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94565345 Ha
+[Damping] Linear mix with alpha=0.231
+[Iteration 2] Embedding total energy = -693.21502521 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94676636 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87653810 Ha | ΔE: 0.07022826
+  [VQE] Iteration:    2 | Energy:  -3.94677080 Ha | ΔE: 0.07023270
+  [VQE] Iteration:    3 | Energy:  -3.94677142 Ha | ΔE: 0.00000062
+  [VQE Converged] ΔE (6.216e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94677142 Ha
+[Damping] Linear mix with alpha=0.200
+[Iteration 3] Embedding total energy = -693.20308106 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94750354 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87633916 Ha | ΔE: 0.07116439
+  [VQE] Iteration:    2 | Energy:  -3.94750800 Ha | ΔE: 0.07116885
+  [VQE] Iteration:    3 | Energy:  -3.94750863 Ha | ΔE: 0.00000063
+  [VQE Converged] ΔE (6.252e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94750863 Ha
+[Damping] Linear mix with alpha=0.179
+[Iteration 4] Embedding total energy = -693.19697370 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94802805 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87614842 Ha | ΔE: 0.07187963
+  [VQE] Iteration:    2 | Energy:  -3.94803252 Ha | ΔE: 0.07188410
+  [VQE] Iteration:    3 | Energy:  -3.94803315 Ha | ΔE: 0.00000063
+  [VQE Converged] ΔE (6.281e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94803315 Ha
+[Damping] Linear mix with alpha=0.163
+[Iteration 5] Embedding total energy = -693.19347360 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94841980 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87598097 Ha | ΔE: 0.07243883
+  [VQE] Iteration:    2 | Energy:  -3.94842428 Ha | ΔE: 0.07244332
+  [VQE] Iteration:    3 | Energy:  -3.94842491 Ha | ΔE: 0.00000063
+  [VQE Converged] ΔE (6.306e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94842491 Ha
+[Damping] Linear mix with alpha=0.151
+[Iteration 6] Embedding total energy = -693.19131465 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94872253 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87583757 Ha | ΔE: 0.07288495
+  [VQE] Iteration:    2 | Energy:  -3.94872702 Ha | ΔE: 0.07288945
+  [VQE] Iteration:    3 | Energy:  -3.94872765 Ha | ΔE: 0.00000063
+  [VQE Converged] ΔE (6.326e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94872765 Ha
+[Damping] Linear mix with alpha=0.141
+[Iteration 7] Embedding total energy = -693.18991201 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94896246 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87571561 Ha | ΔE: 0.07324686
+  [VQE] Iteration:    2 | Energy:  -3.94896696 Ha | ΔE: 0.07325136
+  [VQE] Iteration:    3 | Energy:  -3.94896760 Ha | ΔE: 0.00000063
+  [VQE Converged] ΔE (6.344e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94896760 Ha
+[Damping] Linear mix with alpha=0.133
+[Iteration 8] Embedding total energy = -693.18896505 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94915645 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87561179 Ha | ΔE: 0.07354466
+  [VQE] Iteration:    2 | Energy:  -3.94916096 Ha | ΔE: 0.07354916
+  [VQE] Iteration:    3 | Energy:  -3.94916159 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.358e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94916159 Ha
+[DIIS] Extrapolating density (coeffs: [-0.36  0.52  1.01 -0.17])
+[Iteration 9] Embedding total energy = -693.18830822 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94900164 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87569560 Ha | ΔE: 0.07330604
+  [VQE] Iteration:    2 | Energy:  -3.94900614 Ha | ΔE: 0.07331054
+  [VQE] Iteration:    3 | Energy:  -3.94900678 Ha | ΔE: 0.00000063
+  [VQE Converged] ΔE (6.346e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94900678 Ha
+[DIIS] Extrapolating density (coeffs: [-0.32  0.63  0.65  0.04])
+[Iteration 10] Embedding total energy = -693.18882247 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94916551 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87560720 Ha | ΔE: 0.07355832
+  [VQE] Iteration:    2 | Energy:  -3.94917002 Ha | ΔE: 0.07356282
+  [VQE] Iteration:    3 | Energy:  -3.94917066 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.359e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94917066 Ha
+[DIIS] Extrapolating density (coeffs: [-0.08  0.59  0.47  0.02])
+[Iteration 11] Embedding total energy = -693.18827688 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94909970 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87564306 Ha | ΔE: 0.07345664
+  [VQE] Iteration:    2 | Energy:  -3.94910420 Ha | ΔE: 0.07346114
+  [VQE] Iteration:    3 | Energy:  -3.94910484 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.354e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94910484 Ha
+[DIIS] Extrapolating density (coeffs: [0.23 0.31 0.45 0.01])
+[Iteration 12] Embedding total energy = -693.18848881 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94911204 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563637 Ha | ΔE: 0.07347567
+  [VQE] Iteration:    2 | Energy:  -3.94911654 Ha | ΔE: 0.07348017
+  [VQE] Iteration:    3 | Energy:  -3.94911718 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911718 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.3   0.38  0.35 -0.02])
+[Iteration 13] Embedding total energy = -693.18844732 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94909508 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87564557 Ha | ΔE: 0.07344951
+  [VQE] Iteration:    2 | Energy:  -3.94909959 Ha | ΔE: 0.07345402
+  [VQE] Iteration:    3 | Energy:  -3.94910022 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.353e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94910022 Ha
+[DIIS] Extrapolating density (coeffs: [0.34 0.32 0.33 0.02])
+[Iteration 14] Embedding total energy = -693.18850142 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94912575 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87562891 Ha | ΔE: 0.07349684
+  [VQE] Iteration:    2 | Energy:  -3.94913025 Ha | ΔE: 0.07350134
+  [VQE] Iteration:    3 | Energy:  -3.94913089 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.356e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94913089 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.34  0.33 -0.01])
+[Iteration 15] Embedding total energy = -693.18840222 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910223 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87564169 Ha | ΔE: 0.07346054
+  [VQE] Iteration:    2 | Energy:  -3.94910673 Ha | ΔE: 0.07346504
+  [VQE] Iteration:    3 | Energy:  -3.94910737 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.354e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94910737 Ha
+[DIIS] Extrapolating density (coeffs: [0.34 0.32 0.34 0.  ])
+[Iteration 16] Embedding total energy = -693.18848032 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94911114 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563686 Ha | ΔE: 0.07347428
+  [VQE] Iteration:    2 | Energy:  -3.94911565 Ha | ΔE: 0.07347879
+  [VQE] Iteration:    3 | Energy:  -3.94911628 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911628 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.34  0.33 -0.  ])
+[Iteration 17] Embedding total energy = -693.18845007 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910790 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563862 Ha | ΔE: 0.07346928
+  [VQE] Iteration:    2 | Energy:  -3.94911240 Ha | ΔE: 0.07347378
+  [VQE] Iteration:    3 | Energy:  -3.94911304 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.354e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911304 Ha
+[DIIS] Extrapolating density (coeffs: [0.34 0.33 0.33 0.  ])
+[Iteration 18] Embedding total energy = -693.18846131 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94911311 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563579 Ha | ΔE: 0.07347733
+  [VQE] Iteration:    2 | Energy:  -3.94911762 Ha | ΔE: 0.07348183
+  [VQE] Iteration:    3 | Energy:  -3.94911825 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911825 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.34  0.33 -0.  ])
+[Iteration 19] Embedding total energy = -693.18844472 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910709 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563906 Ha | ΔE: 0.07346803
+  [VQE] Iteration:    2 | Energy:  -3.94911159 Ha | ΔE: 0.07347253
+  [VQE] Iteration:    3 | Energy:  -3.94911223 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.354e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911223 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 20] Embedding total energy = -693.18846403 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94911072 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563709 Ha | ΔE: 0.07347364
+  [VQE] Iteration:    2 | Energy:  -3.94911523 Ha | ΔE: 0.07347814
+  [VQE] Iteration:    3 | Energy:  -3.94911586 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911586 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.34  0.33 -0.  ])
+[Iteration 21] Embedding total energy = -693.18845081 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910938 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563782 Ha | ΔE: 0.07347156
+  [VQE] Iteration:    2 | Energy:  -3.94911388 Ha | ΔE: 0.07347606
+  [VQE] Iteration:    3 | Energy:  -3.94911452 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911452 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 22] Embedding total energy = -693.18845581 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94911031 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563731 Ha | ΔE: 0.07347301
+  [VQE] Iteration:    2 | Energy:  -3.94911482 Ha | ΔE: 0.07347751
+  [VQE] Iteration:    3 | Energy:  -3.94911545 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911545 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 23] Embedding total energy = -693.18845288 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910906 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563799 Ha | ΔE: 0.07347108
+  [VQE] Iteration:    2 | Energy:  -3.94911357 Ha | ΔE: 0.07347558
+  [VQE] Iteration:    3 | Energy:  -3.94911420 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911420 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 24] Embedding total energy = -693.18845784 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94911014 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563740 Ha | ΔE: 0.07347273
+  [VQE] Iteration:    2 | Energy:  -3.94911464 Ha | ΔE: 0.07347724
+  [VQE] Iteration:    3 | Energy:  -3.94911528 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911528 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 25] Embedding total energy = -693.18845363 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910959 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563770 Ha | ΔE: 0.07347188
+  [VQE] Iteration:    2 | Energy:  -3.94911409 Ha | ΔE: 0.07347639
+  [VQE] Iteration:    3 | Energy:  -3.94911472 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911472 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 26] Embedding total energy = -693.18845576 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910984 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563757 Ha | ΔE: 0.07347227
+  [VQE] Iteration:    2 | Energy:  -3.94911434 Ha | ΔE: 0.07347678
+  [VQE] Iteration:    3 | Energy:  -3.94911498 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911498 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 27] Embedding total energy = -693.18845311 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910960 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563770 Ha | ΔE: 0.07347190
+  [VQE] Iteration:    2 | Energy:  -3.94911410 Ha | ΔE: 0.07347640
+  [VQE] Iteration:    3 | Energy:  -3.94911474 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911474 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 28] Embedding total energy = -693.18845509 Ha
+
+>> [PennyLane] Initiating Native JAX-JIT GPU Pipeline...
+  [*] Bridged 939 Pauli terms on 12 qubits.
+  [*] Launching Compiled Adjoint L-BFGS-B Optimization...
+  [!] NOTE: The first step will pause for JIT compilation. Please wait...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -3.94910985 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -3.87563756 Ha | ΔE: 0.07347230
+  [VQE] Iteration:    2 | Energy:  -3.94911436 Ha | ΔE: 0.07347680
+  [VQE] Iteration:    3 | Energy:  -3.94911499 Ha | ΔE: 0.00000064
+  [VQE Converged] ΔE (6.355e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -3.94911499 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 29] Embedding total energy = -693.18845499 Ha
+[Converged] change 9.761e-08 < 1e-06
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1805.87897947714
+  - computed part:      -3.955239453574
+  - ActiveSpaceTransformer extracted energy part: -1801.923740023566
+~ Nuclear repulsion energy (Hartree): 1112.690524483842
+> Total ground state energy (Hartree): -693.188454993298
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.005 S^2: 0.005 M: 0.000
+
+================ PROFILING SUMMARY ================
+DFT (Energy Evaluator) time   : 192.00 s
+Classical Embedding Overhead  : 5297.86 s
+Active Space (Quantum) time   : 19947.17 s
+  --> Pure VQE Callback Time  : 24554.84 s
+--------------------------------------------------
+Total measured time           : 25437.03 s
+
+Memory snapshots (RSS, MB):
+DFT_start_MB                  : 25963.73 MB
+DFT_end_MB                    : 25964.59 MB
+Embedding_start_MB            : 25964.59 MB
+Embedding_end_MB              : 26000.65 MB
+Active Space_start_MB         : 26000.65 MB
+Active Space_end_MB           : 26485.62 MB
+==================================================
+Job finished at: Thu Apr 16 02:27:31 IST 2026
