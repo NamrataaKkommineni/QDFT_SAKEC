@@ -1,35 +1,38 @@
 # Energy + Density Production Framework
 
-This directory contains the **production implementation** of the hybrid Quantum-Classical Density Functional Theory (QDFT) embedding framework.
+This directory contains the **production implementation** of the hybrid **Quantum-Classical Density Functional Theory (QDFT)** embedding framework.
 
-These scripts represent the most mature implementation of the repository and are recommended for all production VQE+DFT embedding calculations.
+These scripts constitute the validated production workflows for **VQE+DFT embedding calculations** and represent the most mature implementations within the repository.
 
-Unlike the experimental workflows contained elsewhere in the repository, every implementation in this directory employs **dual self-consistency**, requiring simultaneous convergence of both
+Unlike the experimental and benchmarking codes distributed throughout the project, every implementation in this directory employs **dual self-consistency**, requiring simultaneous convergence of both
 
-- Total electronic energy
-- Electron density matrix (Frobenius norm)
+- **Total Electronic Energy**
+- **Electron Density Matrix** (measured using the Frobenius norm)
 
-before terminating the embedding cycle.
+before terminating the self-consistent embedding cycle.
 
 ---
 
 # Production Configuration
 
-Unless otherwise specified, all production calculations employ the following computational settings.
+Unless otherwise specified, all production calculations use the following computational configuration.
 
 | Parameter | Value |
 |-----------|-------|
 | Active Space | CAS(6e,6o) |
-| Ansatz | UCCSD |
+| Quantum Ansatz | UCCSD |
+| Classical Driver | PySCF |
 | Optimizer | L-BFGS-B |
 | Initial Guess | MP2 |
-| Spin Hamiltonian | Enabled (except tuned_MP2.py) |
-| Convergence | Energy + Density |
+| Spin Hamiltonian | Enabled (except `tuned_MP2.py`) |
+| Convergence Criterion | Energy + Density |
 | Density Metric | Frobenius Norm |
 | Adaptive Damping | DIIS |
-| base_alpha | 0.75 |
-| diis_start | 9 |
-| diis_space | 3 |
+| `base_alpha` | 0.75 |
+| `diis_start` | 9 |
+| `diis_space` | 3 |
+
+These parameters were selected through extensive convergence testing and are recommended for all production calculations.
 
 ---
 
@@ -39,22 +42,22 @@ Unless otherwise specified, all production calculations employ the following com
 
 Production implementation using the **Range-Separated Local Density Approximation (LDA-RS)**.
 
-Features
+**Features**
 
 - UCCSD Ansatz
 - MP2 initialization
-- Spin Hamiltonian correction
+- Active-space spin Hamiltonian correction
 - Adaptive DIIS damping
 - Dual Energy + Density convergence
-- Explicit range-separation parameter ω
+- Explicit range-separation parameter (`ω`)
 
 ---
 
 ## `OtherFunctional_MP2_spin.py`
 
-Production implementation supporting conventional exchange-correlation functionals.
+General production workflow supporting conventional exchange-correlation functionals.
 
-Supported functionals include
+**Supported Functionals**
 
 - LDA
 - PBE
@@ -62,11 +65,11 @@ Supported functionals include
 - CAM-B3LYP
 - LRC-ωPBE
 
-Features
+**Features**
 
 - UCCSD Ansatz
 - MP2 initialization
-- Spin Hamiltonian correction
+- Active-space spin Hamiltonian correction
 - Adaptive DIIS damping
 - Dual Energy + Density convergence
 
@@ -74,14 +77,14 @@ Features
 
 ## `tuned_MP2_spin.py`
 
-Production implementation using a tuned CAM-B3LYP functional.
+Production implementation using a **tuned CAM-B3LYP** exchange-correlation functional.
 
-Features
+**Features**
 
 - Tuned CAM-B3LYP
 - UCCSD Ansatz
 - MP2 initialization
-- Spin Hamiltonian correction
+- Active-space spin Hamiltonian correction
 - Adaptive DIIS damping
 - Dual Energy + Density convergence
 
@@ -89,30 +92,30 @@ Features
 
 ## `tuned_MP2.py`
 
-Baseline implementation identical to `tuned_MP2_spin.py` except that the active-space spin Hamiltonian penalty is disabled.
+Baseline implementation identical to `tuned_MP2_spin.py`, except that the active-space spin Hamiltonian penalty is disabled.
 
-This script serves as the reference implementation for evaluating the influence of spin-state constraints on embedding calculations.
+This script serves as the control implementation for evaluating the influence of spin-state preservation on convergence behavior and electronic energies.
 
 ---
 
 # Convergence Strategy
 
-Every embedding iteration simultaneously evaluates
+At every embedding iteration, the framework simultaneously evaluates
 
 1. Total electronic energy
 2. Electron density matrix
 
 Self-consistency is declared only when **both quantities** satisfy their respective convergence thresholds.
 
-Compared with energy-only convergence, this dual criterion significantly improves numerical stability and reduces false convergence arising from oscillating density matrices.
+Compared with conventional energy-only convergence, this dual criterion improves numerical stability and minimizes false convergence arising from oscillatory density updates.
 
 ---
 
 # Spin-State Preservation
 
-Production workflows (except `tuned_MP2.py`) employ an active-space spin Hamiltonian
+All production workflows, with the exception of `tuned_MP2.py`, employ an active-space spin Hamiltonian of the form
 
-\[
+```math
 H_{\mathrm{penalized}}
 =
 H_{\mathrm{native}}
@@ -123,17 +126,17 @@ H_{\mathrm{native}}
 -
 \langle S^{2}\rangle_{\mathrm{target}}
 \right)
-\]
+```
 
-to suppress artificial spin contamination during the embedding procedure.
+to suppress artificial spin contamination while preserving the desired spin multiplicity throughout the embedding procedure.
 
-Molecule-specific β coefficients are generated using the **Automated Spin-Penalty β Calculator** provided elsewhere in this repository.
+The required molecule-specific **β** coefficients can be generated using the **Automated Spin-Penalty β Coefficient Calculator** included elsewhere in this repository.
 
 ---
 
 # Benchmark Dataset
 
-The production implementation has been benchmarked across a diverse collection of molecular systems, including
+The production implementations have been benchmarked on a diverse set of molecular systems, including
 
 - Benzene
 - Pyridine
@@ -157,13 +160,14 @@ using multiple exchange-correlation functionals:
 - LRC-ωPBE
 - LDA-RS
 
-The benchmark dataset includes
+The benchmark database includes
 
-- QDFT total energies
+- QDFT (VQE + DFT) energies
 - DFT+FCI reference calculations
+- Classical DFT reference calculations
 - CCSD(T) reference energies
 - Experimental excitation energies
-- CAS active-space comparisons
+- Active-space (CAS) comparisons
 - Excitation-gap analysis
 - Runtime measurements
 - Functional performance comparisons
@@ -172,30 +176,30 @@ The benchmark dataset includes
 
 # Complete Benchmark Database
 
-The complete benchmark dataset is maintained separately as a Google Sheet and is continuously updated as additional molecules and benchmark studies are completed.
+The complete benchmark dataset is maintained separately as a Google Sheets document to allow continuous updates as additional molecular systems and validation studies are completed.
 
-**Benchmark Database**
+**QDFT Benchmark Database**
 
-> **[<Insert Google Sheets Link Here>](https://docs.google.com/spreadsheets/d/1jqu6-lq_od3toY4zbfOZyQ7kjna7TH3r5ojPXu2AEIE/edit?usp=sharing)**
+📊 https://docs.google.com/spreadsheets/d/1jqu6-lq_od3toY4zbfOZyQ7kjna7TH3r5ojPXu2AEIE
 
 ---
 
 # Recommended Workflow
 
-For production calculations
+For production calculations:
 
 1. Select the desired exchange-correlation functional.
-2. Compute the appropriate β coefficient.
+2. Compute the appropriate **β** coefficient using the Spin-Penalty Calculator.
 3. Use the default production parameters unless benchmarking alternative configurations.
-4. Verify convergence of both energy and density before accepting results.
-5. Compare results with the benchmark database whenever possible.
+4. Verify convergence of both the total energy and density matrix.
+5. Compare the results with the benchmark database whenever applicable.
 
 ---
 
 # Notes
 
-- All production calculations employ the UCCSD ansatz.
-- MP2 initialization is used throughout.
-- The default optimizer is L-BFGS-B.
-- Adaptive DIIS parameters (`base_alpha = 0.75`, `diis_start = 9`, `diis_space = 3`) were selected through empirical convergence studies.
-- These implementations constitute the validated production reference for the broader QDFT framework.
+- All production calculations employ the **UCCSD** ansatz.
+- MP2 initialization is used throughout all production workflows.
+- The default optimizer is **L-BFGS-B**.
+- Adaptive DIIS parameters (`base_alpha = 0.75`, `diis_start = 9`, `diis_space = 3`) were determined through empirical convergence studies.
+- The implementations in this directory constitute the validated production reference for the broader QDFT framework.
