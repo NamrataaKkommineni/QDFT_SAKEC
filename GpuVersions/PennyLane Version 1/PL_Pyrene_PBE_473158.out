@@ -1,0 +1,891 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 473158
+SLURM_JOB_NAME = PL_Pyrene_PBE
+SLURM_JOB_NODELIST = rpgpu028
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = gpu
+SLURM_TASK_PID = 937398
+SLURM_SUBMIT_DIR = /home/samritm/tejjan
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 937398
+==========================================
+Job started at: Tue Apr 14 11:09:09 IST 2026
+Node: rpgpu028
+CUDA_VISIBLE_DEVICES: 0
+>> Building PySCF molecule...
+>> Intercepting Qiskit Nature: Running gpu4pyscf on GPU...
+converged SCF energy = -614.974620108993
+>> Transferring GPU matrices back to CPU for Qiskit Mapper...
+
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -614.97462011 Ha
+==============================================
+
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.55179662 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.59958187 Ha | ΔE: 0.04778525
+  [VQE] Iteration:    2 | Energy:  -0.65427000 Ha | ΔE: 0.05468812
+  [VQE] Iteration:    3 | Energy:  -0.62777868 Ha | ΔE: 0.02649132
+  [VQE] Iteration:    4 | Energy:  -0.67159887 Ha | ΔE: 0.04382019
+  [VQE] Iteration:    5 | Energy:  -0.67284224 Ha | ΔE: 0.00124337
+  [VQE] Iteration:    6 | Energy:  -0.67296781 Ha | ΔE: 0.00012557
+  [VQE] Iteration:    7 | Energy:  -0.67459374 Ha | ΔE: 0.00162593
+  [VQE] Iteration:    8 | Energy:  -0.67421270 Ha | ΔE: 0.00038104
+  [VQE] Iteration:    9 | Energy:  -0.67511412 Ha | ΔE: 0.00090142
+  [VQE] Iteration:   10 | Energy:  -0.67848486 Ha | ΔE: 0.00337074
+  [VQE] Iteration:   11 | Energy:  -0.68761250 Ha | ΔE: 0.00912764
+  [VQE] Iteration:   12 | Energy:  -0.68048311 Ha | ΔE: 0.00712939
+  [VQE] Iteration:   13 | Energy:  -0.69002275 Ha | ΔE: 0.00953963
+  [VQE] Iteration:   14 | Energy:  -0.69488245 Ha | ΔE: 0.00485970
+  [VQE] Iteration:   15 | Energy:  -0.69616139 Ha | ΔE: 0.00127894
+  [VQE] Iteration:   16 | Energy:  -0.69700302 Ha | ΔE: 0.00084163
+  [VQE] Iteration:   17 | Energy:  -0.69809057 Ha | ΔE: 0.00108754
+  [VQE] Iteration:   18 | Energy:  -0.69850083 Ha | ΔE: 0.00041027
+  [VQE] Iteration:   19 | Energy:  -0.69857525 Ha | ΔE: 0.00007441
+  [VQE] Iteration:   20 | Energy:  -0.69861725 Ha | ΔE: 0.00004200
+  [VQE] Iteration:   21 | Energy:  -0.69862695 Ha | ΔE: 0.00000971
+  [VQE] Iteration:   22 | Energy:  -0.69863283 Ha | ΔE: 0.00000587
+  [VQE] Iteration:   23 | Energy:  -0.69863452 Ha | ΔE: 0.00000169
+  [VQE] Iteration:   24 | Energy:  -0.69863447 Ha | ΔE: 0.00000006
+  [VQE Converged] ΔE (5.758e-08) is below threshold (1e-06)!
+  [VQE] Iteration:   25 | Energy:  -0.69863503 Ha | ΔE: 0.00000056
+  [VQE Converged] ΔE (5.648e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.69863503 Ha
+[Damping] Linear mix with alpha=0.283
+[Iteration 1] Embedding total energy = -615.12155370 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.62931753 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.59087206 Ha | ΔE: 0.03844547
+  [VQE] Iteration:    2 | Energy:  -0.65462382 Ha | ΔE: 0.06375177
+  [VQE] Iteration:    3 | Energy:  -0.65898245 Ha | ΔE: 0.00435863
+  [VQE] Iteration:    4 | Energy:  -0.66498858 Ha | ΔE: 0.00600612
+  [VQE] Iteration:    5 | Energy:  -0.66632398 Ha | ΔE: 0.00133540
+  [VQE] Iteration:    6 | Energy:  -0.66662977 Ha | ΔE: 0.00030579
+  [VQE] Iteration:    7 | Energy:  -0.66669242 Ha | ΔE: 0.00006265
+  [VQE] Iteration:    8 | Energy:  -0.66672651 Ha | ΔE: 0.00003409
+  [VQE] Iteration:    9 | Energy:  -0.66672768 Ha | ΔE: 0.00000117
+  [VQE] Iteration:   10 | Energy:  -0.66673628 Ha | ΔE: 0.00000860
+  [VQE] Iteration:   11 | Energy:  -0.66673650 Ha | ΔE: 0.00000022
+  [VQE Converged] ΔE (2.198e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.66673650 Ha
+[Damping] Linear mix with alpha=0.231
+[Iteration 2] Embedding total energy = -615.03019831 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.63887832 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.59277209 Ha | ΔE: 0.04610623
+  [VQE] Iteration:    2 | Energy:  -0.66326647 Ha | ΔE: 0.07049438
+  [VQE] Iteration:    3 | Energy:  -0.66660074 Ha | ΔE: 0.00333427
+  [VQE] Iteration:    4 | Energy:  -0.67002467 Ha | ΔE: 0.00342393
+  [VQE] Iteration:    5 | Energy:  -0.67064910 Ha | ΔE: 0.00062443
+  [VQE] Iteration:    6 | Energy:  -0.67073582 Ha | ΔE: 0.00008672
+  [VQE] Iteration:    7 | Energy:  -0.67074918 Ha | ΔE: 0.00001336
+  [VQE] Iteration:    8 | Energy:  -0.67077024 Ha | ΔE: 0.00002106
+  [VQE] Iteration:    9 | Energy:  -0.67076753 Ha | ΔE: 0.00000270
+  [VQE] Iteration:   10 | Energy:  -0.67077472 Ha | ΔE: 0.00000719
+  [VQE] Iteration:   11 | Energy:  -0.67077815 Ha | ΔE: 0.00000343
+  [VQE] Iteration:   12 | Energy:  -0.67079097 Ha | ΔE: 0.00001282
+  [VQE] Iteration:   13 | Energy:  -0.67080157 Ha | ΔE: 0.00001060
+  [VQE] Iteration:   14 | Energy:  -0.67078266 Ha | ΔE: 0.00001892
+  [VQE] Iteration:   15 | Energy:  -0.67080503 Ha | ΔE: 0.00002237
+  [VQE] Iteration:   16 | Energy:  -0.67081119 Ha | ΔE: 0.00000616
+  [VQE] Iteration:   17 | Energy:  -0.67081204 Ha | ΔE: 0.00000084
+  [VQE Converged] ΔE (8.435e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.67081204 Ha
+[Damping] Linear mix with alpha=0.200
+[Iteration 3] Embedding total energy = -615.02942423 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.63762946 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.59695885 Ha | ΔE: 0.04067061
+  [VQE] Iteration:    2 | Energy:  -0.66291095 Ha | ΔE: 0.06595210
+  [VQE] Iteration:    3 | Energy:  -0.66764706 Ha | ΔE: 0.00473611
+  [VQE] Iteration:    4 | Energy:  -0.67486700 Ha | ΔE: 0.00721994
+  [VQE] Iteration:    5 | Energy:  -0.67795707 Ha | ΔE: 0.00309007
+  [VQE] Iteration:    6 | Energy:  -0.68090069 Ha | ΔE: 0.00294362
+  [VQE] Iteration:    7 | Energy:  -0.68165902 Ha | ΔE: 0.00075833
+  [VQE] Iteration:    8 | Energy:  -0.68231323 Ha | ΔE: 0.00065420
+  [VQE] Iteration:    9 | Energy:  -0.68253940 Ha | ΔE: 0.00022618
+  [VQE] Iteration:   10 | Energy:  -0.68272313 Ha | ΔE: 0.00018372
+  [VQE] Iteration:   11 | Energy:  -0.68274300 Ha | ΔE: 0.00001987
+  [VQE] Iteration:   12 | Energy:  -0.68281989 Ha | ΔE: 0.00007689
+  [VQE] Iteration:   13 | Energy:  -0.68283689 Ha | ΔE: 0.00001700
+  [VQE] Iteration:   14 | Energy:  -0.68284164 Ha | ΔE: 0.00000475
+  [VQE] Iteration:   15 | Energy:  -0.68284530 Ha | ΔE: 0.00000366
+  [VQE] Iteration:   16 | Energy:  -0.68284474 Ha | ΔE: 0.00000055
+  [VQE Converged] ΔE (5.525e-07) is below threshold (1e-06)!
+  [VQE] Iteration:   17 | Energy:  -0.68284555 Ha | ΔE: 0.00000081
+  [VQE Converged] ΔE (8.074e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.68284555 Ha
+[Damping] Linear mix with alpha=0.179
+[Iteration 4] Embedding total energy = -615.04158856 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64645596 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.61494885 Ha | ΔE: 0.03150711
+  [VQE] Iteration:    2 | Energy:  -0.67505163 Ha | ΔE: 0.06010278
+  [VQE] Iteration:    3 | Energy:  -0.68289466 Ha | ΔE: 0.00784304
+  [VQE] Iteration:    4 | Energy:  -0.69018966 Ha | ΔE: 0.00729499
+  [VQE] Iteration:    5 | Energy:  -0.69680653 Ha | ΔE: 0.00661687
+  [VQE] Iteration:    6 | Energy:  -0.69880000 Ha | ΔE: 0.00199347
+  [VQE] Iteration:    7 | Energy:  -0.70047655 Ha | ΔE: 0.00167655
+  [VQE] Iteration:    8 | Energy:  -0.70095990 Ha | ΔE: 0.00048336
+  [VQE] Iteration:    9 | Energy:  -0.70101997 Ha | ΔE: 0.00006006
+  [VQE] Iteration:   10 | Energy:  -0.70112557 Ha | ΔE: 0.00010561
+  [VQE] Iteration:   11 | Energy:  -0.70113743 Ha | ΔE: 0.00001186
+  [VQE] Iteration:   12 | Energy:  -0.70115039 Ha | ΔE: 0.00001296
+  [VQE] Iteration:   13 | Energy:  -0.70115601 Ha | ΔE: 0.00000562
+  [VQE] Iteration:   14 | Energy:  -0.70115726 Ha | ΔE: 0.00000125
+  [VQE] Iteration:   15 | Energy:  -0.70115756 Ha | ΔE: 0.00000030
+  [VQE Converged] ΔE (3.025e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.70115756 Ha
+[DIIS] Extrapolating density (coeffs: [-1.05  1.26  0.56  0.23])
+[Iteration 5] Embedding total energy = -615.05821449 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64960911 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.64435569 Ha | ΔE: 0.00525342
+  [VQE] Iteration:    2 | Energy:  -0.68741424 Ha | ΔE: 0.04305855
+  [VQE] Iteration:    3 | Energy:  -0.70221878 Ha | ΔE: 0.01480454
+  [VQE] Iteration:    4 | Energy:  -0.71388567 Ha | ΔE: 0.01166689
+  [VQE] Iteration:    5 | Energy:  -0.72075902 Ha | ΔE: 0.00687335
+  [VQE] Iteration:    6 | Energy:  -0.72189216 Ha | ΔE: 0.00113314
+  [VQE] Iteration:    7 | Energy:  -0.72249932 Ha | ΔE: 0.00060716
+  [VQE] Iteration:    8 | Energy:  -0.72277227 Ha | ΔE: 0.00027294
+  [VQE] Iteration:    9 | Energy:  -0.72279049 Ha | ΔE: 0.00001822
+  [VQE] Iteration:   10 | Energy:  -0.72283512 Ha | ΔE: 0.00004464
+  [VQE] Iteration:   11 | Energy:  -0.72283754 Ha | ΔE: 0.00000242
+  [VQE] Iteration:   12 | Energy:  -0.72283973 Ha | ΔE: 0.00000219
+  [VQE] Iteration:   13 | Energy:  -0.72284004 Ha | ΔE: 0.00000031
+  [VQE Converged] ΔE (3.086e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.72284004 Ha
+[DIIS] Extrapolating density (coeffs: [ 2.9  -0.69 -1.77  0.55])
+[Iteration 6] Embedding total energy = -615.08200353 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.63217025 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.79041872 Ha | ΔE: 0.15824847
+  [VQE] Iteration:    2 | Energy:  -0.82086121 Ha | ΔE: 0.03044249
+  [VQE] Iteration:    3 | Energy:  -0.82886914 Ha | ΔE: 0.00800793
+  [VQE] Iteration:    4 | Energy:  -0.83247991 Ha | ΔE: 0.00361077
+  [VQE] Iteration:    5 | Energy:  -0.83515317 Ha | ΔE: 0.00267326
+  [VQE] Iteration:    6 | Energy:  -0.83532485 Ha | ΔE: 0.00017169
+  [VQE] Iteration:    7 | Energy:  -0.83538540 Ha | ΔE: 0.00006055
+  [VQE] Iteration:    8 | Energy:  -0.83542067 Ha | ΔE: 0.00003527
+  [VQE] Iteration:    9 | Energy:  -0.83544233 Ha | ΔE: 0.00002166
+  [VQE] Iteration:   10 | Energy:  -0.83546167 Ha | ΔE: 0.00001933
+  [VQE] Iteration:   11 | Energy:  -0.83547191 Ha | ΔE: 0.00001025
+  [VQE] Iteration:   12 | Energy:  -0.83547828 Ha | ΔE: 0.00000637
+  [VQE] Iteration:   13 | Energy:  -0.83548028 Ha | ΔE: 0.00000201
+  [VQE] Iteration:   14 | Energy:  -0.83548059 Ha | ΔE: 0.00000030
+  [VQE Converged] ΔE (3.048e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.83548059 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.53  0.39  0.13 -0.05])
+[Iteration 7] Embedding total energy = -615.25572514 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64274923 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.61297559 Ha | ΔE: 0.02977364
+  [VQE] Iteration:    2 | Energy:  -0.67133422 Ha | ΔE: 0.05835863
+  [VQE] Iteration:    3 | Energy:  -0.67954737 Ha | ΔE: 0.00821315
+  [VQE] Iteration:    4 | Energy:  -0.68585295 Ha | ΔE: 0.00630557
+  [VQE] Iteration:    5 | Energy:  -0.69473566 Ha | ΔE: 0.00888272
+  [VQE] Iteration:    6 | Energy:  -0.69710613 Ha | ΔE: 0.00237047
+  [VQE] Iteration:    7 | Energy:  -0.69955353 Ha | ΔE: 0.00244739
+  [VQE] Iteration:    8 | Energy:  -0.70006077 Ha | ΔE: 0.00050724
+  [VQE] Iteration:    9 | Energy:  -0.70022773 Ha | ΔE: 0.00016696
+  [VQE] Iteration:   10 | Energy:  -0.70029592 Ha | ΔE: 0.00006819
+  [VQE] Iteration:   11 | Energy:  -0.70032085 Ha | ΔE: 0.00002493
+  [VQE] Iteration:   12 | Energy:  -0.70033657 Ha | ΔE: 0.00001572
+  [VQE] Iteration:   13 | Energy:  -0.70034289 Ha | ΔE: 0.00000632
+  [VQE] Iteration:   14 | Energy:  -0.70034362 Ha | ΔE: 0.00000073
+  [VQE Converged] ΔE (7.287e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.70034362 Ha
+[DIIS] Extrapolating density (coeffs: [0.15 0.37 0.44 0.03])
+[Iteration 8] Embedding total energy = -615.05856327 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64123383 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65226901 Ha | ΔE: 0.01103518
+  [VQE] Iteration:    2 | Energy:  -0.69830687 Ha | ΔE: 0.04603785
+  [VQE] Iteration:    3 | Energy:  -0.57346094 Ha | ΔE: 0.12484592
+  [VQE] Iteration:    4 | Energy:  -0.71545331 Ha | ΔE: 0.14199237
+  [VQE] Iteration:    5 | Energy:  -0.72601720 Ha | ΔE: 0.01056389
+  [VQE] Iteration:    6 | Energy:  -0.72708847 Ha | ΔE: 0.00107127
+  [VQE] Iteration:    7 | Energy:  -0.72736141 Ha | ΔE: 0.00027294
+  [VQE] Iteration:    8 | Energy:  -0.72745575 Ha | ΔE: 0.00009435
+  [VQE] Iteration:    9 | Energy:  -0.72762550 Ha | ΔE: 0.00016975
+  [VQE] Iteration:   10 | Energy:  -0.72754986 Ha | ΔE: 0.00007564
+  [VQE] Iteration:   11 | Energy:  -0.72764143 Ha | ΔE: 0.00009157
+  [VQE] Iteration:   12 | Energy:  -0.72765275 Ha | ΔE: 0.00001132
+  [VQE] Iteration:   13 | Energy:  -0.72765570 Ha | ΔE: 0.00000294
+  [VQE] Iteration:   14 | Energy:  -0.72765661 Ha | ΔE: 0.00000091
+  [VQE Converged] ΔE (9.147e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.72765661 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.13  0.35  0.53 -0.01])
+[Iteration 9] Embedding total energy = -615.09267124 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64000721 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.66317624 Ha | ΔE: 0.02316903
+  [VQE] Iteration:    2 | Energy:  -0.70654630 Ha | ΔE: 0.04337006
+  [VQE] Iteration:    3 | Energy:  -0.58728071 Ha | ΔE: 0.11926559
+  [VQE] Iteration:    4 | Energy:  -0.72451006 Ha | ΔE: 0.13722935
+  [VQE] Iteration:    5 | Energy:  -0.73437731 Ha | ΔE: 0.00986726
+  [VQE] Iteration:    6 | Energy:  -0.73509008 Ha | ΔE: 0.00071276
+  [VQE] Iteration:    7 | Energy:  -0.73532196 Ha | ΔE: 0.00023189
+  [VQE] Iteration:    8 | Energy:  -0.73542621 Ha | ΔE: 0.00010425
+  [VQE] Iteration:    9 | Energy:  -0.73548697 Ha | ΔE: 0.00006076
+  [VQE] Iteration:   10 | Energy:  -0.73552743 Ha | ΔE: 0.00004046
+  [VQE] Iteration:   11 | Energy:  -0.73553678 Ha | ΔE: 0.00000935
+  [VQE] Iteration:   12 | Energy:  -0.73553935 Ha | ΔE: 0.00000257
+  [VQE] Iteration:   13 | Energy:  -0.73553965 Ha | ΔE: 0.00000030
+  [VQE Converged] ΔE (3.050e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73553965 Ha
+[DIIS] Extrapolating density (coeffs: [0.08 0.3  0.62 0.01])
+[Iteration 10] Embedding total energy = -615.10281597 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64094187 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65271211 Ha | ΔE: 0.01177024
+  [VQE] Iteration:    2 | Energy:  -0.69857679 Ha | ΔE: 0.04586468
+  [VQE] Iteration:    3 | Energy:  -0.57451442 Ha | ΔE: 0.12406237
+  [VQE] Iteration:    4 | Energy:  -0.71602927 Ha | ΔE: 0.14151485
+  [VQE] Iteration:    5 | Energy:  -0.72665492 Ha | ΔE: 0.01062565
+  [VQE] Iteration:    6 | Energy:  -0.72767991 Ha | ΔE: 0.00102499
+  [VQE] Iteration:    7 | Energy:  -0.72794409 Ha | ΔE: 0.00026419
+  [VQE] Iteration:    8 | Energy:  -0.72803670 Ha | ΔE: 0.00009261
+  [VQE] Iteration:    9 | Energy:  -0.72819640 Ha | ΔE: 0.00015970
+  [VQE] Iteration:   10 | Energy:  -0.72806230 Ha | ΔE: 0.00013411
+  [VQE] Iteration:   11 | Energy:  -0.72821684 Ha | ΔE: 0.00015455
+  [VQE] Iteration:   12 | Energy:  -0.72822551 Ha | ΔE: 0.00000866
+  [VQE] Iteration:   13 | Energy:  -0.72823007 Ha | ΔE: 0.00000456
+  [VQE] Iteration:   14 | Energy:  -0.72823104 Ha | ΔE: 0.00000097
+  [VQE Converged] ΔE (9.713e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.72823104 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.06  0.25  0.7  -0.01])
+[Iteration 11] Embedding total energy = -615.09327361 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64046504 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65759489 Ha | ΔE: 0.01712984
+  [VQE] Iteration:    2 | Energy:  -0.70222304 Ha | ΔE: 0.04462816
+  [VQE] Iteration:    3 | Energy:  -0.57991183 Ha | ΔE: 0.12231121
+  [VQE] Iteration:    4 | Energy:  -0.71997995 Ha | ΔE: 0.14006812
+  [VQE] Iteration:    5 | Energy:  -0.73030017 Ha | ΔE: 0.01032022
+  [VQE] Iteration:    6 | Energy:  -0.73115278 Ha | ΔE: 0.00085261
+  [VQE] Iteration:    7 | Energy:  -0.73139233 Ha | ΔE: 0.00023955
+  [VQE] Iteration:    8 | Energy:  -0.73148976 Ha | ΔE: 0.00009743
+  [VQE] Iteration:    9 | Energy:  -0.73159593 Ha | ΔE: 0.00010617
+  [VQE] Iteration:   10 | Energy:  -0.73160320 Ha | ΔE: 0.00000727
+  [VQE] Iteration:   11 | Energy:  -0.73163908 Ha | ΔE: 0.00003588
+  [VQE] Iteration:   12 | Energy:  -0.73164171 Ha | ΔE: 0.00000263
+  [VQE] Iteration:   13 | Energy:  -0.73164493 Ha | ΔE: 0.00000322
+  [VQE] Iteration:   14 | Energy:  -0.73164525 Ha | ΔE: 0.00000032
+  [VQE Converged] ΔE (3.246e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73164525 Ha
+[DIIS] Extrapolating density (coeffs: [0.04 0.23 0.73 0.  ])
+[Iteration 12] Embedding total energy = -615.09771530 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64073252 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65516961 Ha | ΔE: 0.01443710
+  [VQE] Iteration:    2 | Energy:  -0.70040664 Ha | ΔE: 0.04523703
+  [VQE] Iteration:    3 | Energy:  -0.57693680 Ha | ΔE: 0.12346984
+  [VQE] Iteration:    4 | Energy:  -0.71799589 Ha | ΔE: 0.14105910
+  [VQE] Iteration:    5 | Energy:  -0.72848095 Ha | ΔE: 0.01048506
+  [VQE] Iteration:    6 | Energy:  -0.72941486 Ha | ΔE: 0.00093391
+  [VQE] Iteration:    7 | Energy:  -0.72966440 Ha | ΔE: 0.00024954
+  [VQE] Iteration:    8 | Energy:  -0.72975899 Ha | ΔE: 0.00009459
+  [VQE] Iteration:    9 | Energy:  -0.72989186 Ha | ΔE: 0.00013287
+  [VQE] Iteration:   10 | Energy:  -0.72983394 Ha | ΔE: 0.00005792
+  [VQE] Iteration:   11 | Energy:  -0.72992350 Ha | ΔE: 0.00008956
+  [VQE] Iteration:   12 | Energy:  -0.72992906 Ha | ΔE: 0.00000556
+  [VQE] Iteration:   13 | Energy:  -0.72993375 Ha | ΔE: 0.00000469
+  [VQE] Iteration:   14 | Energy:  -0.72993462 Ha | ΔE: 0.00000087
+  [VQE Converged] ΔE (8.658e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.72993462 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.11  0.35  0.54 -0.  ])
+[Iteration 13] Embedding total energy = -615.09548438 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64057972 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65646391 Ha | ΔE: 0.01588419
+  [VQE] Iteration:    2 | Energy:  -0.70136991 Ha | ΔE: 0.04490600
+  [VQE] Iteration:    3 | Energy:  -0.57851095 Ha | ΔE: 0.12285896
+  [VQE] Iteration:    4 | Energy:  -0.71905870 Ha | ΔE: 0.14054775
+  [VQE] Iteration:    5 | Energy:  -0.72946009 Ha | ΔE: 0.01040139
+  [VQE] Iteration:    6 | Energy:  -0.73034845 Ha | ΔE: 0.00088835
+  [VQE] Iteration:    7 | Energy:  -0.73059197 Ha | ΔE: 0.00024352
+  [VQE] Iteration:    8 | Energy:  -0.73068788 Ha | ΔE: 0.00009592
+  [VQE] Iteration:    9 | Energy:  -0.73080548 Ha | ΔE: 0.00011760
+  [VQE] Iteration:   10 | Energy:  -0.73079238 Ha | ΔE: 0.00001311
+  [VQE] Iteration:   11 | Energy:  -0.73084082 Ha | ΔE: 0.00004845
+  [VQE] Iteration:   12 | Energy:  -0.73084691 Ha | ΔE: 0.00000608
+  [VQE] Iteration:   13 | Energy:  -0.73085170 Ha | ΔE: 0.00000479
+  [VQE] Iteration:   14 | Energy:  -0.73085267 Ha | ΔE: 0.00000097
+  [VQE Converged] ΔE (9.687e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73085267 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.11  0.47  0.42 -0.  ])
+[Iteration 14] Embedding total energy = -615.09667966 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64063001 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65605652 Ha | ΔE: 0.01542650
+  [VQE] Iteration:    2 | Energy:  -0.70106644 Ha | ΔE: 0.04500992
+  [VQE] Iteration:    3 | Energy:  -0.57799592 Ha | ΔE: 0.12307051
+  [VQE] Iteration:    4 | Energy:  -0.71872256 Ha | ΔE: 0.14072664
+  [VQE] Iteration:    5 | Energy:  -0.72915107 Ha | ΔE: 0.01042851
+  [VQE] Iteration:    6 | Energy:  -0.73005345 Ha | ΔE: 0.00090238
+  [VQE] Iteration:    7 | Energy:  -0.73029878 Ha | ΔE: 0.00024533
+  [VQE] Iteration:    8 | Energy:  -0.73039426 Ha | ΔE: 0.00009548
+  [VQE] Iteration:    9 | Energy:  -0.73051656 Ha | ΔE: 0.00012230
+  [VQE] Iteration:   10 | Energy:  -0.73049195 Ha | ΔE: 0.00002461
+  [VQE] Iteration:   11 | Energy:  -0.73055122 Ha | ΔE: 0.00005926
+  [VQE] Iteration:   12 | Energy:  -0.73055689 Ha | ΔE: 0.00000568
+  [VQE] Iteration:   13 | Energy:  -0.73056162 Ha | ΔE: 0.00000473
+  [VQE] Iteration:   14 | Energy:  -0.73056255 Ha | ΔE: 0.00000093
+  [VQE Converged] ΔE (9.270e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73056255 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.2   0.37  0.43 -0.  ])
+[Iteration 15] Embedding total energy = -615.09630173 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64061461 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65617982 Ha | ΔE: 0.01556521
+  [VQE] Iteration:    2 | Energy:  -0.70115826 Ha | ΔE: 0.04497844
+  [VQE] Iteration:    3 | Energy:  -0.57815702 Ha | ΔE: 0.12300124
+  [VQE] Iteration:    4 | Energy:  -0.71882443 Ha | ΔE: 0.14066741
+  [VQE] Iteration:    5 | Energy:  -0.72924488 Ha | ΔE: 0.01042045
+  [VQE] Iteration:    6 | Energy:  -0.73014294 Ha | ΔE: 0.00089807
+  [VQE] Iteration:    7 | Energy:  -0.73038769 Ha | ΔE: 0.00024475
+  [VQE] Iteration:    8 | Energy:  -0.73048329 Ha | ΔE: 0.00009560
+  [VQE] Iteration:    9 | Energy:  -0.73060400 Ha | ΔE: 0.00012070
+  [VQE] Iteration:   10 | Energy:  -0.73058422 Ha | ΔE: 0.00001978
+  [VQE] Iteration:   11 | Energy:  -0.73063910 Ha | ΔE: 0.00005489
+  [VQE] Iteration:   12 | Energy:  -0.73064485 Ha | ΔE: 0.00000575
+  [VQE] Iteration:   13 | Energy:  -0.73064961 Ha | ΔE: 0.00000475
+  [VQE] Iteration:   14 | Energy:  -0.73065054 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.359e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73065054 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 16] Embedding total energy = -615.09641625 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64064732 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65589337 Ha | ΔE: 0.01524606
+  [VQE] Iteration:    2 | Energy:  -0.70094450 Ha | ΔE: 0.04505113
+  [VQE] Iteration:    3 | Energy:  -0.57781414 Ha | ΔE: 0.12313036
+  [VQE] Iteration:    4 | Energy:  -0.71858976 Ha | ΔE: 0.14077562
+  [VQE] Iteration:    5 | Energy:  -0.72902894 Ha | ΔE: 0.01043918
+  [VQE] Iteration:    6 | Energy:  -0.72993683 Ha | ΔE: 0.00090789
+  [VQE] Iteration:    7 | Energy:  -0.73018287 Ha | ΔE: 0.00024604
+  [VQE] Iteration:    8 | Energy:  -0.73027817 Ha | ΔE: 0.00009530
+  [VQE] Iteration:    9 | Energy:  -0.73040241 Ha | ΔE: 0.00012423
+  [VQE] Iteration:   10 | Energy:  -0.73037203 Ha | ΔE: 0.00003038
+  [VQE] Iteration:   11 | Energy:  -0.73043657 Ha | ΔE: 0.00006455
+  [VQE] Iteration:   12 | Energy:  -0.73044215 Ha | ΔE: 0.00000558
+  [VQE] Iteration:   13 | Energy:  -0.73044685 Ha | ΔE: 0.00000470
+  [VQE] Iteration:   14 | Energy:  -0.73044776 Ha | ΔE: 0.00000092
+  [VQE Converged] ΔE (9.159e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73044776 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.34  0.33 -0.  ])
+[Iteration 17] Embedding total energy = -615.09615222 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64060818 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65623836 Ha | ΔE: 0.01563018
+  [VQE] Iteration:    2 | Energy:  -0.70120198 Ha | ΔE: 0.04496362
+  [VQE] Iteration:    3 | Energy:  -0.57822310 Ha | ΔE: 0.12297888
+  [VQE] Iteration:    4 | Energy:  -0.71887233 Ha | ΔE: 0.14064923
+  [VQE] Iteration:    5 | Energy:  -0.72928887 Ha | ΔE: 0.01041654
+  [VQE] Iteration:    6 | Energy:  -0.73018492 Ha | ΔE: 0.00089604
+  [VQE] Iteration:    7 | Energy:  -0.73042940 Ha | ΔE: 0.00024449
+  [VQE] Iteration:    8 | Energy:  -0.73052509 Ha | ΔE: 0.00009569
+  [VQE] Iteration:    9 | Energy:  -0.73064516 Ha | ΔE: 0.00012007
+  [VQE] Iteration:   10 | Energy:  -0.73062665 Ha | ΔE: 0.00001851
+  [VQE] Iteration:   11 | Energy:  -0.73068031 Ha | ΔE: 0.00005367
+  [VQE] Iteration:   12 | Energy:  -0.73068612 Ha | ΔE: 0.00000580
+  [VQE] Iteration:   13 | Energy:  -0.73069088 Ha | ΔE: 0.00000476
+  [VQE] Iteration:   14 | Energy:  -0.73069182 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.434e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73069182 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 18] Embedding total energy = -615.09647006 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64063077 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65603975 Ha | ΔE: 0.01540898
+  [VQE] Iteration:    2 | Energy:  -0.70105358 Ha | ΔE: 0.04501383
+  [VQE] Iteration:    3 | Energy:  -0.57797193 Ha | ΔE: 0.12308165
+  [VQE] Iteration:    4 | Energy:  -0.71870922 Ha | ΔE: 0.14073728
+  [VQE] Iteration:    5 | Energy:  -0.72913907 Ha | ΔE: 0.01042985
+  [VQE] Iteration:    6 | Energy:  -0.73004205 Ha | ΔE: 0.00090298
+  [VQE] Iteration:    7 | Energy:  -0.73028742 Ha | ΔE: 0.00024537
+  [VQE] Iteration:    8 | Energy:  -0.73038285 Ha | ΔE: 0.00009543
+  [VQE] Iteration:    9 | Energy:  -0.73050542 Ha | ΔE: 0.00012257
+  [VQE] Iteration:   10 | Energy:  -0.73047990 Ha | ΔE: 0.00002552
+  [VQE] Iteration:   11 | Energy:  -0.73053995 Ha | ΔE: 0.00006006
+  [VQE] Iteration:   12 | Energy:  -0.73054562 Ha | ΔE: 0.00000567
+  [VQE] Iteration:   13 | Energy:  -0.73055034 Ha | ΔE: 0.00000472
+  [VQE] Iteration:   14 | Energy:  -0.73055128 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.403e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73055128 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 19] Embedding total energy = -615.09628698 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062337 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65610391 Ha | ΔE: 0.01548054
+  [VQE] Iteration:    2 | Energy:  -0.70110136 Ha | ΔE: 0.04499745
+  [VQE] Iteration:    3 | Energy:  -0.57805364 Ha | ΔE: 0.12304771
+  [VQE] Iteration:    4 | Energy:  -0.71876219 Ha | ΔE: 0.14070855
+  [VQE] Iteration:    5 | Energy:  -0.72918762 Ha | ΔE: 0.01042543
+  [VQE] Iteration:    6 | Energy:  -0.73008826 Ha | ΔE: 0.00090064
+  [VQE] Iteration:    7 | Energy:  -0.73033332 Ha | ΔE: 0.00024506
+  [VQE] Iteration:    8 | Energy:  -0.73042883 Ha | ΔE: 0.00009552
+  [VQE] Iteration:    9 | Energy:  -0.73055077 Ha | ΔE: 0.00012194
+  [VQE] Iteration:   10 | Energy:  -0.73052664 Ha | ΔE: 0.00002413
+  [VQE] Iteration:   11 | Energy:  -0.73058534 Ha | ΔE: 0.00005870
+  [VQE] Iteration:   12 | Energy:  -0.73059107 Ha | ΔE: 0.00000574
+  [VQE] Iteration:   13 | Energy:  -0.73059580 Ha | ΔE: 0.00000472
+  [VQE] Iteration:   14 | Energy:  -0.73059674 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.383e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73059674 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 20] Embedding total energy = -615.09634620 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062873 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65605826 Ha | ΔE: 0.01542953
+  [VQE] Iteration:    2 | Energy:  -0.70106771 Ha | ΔE: 0.04500944
+  [VQE] Iteration:    3 | Energy:  -0.57801396 Ha | ΔE: 0.12305375
+  [VQE] Iteration:    4 | Energy:  -0.71872476 Ha | ΔE: 0.14071080
+  [VQE] Iteration:    5 | Energy:  -0.72915318 Ha | ΔE: 0.01042842
+  [VQE] Iteration:    6 | Energy:  -0.73005545 Ha | ΔE: 0.00090228
+  [VQE] Iteration:    7 | Energy:  -0.73030070 Ha | ΔE: 0.00024525
+  [VQE] Iteration:    8 | Energy:  -0.73039617 Ha | ΔE: 0.00009547
+  [VQE] Iteration:    9 | Energy:  -0.73051820 Ha | ΔE: 0.00012203
+  [VQE] Iteration:   10 | Energy:  -0.73049501 Ha | ΔE: 0.00002319
+  [VQE] Iteration:   11 | Energy:  -0.73055303 Ha | ΔE: 0.00005802
+  [VQE] Iteration:   12 | Energy:  -0.73055869 Ha | ΔE: 0.00000567
+  [VQE] Iteration:   13 | Energy:  -0.73056344 Ha | ΔE: 0.00000474
+  [VQE] Iteration:   14 | Energy:  -0.73056436 Ha | ΔE: 0.00000092
+  [VQE Converged] ΔE (9.180e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73056436 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 21] Embedding total energy = -615.09630404 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062080 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65612654 Ha | ΔE: 0.01550574
+  [VQE] Iteration:    2 | Energy:  -0.70111858 Ha | ΔE: 0.04499205
+  [VQE] Iteration:    3 | Energy:  -0.57809711 Ha | ΔE: 0.12302148
+  [VQE] Iteration:    4 | Energy:  -0.71878088 Ha | ΔE: 0.14068377
+  [VQE] Iteration:    5 | Energy:  -0.72920475 Ha | ΔE: 0.01042387
+  [VQE] Iteration:    6 | Energy:  -0.73010463 Ha | ΔE: 0.00089988
+  [VQE] Iteration:    7 | Energy:  -0.73034957 Ha | ΔE: 0.00024495
+  [VQE] Iteration:    8 | Energy:  -0.73044513 Ha | ΔE: 0.00009556
+  [VQE] Iteration:    9 | Energy:  -0.73056663 Ha | ΔE: 0.00012150
+  [VQE] Iteration:   10 | Energy:  -0.73054393 Ha | ΔE: 0.00002270
+  [VQE] Iteration:   11 | Energy:  -0.73060134 Ha | ΔE: 0.00005741
+  [VQE] Iteration:   12 | Energy:  -0.73060708 Ha | ΔE: 0.00000574
+  [VQE] Iteration:   13 | Energy:  -0.73061181 Ha | ΔE: 0.00000473
+  [VQE] Iteration:   14 | Energy:  -0.73061276 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.435e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73061276 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 22] Embedding total energy = -615.09636706 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062762 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65606747 Ha | ΔE: 0.01543985
+  [VQE] Iteration:    2 | Energy:  -0.70107438 Ha | ΔE: 0.04500691
+  [VQE] Iteration:    3 | Energy:  -0.57801808 Ha | ΔE: 0.12305630
+  [VQE] Iteration:    4 | Energy:  -0.71873225 Ha | ΔE: 0.14071418
+  [VQE] Iteration:    5 | Energy:  -0.72916014 Ha | ΔE: 0.01042788
+  [VQE] Iteration:    6 | Energy:  -0.73006202 Ha | ΔE: 0.00090188
+  [VQE] Iteration:    7 | Energy:  -0.73030723 Ha | ΔE: 0.00024521
+  [VQE] Iteration:    8 | Energy:  -0.73040269 Ha | ΔE: 0.00009546
+  [VQE] Iteration:    9 | Energy:  -0.73052461 Ha | ΔE: 0.00012192
+  [VQE] Iteration:   10 | Energy:  -0.73050204 Ha | ΔE: 0.00002256
+  [VQE] Iteration:   11 | Energy:  -0.73055957 Ha | ΔE: 0.00005753
+  [VQE] Iteration:   12 | Energy:  -0.73056522 Ha | ΔE: 0.00000565
+  [VQE] Iteration:   13 | Energy:  -0.73056996 Ha | ΔE: 0.00000474
+  [VQE] Iteration:   14 | Energy:  -0.73057089 Ha | ΔE: 0.00000093
+  [VQE Converged] ΔE (9.284e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73057089 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 23] Embedding total energy = -615.09631253 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062430 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65609650 Ha | ΔE: 0.01547221
+  [VQE] Iteration:    2 | Energy:  -0.70109588 Ha | ΔE: 0.04499938
+  [VQE] Iteration:    3 | Energy:  -0.57804506 Ha | ΔE: 0.12305083
+  [VQE] Iteration:    4 | Energy:  -0.71875588 Ha | ΔE: 0.14071082
+  [VQE] Iteration:    5 | Energy:  -0.72918200 Ha | ΔE: 0.01042612
+  [VQE] Iteration:    6 | Energy:  -0.73008283 Ha | ΔE: 0.00090083
+  [VQE] Iteration:    7 | Energy:  -0.73032795 Ha | ΔE: 0.00024512
+  [VQE] Iteration:    8 | Energy:  -0.73042347 Ha | ΔE: 0.00009552
+  [VQE] Iteration:    9 | Energy:  -0.73054511 Ha | ΔE: 0.00012164
+  [VQE] Iteration:   10 | Energy:  -0.73052296 Ha | ΔE: 0.00002215
+  [VQE] Iteration:   11 | Energy:  -0.73058007 Ha | ΔE: 0.00005711
+  [VQE] Iteration:   12 | Energy:  -0.73058573 Ha | ΔE: 0.00000566
+  [VQE] Iteration:   13 | Energy:  -0.73059046 Ha | ΔE: 0.00000473
+  [VQE] Iteration:   14 | Energy:  -0.73059140 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.362e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73059140 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 24] Embedding total energy = -615.09633924 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062572 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65608393 Ha | ΔE: 0.01545821
+  [VQE] Iteration:    2 | Energy:  -0.70108656 Ha | ΔE: 0.04500263
+  [VQE] Iteration:    3 | Energy:  -0.57802154 Ha | ΔE: 0.12306502
+  [VQE] Iteration:    4 | Energy:  -0.71874550 Ha | ΔE: 0.14072396
+  [VQE] Iteration:    5 | Energy:  -0.72917250 Ha | ΔE: 0.01042700
+  [VQE] Iteration:    6 | Energy:  -0.73007380 Ha | ΔE: 0.00090130
+  [VQE] Iteration:    7 | Energy:  -0.73031899 Ha | ΔE: 0.00024519
+  [VQE] Iteration:    8 | Energy:  -0.73041447 Ha | ΔE: 0.00009548
+  [VQE] Iteration:    9 | Energy:  -0.73053620 Ha | ΔE: 0.00012173
+  [VQE] Iteration:   10 | Energy:  -0.73051426 Ha | ΔE: 0.00002194
+  [VQE] Iteration:   11 | Energy:  -0.73057123 Ha | ΔE: 0.00005697
+  [VQE] Iteration:   12 | Energy:  -0.73057688 Ha | ΔE: 0.00000566
+  [VQE] Iteration:   13 | Energy:  -0.73058163 Ha | ΔE: 0.00000475
+  [VQE] Iteration:   14 | Energy:  -0.73058257 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.362e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058257 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 25] Embedding total energy = -615.09632773 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062424 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65609692 Ha | ΔE: 0.01547268
+  [VQE] Iteration:    2 | Energy:  -0.70109636 Ha | ΔE: 0.04499944
+  [VQE] Iteration:    3 | Energy:  -0.57805012 Ha | ΔE: 0.12304624
+  [VQE] Iteration:    4 | Energy:  -0.71875623 Ha | ΔE: 0.14070611
+  [VQE] Iteration:    5 | Energy:  -0.72918226 Ha | ΔE: 0.01042603
+  [VQE] Iteration:    6 | Energy:  -0.73008316 Ha | ΔE: 0.00090089
+  [VQE] Iteration:    7 | Energy:  -0.73032829 Ha | ΔE: 0.00024513
+  [VQE] Iteration:    8 | Energy:  -0.73042382 Ha | ΔE: 0.00009552
+  [VQE] Iteration:    9 | Energy:  -0.73054543 Ha | ΔE: 0.00012162
+  [VQE] Iteration:   10 | Energy:  -0.73052323 Ha | ΔE: 0.00002221
+  [VQE] Iteration:   11 | Energy:  -0.73058036 Ha | ΔE: 0.00005714
+  [VQE] Iteration:   12 | Energy:  -0.73058605 Ha | ΔE: 0.00000568
+  [VQE] Iteration:   13 | Energy:  -0.73059078 Ha | ΔE: 0.00000473
+  [VQE] Iteration:   14 | Energy:  -0.73059171 Ha | ΔE: 0.00000093
+  [VQE Converged] ΔE (9.293e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73059171 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 26] Embedding total energy = -615.09633964 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062588 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65608261 Ha | ΔE: 0.01545673
+  [VQE] Iteration:    2 | Energy:  -0.70108575 Ha | ΔE: 0.04500314
+  [VQE] Iteration:    3 | Energy:  -0.57803430 Ha | ΔE: 0.12305145
+  [VQE] Iteration:    4 | Energy:  -0.71874455 Ha | ΔE: 0.14071026
+  [VQE] Iteration:    5 | Energy:  -0.72917150 Ha | ΔE: 0.01042694
+  [VQE] Iteration:    6 | Energy:  -0.73007293 Ha | ΔE: 0.00090143
+  [VQE] Iteration:    7 | Energy:  -0.73031811 Ha | ΔE: 0.00024518
+  [VQE] Iteration:    8 | Energy:  -0.73041360 Ha | ΔE: 0.00009549
+  [VQE] Iteration:    9 | Energy:  -0.73053548 Ha | ΔE: 0.00012188
+  [VQE] Iteration:   10 | Energy:  -0.73051226 Ha | ΔE: 0.00002322
+  [VQE] Iteration:   11 | Energy:  -0.73057027 Ha | ΔE: 0.00005801
+  [VQE] Iteration:   12 | Energy:  -0.73057596 Ha | ΔE: 0.00000569
+  [VQE] Iteration:   13 | Energy:  -0.73058070 Ha | ΔE: 0.00000474
+  [VQE] Iteration:   14 | Energy:  -0.73058162 Ha | ΔE: 0.00000093
+  [VQE Converged] ΔE (9.260e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058162 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 27] Embedding total energy = -615.09632651 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062475 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65609233 Ha | ΔE: 0.01546758
+  [VQE] Iteration:    2 | Energy:  -0.70109288 Ha | ΔE: 0.04500055
+  [VQE] Iteration:    3 | Energy:  -0.57804759 Ha | ΔE: 0.12304529
+  [VQE] Iteration:    4 | Energy:  -0.71875278 Ha | ΔE: 0.14070519
+  [VQE] Iteration:    5 | Energy:  -0.72917896 Ha | ΔE: 0.01042617
+  [VQE] Iteration:    6 | Energy:  -0.73007987 Ha | ΔE: 0.00090092
+  [VQE] Iteration:    7 | Energy:  -0.73032504 Ha | ΔE: 0.00024517
+  [VQE] Iteration:    8 | Energy:  -0.73042054 Ha | ΔE: 0.00009550
+  [VQE] Iteration:    9 | Energy:  -0.73054214 Ha | ΔE: 0.00012160
+  [VQE] Iteration:   10 | Energy:  -0.73052043 Ha | ΔE: 0.00002171
+  [VQE] Iteration:   11 | Energy:  -0.73057718 Ha | ΔE: 0.00005675
+  [VQE] Iteration:   12 | Energy:  -0.73058285 Ha | ΔE: 0.00000566
+  [VQE] Iteration:   13 | Energy:  -0.73058761 Ha | ΔE: 0.00000476
+  [VQE] Iteration:   14 | Energy:  -0.73058852 Ha | ΔE: 0.00000092
+  [VQE Converged] ΔE (9.183e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058852 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 28] Embedding total energy = -615.09633551 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062528 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65608781 Ha | ΔE: 0.01546254
+  [VQE] Iteration:    2 | Energy:  -0.70108959 Ha | ΔE: 0.04500177
+  [VQE] Iteration:    3 | Energy:  -0.57804616 Ha | ΔE: 0.12304343
+  [VQE] Iteration:    4 | Energy:  -0.71874900 Ha | ΔE: 0.14070284
+  [VQE] Iteration:    5 | Energy:  -0.72917543 Ha | ΔE: 0.01042643
+  [VQE] Iteration:    6 | Energy:  -0.73007668 Ha | ΔE: 0.00090124
+  [VQE] Iteration:    7 | Energy:  -0.73032181 Ha | ΔE: 0.00024514
+  [VQE] Iteration:    8 | Energy:  -0.73041732 Ha | ΔE: 0.00009551
+  [VQE] Iteration:    9 | Energy:  -0.73053923 Ha | ΔE: 0.00012191
+  [VQE] Iteration:   10 | Energy:  -0.73051559 Ha | ΔE: 0.00002365
+  [VQE] Iteration:   11 | Energy:  -0.73057395 Ha | ΔE: 0.00005836
+  [VQE] Iteration:   12 | Energy:  -0.73057966 Ha | ΔE: 0.00000571
+  [VQE] Iteration:   13 | Energy:  -0.73058437 Ha | ΔE: 0.00000471
+  [VQE] Iteration:   14 | Energy:  -0.73058530 Ha | ΔE: 0.00000093
+  [VQE Converged] ΔE (9.301e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058530 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 29] Embedding total energy = -615.09633130 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062496 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65609063 Ha | ΔE: 0.01546568
+  [VQE] Iteration:    2 | Energy:  -0.70109152 Ha | ΔE: 0.04500089
+  [VQE] Iteration:    3 | Energy:  -0.57803996 Ha | ΔE: 0.12305157
+  [VQE] Iteration:    4 | Energy:  -0.71875124 Ha | ΔE: 0.14071129
+  [VQE] Iteration:    5 | Energy:  -0.72917756 Ha | ΔE: 0.01042632
+  [VQE] Iteration:    6 | Energy:  -0.73007867 Ha | ΔE: 0.00090111
+  [VQE] Iteration:    7 | Energy:  -0.73032383 Ha | ΔE: 0.00024516
+  [VQE] Iteration:    8 | Energy:  -0.73041933 Ha | ΔE: 0.00009549
+  [VQE] Iteration:    9 | Energy:  -0.73054106 Ha | ΔE: 0.00012173
+  [VQE] Iteration:   10 | Energy:  -0.73051854 Ha | ΔE: 0.00002252
+  [VQE] Iteration:   11 | Energy:  -0.73057595 Ha | ΔE: 0.00005740
+  [VQE] Iteration:   12 | Energy:  -0.73058162 Ha | ΔE: 0.00000568
+  [VQE] Iteration:   13 | Energy:  -0.73058636 Ha | ΔE: 0.00000474
+  [VQE] Iteration:   14 | Energy:  -0.73058728 Ha | ΔE: 0.00000092
+  [VQE Converged] ΔE (9.165e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058728 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 30] Embedding total energy = -615.09633388 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062530 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65608758 Ha | ΔE: 0.01546228
+  [VQE] Iteration:    2 | Energy:  -0.70108935 Ha | ΔE: 0.04500177
+  [VQE] Iteration:    3 | Energy:  -0.57803827 Ha | ΔE: 0.12305108
+  [VQE] Iteration:    4 | Energy:  -0.71874867 Ha | ΔE: 0.14071040
+  [VQE] Iteration:    5 | Energy:  -0.72917532 Ha | ΔE: 0.01042665
+  [VQE] Iteration:    6 | Energy:  -0.73007647 Ha | ΔE: 0.00090115
+  [VQE] Iteration:    7 | Energy:  -0.73032164 Ha | ΔE: 0.00024517
+  [VQE] Iteration:    8 | Energy:  -0.73041714 Ha | ΔE: 0.00009550
+  [VQE] Iteration:    9 | Energy:  -0.73053900 Ha | ΔE: 0.00012186
+  [VQE] Iteration:   10 | Energy:  -0.73051587 Ha | ΔE: 0.00002314
+  [VQE] Iteration:   11 | Energy:  -0.73057378 Ha | ΔE: 0.00005791
+  [VQE] Iteration:   12 | Energy:  -0.73057947 Ha | ΔE: 0.00000569
+  [VQE] Iteration:   13 | Energy:  -0.73058421 Ha | ΔE: 0.00000474
+  [VQE] Iteration:   14 | Energy:  -0.73058515 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.358e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058515 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 31] Embedding total energy = -615.09633110 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062500 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65609025 Ha | ΔE: 0.01546526
+  [VQE] Iteration:    2 | Energy:  -0.70109137 Ha | ΔE: 0.04500112
+  [VQE] Iteration:    3 | Energy:  -0.57804535 Ha | ΔE: 0.12304602
+  [VQE] Iteration:    4 | Energy:  -0.71875101 Ha | ΔE: 0.14070566
+  [VQE] Iteration:    5 | Energy:  -0.72917730 Ha | ΔE: 0.01042628
+  [VQE] Iteration:    6 | Energy:  -0.73007840 Ha | ΔE: 0.00090111
+  [VQE] Iteration:    7 | Energy:  -0.73032356 Ha | ΔE: 0.00024516
+  [VQE] Iteration:    8 | Energy:  -0.73041911 Ha | ΔE: 0.00009555
+  [VQE] Iteration:    9 | Energy:  -0.73054094 Ha | ΔE: 0.00012183
+  [VQE] Iteration:   10 | Energy:  -0.73051767 Ha | ΔE: 0.00002327
+  [VQE] Iteration:   11 | Energy:  -0.73057571 Ha | ΔE: 0.00005803
+  [VQE] Iteration:   12 | Energy:  -0.73058139 Ha | ΔE: 0.00000568
+  [VQE] Iteration:   13 | Energy:  -0.73058611 Ha | ΔE: 0.00000472
+  [VQE] Iteration:   14 | Energy:  -0.73058704 Ha | ΔE: 0.00000093
+  [VQE Converged] ΔE (9.330e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058704 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 32] Embedding total energy = -615.09633356 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062518 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65608865 Ha | ΔE: 0.01546347
+  [VQE] Iteration:    2 | Energy:  -0.70109013 Ha | ΔE: 0.04500148
+  [VQE] Iteration:    3 | Energy:  -0.57803644 Ha | ΔE: 0.12305368
+  [VQE] Iteration:    4 | Energy:  -0.71874947 Ha | ΔE: 0.14071303
+  [VQE] Iteration:    5 | Energy:  -0.72917604 Ha | ΔE: 0.01042657
+  [VQE] Iteration:    6 | Energy:  -0.73007724 Ha | ΔE: 0.00090120
+  [VQE] Iteration:    7 | Energy:  -0.73032242 Ha | ΔE: 0.00024518
+  [VQE] Iteration:    8 | Energy:  -0.73041793 Ha | ΔE: 0.00009550
+  [VQE] Iteration:    9 | Energy:  -0.73053998 Ha | ΔE: 0.00012206
+  [VQE] Iteration:   10 | Energy:  -0.73051544 Ha | ΔE: 0.00002455
+  [VQE] Iteration:   11 | Energy:  -0.73057453 Ha | ΔE: 0.00005909
+  [VQE] Iteration:   12 | Energy:  -0.73058025 Ha | ΔE: 0.00000572
+  [VQE] Iteration:   13 | Energy:  -0.73058497 Ha | ΔE: 0.00000472
+  [VQE] Iteration:   14 | Energy:  -0.73058591 Ha | ΔE: 0.00000095
+  [VQE Converged] ΔE (9.495e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058591 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 33] Embedding total energy = -615.09633209 Ha
+
+>> [PennyLane] Initiating Quantum-Classical Bridge...
+  [*] Bridged 1687 Pauli terms on 12 qubits.
+  [*] Launching Accelerated L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -0.64062509 Ha | ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -0.65608946 Ha | ΔE: 0.01546437
+  [VQE] Iteration:    2 | Energy:  -0.70109072 Ha | ΔE: 0.04500126
+  [VQE] Iteration:    3 | Energy:  -0.57804432 Ha | ΔE: 0.12304640
+  [VQE] Iteration:    4 | Energy:  -0.71875045 Ha | ΔE: 0.14070613
+  [VQE] Iteration:    5 | Energy:  -0.72917670 Ha | ΔE: 0.01042625
+  [VQE] Iteration:    6 | Energy:  -0.73007785 Ha | ΔE: 0.00090114
+  [VQE] Iteration:    7 | Energy:  -0.73032303 Ha | ΔE: 0.00024519
+  [VQE] Iteration:    8 | Energy:  -0.73041853 Ha | ΔE: 0.00009550
+  [VQE] Iteration:    9 | Energy:  -0.73054014 Ha | ΔE: 0.00012161
+  [VQE] Iteration:   10 | Energy:  -0.73051822 Ha | ΔE: 0.00002192
+  [VQE] Iteration:   11 | Energy:  -0.73057513 Ha | ΔE: 0.00005691
+  [VQE] Iteration:   12 | Energy:  -0.73058081 Ha | ΔE: 0.00000568
+  [VQE] Iteration:   13 | Energy:  -0.73058556 Ha | ΔE: 0.00000475
+  [VQE] Iteration:   14 | Energy:  -0.73058649 Ha | ΔE: 0.00000094
+  [VQE Converged] ΔE (9.351e-07) is below threshold (1e-06)!
+  [*] VQE Complete! Final Energy: -0.73058649 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 34] Embedding total energy = -615.09633284 Ha
+[Converged] change 7.525e-07 < 1e-06
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1580.285975489433
+  - computed part:      -0.730586534911
+  - ActiveSpaceTransformer extracted energy part: -1579.555388954523
+~ Nuclear repulsion energy (Hartree): 965.189642645288
+> Total ground state energy (Hartree): -615.096332844145
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 2.000 S: 0.615 S^2: 0.994 M: 0.000
+
+================ PROFILING SUMMARY ================
+DFT (Energy Evaluator) time   : 214.50 s
+Classical Embedding Overhead  : 3739.15 s
+Active Space (Quantum) time   : 27670.08 s
+  --> Pure VQE Callback Time  : 31380.28 s
+--------------------------------------------------
+Total measured time           : 31623.74 s
+
+Memory snapshots (RSS, MB):
+DFT_start_MB                  :  5663.07 MB
+DFT_end_MB                    :  5663.61 MB
+Embedding_start_MB            :  5663.61 MB
+Embedding_end_MB              :  5659.16 MB
+Active Space_start_MB         :  5659.16 MB
+Active Space_end_MB           :  5663.70 MB
+==================================================
+Job finished at: Tue Apr 14 19:59:48 IST 2026
