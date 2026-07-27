@@ -1,0 +1,119 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 546415
+SLURM_JOB_NAME = FCI_Anthracene_lda_rs
+SLURM_JOB_NODELIST = rpcn508
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 2496237
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/new/UCCSD/lda_rs/6e6o/st9sp3
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 2496237
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/new/UCCSD/lda_rs/6e6o/st9sp3
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Fri Jun 12 00:11:18 IST 2026
+Running on node: rpcn508
+Python path:
+/home/samritm/tejjan/envs/cpu_env/bin/python
+/home/samritm/tejjan/envs/cpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -536.58296588 Ha
+==============================================
+
+[Damping] Linear mix with alpha=0.530
+[Iteration 1] E = -536.61616788 Ha
+[Damping] Linear mix with alpha=0.433
+[Iteration 2] E = -536.61616749 Ha | ΔE = 3.988e-07 | Δρ = 2.845e-02
+  -> [Info] Energy converged, but Density (Δρ = 2.845e-02) is still sloshing. Continuing...
+[Damping] Linear mix with alpha=0.375
+[Iteration 3] E = -536.61616741 Ha | ΔE = 7.651e-08 | Δρ = 1.397e-02
+  -> [Info] Energy converged, but Density (Δρ = 1.397e-02) is still sloshing. Continuing...
+[Damping] Linear mix with alpha=0.335
+[Iteration 4] E = -536.61616739 Ha | ΔE = 2.207e-08 | Δρ = 7.807e-03
+  -> [Info] Energy converged, but Density (Δρ = 7.807e-03) is still sloshing. Continuing...
+[Damping] Linear mix with alpha=0.306
+[Iteration 5] E = -536.61616738 Ha | ΔE = 7.897e-09 | Δρ = 4.736e-03
+  -> [Info] Energy converged, but Density (Δρ = 4.736e-03) is still sloshing. Continuing...
+[Damping] Linear mix with alpha=0.283
+[Iteration 6] E = -536.61616738 Ha | ΔE = 3.237e-09 | Δρ = 3.042e-03
+  -> [Info] Energy converged, but Density (Δρ = 3.042e-03) is still sloshing. Continuing...
+[Damping] Linear mix with alpha=0.265
+[Iteration 7] E = -536.61616737 Ha | ΔE = 1.461e-09 | Δρ = 2.038e-03
+  -> [Info] Energy converged, but Density (Δρ = 2.038e-03) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [ 0.61  1.12 -0.73])
+[Iteration 8] E = -536.61616737 Ha | ΔE = 7.101e-10 | Δρ = 5.376e-03
+  -> [Info] Energy converged, but Density (Δρ = 5.376e-03) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [0.34 0.48 0.17])
+[Iteration 9] E = -536.61616738 Ha | ΔE = 2.340e-09 | Δρ = 3.748e-03
+  -> [Info] Energy converged, but Density (Δρ = 3.748e-03) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [0.49 0.29 0.21])
+[Iteration 10] E = -536.61616737 Ha | ΔE = 1.791e-09 | Δρ = 2.915e-04
+  -> [Info] Energy converged, but Density (Δρ = 2.915e-04) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [ 0.32  0.81 -0.13])
+[Iteration 11] E = -536.61616737 Ha | ΔE = 1.119e-10 | Δρ = 8.862e-04
+  -> [Info] Energy converged, but Density (Δρ = 8.862e-04) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [0.45 0.48 0.07])
+[Iteration 12] E = -536.61616737 Ha | ΔE = 3.706e-10 | Δρ = 9.604e-04
+  -> [Info] Energy converged, but Density (Δρ = 9.604e-04) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [0.56 0.43 0.01])
+[Iteration 13] E = -536.61616737 Ha | ΔE = 3.997e-10 | Δρ = 4.583e-04
+  -> [Info] Energy converged, but Density (Δρ = 4.583e-04) is still sloshing. Continuing...
+[DIIS] Extrapolating density (coeffs: [ 0.46  0.56 -0.02])
+[Iteration 14] E = -536.61616737 Ha | ΔE = 1.858e-10 | Δρ = 2.558e-05
+[Converged] Both Energy (ΔE < 1e-06) and Density (Δρ < 0.0001) criteria met!
+
+=== HOMO-LUMO Analysis ===
+[Classical DFT] HOMO = -0.253504 Ha, LUMO = 0.061611 Ha, Gap = 0.315115 Ha
+[Embedding] HOMO = -0.247718 Ha, LUMO = 0.055171 Ha, Gap = 0.302889 Ha
+
+Attempting to write HOMO/LUMO cube files and analyze PR...
+[Saved] FCI_Anthracene_lda_rs_HOMO_CAS_6e_6o.cube, FCI_Anthracene_lda_rs_LUMO_CAS_6e_6o.cube
+
+[Participation Ratio] HOMO = 19.19 (Effective orbitals participating)
+[Participation Ratio] LUMO = 20.69 (Effective orbitals participating)
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1301.704324846836
+  - computed part:      -4.646065828417
+  - ActiveSpaceTransformer extracted energy part: -1297.058259018419
+~ Nuclear repulsion energy (Hartree): 765.088157472122
+> Total ground state energy (Hartree): -536.616167374713
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.000 S^2: 0.000 M: 0.000
+
+=== Quantum Eigenstate PR Analysis (FCI) ===
+[Exact Eigenstate PR] 1.1495 (Effective configurations participating)
+Top contributing configurations (>1% probability):
+  |000010111101> : Probability = 93.25%
+  |000110111001> : Probability = 1.47%
+
+================ PROFILING SUMMARY ================
+DFT Reference time            : 41.94 s
+DFT (Energy Evaluator) time   : 67.19 s
+Classical Embedding Overhead  : 962.21 s
+Active Space (Exact/FCI) time : 35.14 s
+--------------------------------------------------
+Total measured time           : 1106.47 s
+
+Memory snapshots (RSS, MB):
+DFT_reference_start_MB        :   143.43 MB
+DFT_reference_end_MB          :  2963.29 MB
+DFT_start_MB                  :  5463.02 MB
+DFT_end_MB                    :  5463.02 MB
+Embedding_start_MB            :  5463.02 MB
+Embedding_end_MB              :  5463.02 MB
+Active Space_start_MB         :  5463.02 MB
+Active Space_end_MB           :  5463.58 MB
+==================================================
+Job finished at: Fri Jun 12 00:31:15 IST 2026
