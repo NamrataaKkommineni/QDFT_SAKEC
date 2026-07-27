@@ -1,0 +1,343 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 546347
+SLURM_JOB_NAME = Anthracene_B3LYP
+SLURM_JOB_NODELIST = rpcn086
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 326472
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/new/UCCSD/B3LYP/st9sp3
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 326472
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/new/UCCSD/B3LYP/st9sp3
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Thu Jun 11 22:20:28 IST 2026
+Running on node: rpcn086
+Python path:
+/home/samritm/tejjan/envs/cpu_env/bin/python
+/home/samritm/tejjan/envs/cpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -539.51923280 Ha
+==============================================
+
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.20168820 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.30533819 Ha | Rel ΔE: 0.02407476
+  [VQE] Iteration:    2 | Energy:  -4.35906577 Ha | Rel ΔE: 0.01232548
+  [VQE] Iteration:    3 | Energy:  -4.37978706 Ha | Rel ΔE: 0.00473112
+  [VQE] Iteration:    4 | Energy:  -4.39655224 Ha | Rel ΔE: 0.00381326
+  [VQE] Iteration:    5 | Energy:  -4.40227314 Ha | Rel ΔE: 0.00129953
+  [VQE] Iteration:    6 | Energy:  -4.40547593 Ha | Rel ΔE: 0.00072700
+  [VQE] Iteration:    7 | Energy:  -4.40767520 Ha | Rel ΔE: 0.00049896
+  [VQE] Iteration:    8 | Energy:  -4.40819388 Ha | Rel ΔE: 0.00011766
+  [VQE] Iteration:    9 | Energy:  -4.40875212 Ha | Rel ΔE: 0.00012662
+  [VQE] Iteration:   10 | Energy:  -4.40886430 Ha | Rel ΔE: 0.00002544
+  [VQE] Iteration:   11 | Energy:  -4.40897197 Ha | Rel ΔE: 0.00002442
+  [VQE] Iteration:   12 | Energy:  -4.40904954 Ha | Rel ΔE: 0.00001760
+  [VQE] Iteration:   13 | Energy:  -4.40902274 Ha | Rel ΔE: 0.00000608
+  [VQE] Iteration:   14 | Energy:  -4.40905874 Ha | Rel ΔE: 0.00000817
+  [VQE] Iteration:   15 | Energy:  -4.40906761 Ha | Rel ΔE: 0.00000201
+  [VQE] Iteration:   16 | Energy:  -4.40906865 Ha | Rel ΔE: 0.00000024
+  [VQE Converged] Rel ΔE (2.368e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7275 1.6331 1.4576 0.543  0.3666 0.2723]
+[Damping] Linear mix with alpha=0.530
+[Iteration 1] E = -539.72661284 Ha
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.38894489 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.41225271 Ha | Rel ΔE: 0.00528252
+  [VQE] Iteration:    2 | Energy:  -4.47725623 Ha | Rel ΔE: 0.01451860
+  [VQE] Iteration:    3 | Energy:  -4.47724003 Ha | Rel ΔE: 0.00000362
+  [VQE] Iteration:    4 | Energy:  -4.48371462 Ha | Rel ΔE: 0.00144402
+  [VQE] Iteration:    5 | Energy:  -4.48486040 Ha | Rel ΔE: 0.00025548
+  [VQE] Iteration:    6 | Energy:  -4.48518607 Ha | Rel ΔE: 0.00007261
+  [VQE] Iteration:    7 | Energy:  -4.48527514 Ha | Rel ΔE: 0.00001986
+  [VQE] Iteration:    8 | Energy:  -4.48528873 Ha | Rel ΔE: 0.00000303
+  [VQE] Iteration:    9 | Energy:  -4.48529854 Ha | Rel ΔE: 0.00000219
+  [VQE] Iteration:   10 | Energy:  -4.48530009 Ha | Rel ΔE: 0.00000035
+  [VQE Converged] Rel ΔE (3.460e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.8281 1.8006 1.7569 0.2443 0.1986 0.1714]
+[Damping] Linear mix with alpha=0.433
+[Iteration 2] E = -539.67857919 Ha | ΔE = 4.803e-02 | Δρ = 5.460e-01
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.34420403 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.36959776 Ha | Rel ΔE: 0.00581146
+  [VQE] Iteration:    2 | Energy:  -4.43271977 Ha | Rel ΔE: 0.01424002
+  [VQE] Iteration:    3 | Energy:  -4.43517911 Ha | Rel ΔE: 0.00055451
+  [VQE] Iteration:    4 | Energy:  -4.44572348 Ha | Rel ΔE: 0.00237180
+  [VQE] Iteration:    5 | Energy:  -4.44692089 Ha | Rel ΔE: 0.00026927
+  [VQE] Iteration:    6 | Energy:  -4.44789557 Ha | Rel ΔE: 0.00021913
+  [VQE] Iteration:    7 | Energy:  -4.44787920 Ha | Rel ΔE: 0.00000368
+  [VQE] Iteration:    8 | Energy:  -4.44813300 Ha | Rel ΔE: 0.00005706
+  [VQE] Iteration:    9 | Energy:  -4.44822564 Ha | Rel ΔE: 0.00002083
+  [VQE] Iteration:   10 | Energy:  -4.44825172 Ha | Rel ΔE: 0.00000586
+  [VQE] Iteration:   11 | Energy:  -4.44825552 Ha | Rel ΔE: 0.00000085
+  [VQE Converged] Rel ΔE (8.540e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7469 1.7242 1.4174 0.5833 0.2746 0.2536]
+[Damping] Linear mix with alpha=0.375
+[Iteration 3] E = -539.65044622 Ha | ΔE = 2.813e-02 | Δρ = 1.056e-01
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35293591 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37355495 Ha | Rel ΔE: 0.00471448
+  [VQE] Iteration:    2 | Energy:  -4.43869452 Ha | Rel ΔE: 0.01467539
+  [VQE] Iteration:    3 | Energy:  -4.43981559 Ha | Rel ΔE: 0.00025250
+  [VQE] Iteration:    4 | Energy:  -4.44706039 Ha | Rel ΔE: 0.00162912
+  [VQE] Iteration:    5 | Energy:  -4.45009814 Ha | Rel ΔE: 0.00068263
+  [VQE] Iteration:    6 | Energy:  -4.45168499 Ha | Rel ΔE: 0.00035646
+  [VQE] Iteration:    7 | Energy:  -4.45196420 Ha | Rel ΔE: 0.00006271
+  [VQE] Iteration:    8 | Energy:  -4.45226622 Ha | Rel ΔE: 0.00006784
+  [VQE] Iteration:    9 | Energy:  -4.45230075 Ha | Rel ΔE: 0.00000776
+  [VQE] Iteration:   10 | Energy:  -4.45231285 Ha | Rel ΔE: 0.00000272
+  [VQE] Iteration:   11 | Energy:  -4.45231412 Ha | Rel ΔE: 0.00000028
+  [VQE Converged] Rel ΔE (2.840e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7499 1.7398 1.4813 0.5194 0.2592 0.2504]
+[Damping] Linear mix with alpha=0.335
+[Iteration 4] E = -539.64917627 Ha | ΔE = 1.270e-03 | Δρ = 1.957e-02
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35145475 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37274806 Ha | Rel ΔE: 0.00486955
+  [VQE] Iteration:    2 | Energy:  -4.43769019 Ha | Rel ΔE: 0.01463422
+  [VQE] Iteration:    3 | Energy:  -4.43903936 Ha | Rel ΔE: 0.00030393
+  [VQE] Iteration:    4 | Energy:  -4.44622579 Ha | Rel ΔE: 0.00161630
+  [VQE] Iteration:    5 | Energy:  -4.44938933 Ha | Rel ΔE: 0.00071101
+  [VQE] Iteration:    6 | Energy:  -4.45105267 Ha | Rel ΔE: 0.00037369
+  [VQE] Iteration:    7 | Energy:  -4.45135771 Ha | Rel ΔE: 0.00006853
+  [VQE] Iteration:    8 | Energy:  -4.45167517 Ha | Rel ΔE: 0.00007131
+  [VQE] Iteration:    9 | Energy:  -4.45171249 Ha | Rel ΔE: 0.00000838
+  [VQE] Iteration:   10 | Energy:  -4.45172545 Ha | Rel ΔE: 0.00000291
+  [VQE] Iteration:   11 | Energy:  -4.45172708 Ha | Rel ΔE: 0.00000037
+  [VQE Converged] Rel ΔE (3.650e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7471 1.7406 1.4651 0.5356 0.2584 0.2533]
+[Damping] Linear mix with alpha=0.306
+[Iteration 5] E = -539.64912474 Ha | ΔE = 5.153e-05 | Δρ = 6.108e-03
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35151242 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37277887 Ha | Rel ΔE: 0.00486337
+  [VQE] Iteration:    2 | Energy:  -4.43777338 Ha | Rel ΔE: 0.01464575
+  [VQE] Iteration:    3 | Energy:  -4.43914586 Ha | Rel ΔE: 0.00030918
+  [VQE] Iteration:    4 | Energy:  -4.44632265 Ha | Rel ΔE: 0.00161410
+  [VQE] Iteration:    5 | Energy:  -4.44949917 Ha | Rel ΔE: 0.00071390
+  [VQE] Iteration:    6 | Energy:  -4.45117408 Ha | Rel ΔE: 0.00037629
+  [VQE] Iteration:    7 | Energy:  -4.45148380 Ha | Rel ΔE: 0.00006958
+  [VQE] Iteration:    8 | Energy:  -4.45180492 Ha | Rel ΔE: 0.00007213
+  [VQE] Iteration:    9 | Energy:  -4.45184265 Ha | Rel ΔE: 0.00000848
+  [VQE] Iteration:   10 | Energy:  -4.45185579 Ha | Rel ΔE: 0.00000295
+  [VQE] Iteration:   11 | Energy:  -4.45185744 Ha | Rel ΔE: 0.00000037
+  [VQE Converged] Rel ΔE (3.708e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7468 1.7417 1.463  0.5377 0.2574 0.2536]
+[Damping] Linear mix with alpha=0.283
+[Iteration 6] E = -539.64911924 Ha | ΔE = 5.492e-06 | Δρ = 2.882e-03
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35158999 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37281818 Ha | Rel ΔE: 0.00485458
+  [VQE] Iteration:    2 | Energy:  -4.43785116 Ha | Rel ΔE: 0.01465416
+  [VQE] Iteration:    3 | Energy:  -4.43923659 Ha | Rel ΔE: 0.00031209
+  [VQE] Iteration:    4 | Energy:  -4.44640555 Ha | Rel ΔE: 0.00161231
+  [VQE] Iteration:    5 | Energy:  -4.44958775 Ha | Rel ΔE: 0.00071517
+  [VQE] Iteration:    6 | Energy:  -4.45126814 Ha | Rel ΔE: 0.00037751
+  [VQE] Iteration:    7 | Energy:  -4.45157999 Ha | Rel ΔE: 0.00007005
+  [VQE] Iteration:    8 | Energy:  -4.45190266 Ha | Rel ΔE: 0.00007248
+  [VQE] Iteration:    9 | Energy:  -4.45194056 Ha | Rel ΔE: 0.00000851
+  [VQE] Iteration:   10 | Energy:  -4.45195375 Ha | Rel ΔE: 0.00000296
+  [VQE] Iteration:   11 | Energy:  -4.45195542 Ha | Rel ΔE: 0.00000037
+  [VQE Converged] Rel ΔE (3.740e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7421 1.462  0.5386 0.2569 0.2536]
+[Damping] Linear mix with alpha=0.265
+[Iteration 7] E = -539.64911793 Ha | ΔE = 1.311e-06 | Δρ = 1.519e-03
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35165451 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37285051 Ha | Rel ΔE: 0.00484718
+  [VQE] Iteration:    2 | Energy:  -4.43790976 Ha | Rel ΔE: 0.01465988
+  [VQE] Iteration:    3 | Energy:  -4.43930010 Ha | Rel ΔE: 0.00031319
+  [VQE] Iteration:    4 | Energy:  -4.44646579 Ha | Rel ΔE: 0.00161155
+  [VQE] Iteration:    5 | Energy:  -4.44965057 Ha | Rel ΔE: 0.00071574
+  [VQE] Iteration:    6 | Energy:  -4.45133409 Ha | Rel ΔE: 0.00037820
+  [VQE] Iteration:    7 | Energy:  -4.45164684 Ha | Rel ΔE: 0.00007026
+  [VQE] Iteration:    8 | Energy:  -4.45197044 Ha | Rel ΔE: 0.00007269
+  [VQE] Iteration:    9 | Energy:  -4.45200838 Ha | Rel ΔE: 0.00000852
+  [VQE] Iteration:   10 | Energy:  -4.45202163 Ha | Rel ΔE: 0.00000298
+  [VQE] Iteration:   11 | Energy:  -4.45202334 Ha | Rel ΔE: 0.00000038
+  [VQE Converged] Rel ΔE (3.823e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7468 1.7424 1.4616 0.539  0.2566 0.2536]
+[DIIS] Extrapolating density (coeffs: [-0.41  1.89 -0.48])
+[Iteration 8] E = -539.64911758 Ha | ΔE = 3.519e-07 | Δρ = 1.062e-03
+  -> [Info] Energy converged, but Density (Δρ = 1.062e-03) is still sloshing. Continuing...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35159637 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37282189 Ha | Rel ΔE: 0.00485396
+  [VQE] Iteration:    2 | Energy:  -4.43785911 Ha | Rel ΔE: 0.01465509
+  [VQE] Iteration:    3 | Energy:  -4.43924535 Ha | Rel ΔE: 0.00031227
+  [VQE] Iteration:    4 | Energy:  -4.44641399 Ha | Rel ΔE: 0.00161223
+  [VQE] Iteration:    5 | Energy:  -4.44959688 Ha | Rel ΔE: 0.00071532
+  [VQE] Iteration:    6 | Energy:  -4.45127826 Ha | Rel ΔE: 0.00037773
+  [VQE] Iteration:    7 | Energy:  -4.45159036 Ha | Rel ΔE: 0.00007011
+  [VQE] Iteration:    8 | Energy:  -4.45191347 Ha | Rel ΔE: 0.00007258
+  [VQE] Iteration:    9 | Energy:  -4.45195144 Ha | Rel ΔE: 0.00000853
+  [VQE] Iteration:   10 | Energy:  -4.45196469 Ha | Rel ΔE: 0.00000298
+  [VQE] Iteration:   11 | Energy:  -4.45196635 Ha | Rel ΔE: 0.00000037
+  [VQE Converged] Rel ΔE (3.746e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7422 1.4619 0.5388 0.2568 0.2536]
+[DIIS] Extrapolating density (coeffs: [0.07 0.79 0.15])
+[Iteration 9] E = -539.64911780 Ha | ΔE = 2.183e-07 | Δρ = 8.027e-04
+  -> [Info] Energy converged, but Density (Δρ = 8.027e-04) is still sloshing. Continuing...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35163522 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37284117 Ha | Rel ΔE: 0.00484947
+  [VQE] Iteration:    2 | Energy:  -4.43789370 Ha | Rel ΔE: 0.01465843
+  [VQE] Iteration:    3 | Energy:  -4.43928093 Ha | Rel ΔE: 0.00031249
+  [VQE] Iteration:    4 | Energy:  -4.44644942 Ha | Rel ΔE: 0.00161218
+  [VQE] Iteration:    5 | Energy:  -4.44963389 Ha | Rel ΔE: 0.00071567
+  [VQE] Iteration:    6 | Energy:  -4.45131688 Ha | Rel ΔE: 0.00037809
+  [VQE] Iteration:    7 | Energy:  -4.45162953 Ha | Rel ΔE: 0.00007023
+  [VQE] Iteration:    8 | Energy:  -4.45195298 Ha | Rel ΔE: 0.00007265
+  [VQE] Iteration:    9 | Energy:  -4.45199094 Ha | Rel ΔE: 0.00000853
+  [VQE] Iteration:   10 | Energy:  -4.45200419 Ha | Rel ΔE: 0.00000298
+  [VQE] Iteration:   11 | Energy:  -4.45200588 Ha | Rel ΔE: 0.00000038
+  [VQE Converged] Rel ΔE (3.810e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7424 1.4617 0.5389 0.2567 0.2536]
+[DIIS] Extrapolating density (coeffs: [0.55 0.38 0.07])
+[Iteration 10] E = -539.64911763 Ha | ΔE = 1.680e-07 | Δρ = 1.594e-04
+  -> [Info] Energy converged, but Density (Δρ = 1.594e-04) is still sloshing. Continuing...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35162790 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37283749 Ha | Rel ΔE: 0.00485030
+  [VQE] Iteration:    2 | Energy:  -4.43788708 Ha | Rel ΔE: 0.01465778
+  [VQE] Iteration:    3 | Energy:  -4.43927527 Ha | Rel ΔE: 0.00031271
+  [VQE] Iteration:    4 | Energy:  -4.44644271 Ha | Rel ΔE: 0.00161195
+  [VQE] Iteration:    5 | Energy:  -4.44962675 Ha | Rel ΔE: 0.00071557
+  [VQE] Iteration:    6 | Energy:  -4.45130949 Ha | Rel ΔE: 0.00037803
+  [VQE] Iteration:    7 | Energy:  -4.45162192 Ha | Rel ΔE: 0.00007018
+  [VQE] Iteration:    8 | Energy:  -4.45194554 Ha | Rel ΔE: 0.00007269
+  [VQE] Iteration:    9 | Energy:  -4.45198346 Ha | Rel ΔE: 0.00000852
+  [VQE] Iteration:   10 | Energy:  -4.45199670 Ha | Rel ΔE: 0.00000298
+  [VQE] Iteration:   11 | Energy:  -4.45199840 Ha | Rel ΔE: 0.00000038
+  [VQE Converged] Rel ΔE (3.816e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7423 1.4618 0.5389 0.2567 0.2536]
+[DIIS] Extrapolating density (coeffs: [ 0.46  0.61 -0.07])
+[Iteration 11] E = -539.64911767 Ha | ΔE = 3.828e-08 | Δρ = 1.968e-04
+  -> [Info] Energy converged, but Density (Δρ = 1.968e-04) is still sloshing. Continuing...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35161798 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37283256 Ha | Rel ΔE: 0.00485145
+  [VQE] Iteration:    2 | Energy:  -4.43787833 Ha | Rel ΔE: 0.01465695
+  [VQE] Iteration:    3 | Energy:  -4.43926490 Ha | Rel ΔE: 0.00031234
+  [VQE] Iteration:    4 | Energy:  -4.44643378 Ha | Rel ΔE: 0.00161228
+  [VQE] Iteration:    5 | Energy:  -4.44961753 Ha | Rel ΔE: 0.00071551
+  [VQE] Iteration:    6 | Energy:  -4.45129977 Ha | Rel ΔE: 0.00037792
+  [VQE] Iteration:    7 | Energy:  -4.45161217 Ha | Rel ΔE: 0.00007018
+  [VQE] Iteration:    8 | Energy:  -4.45193552 Ha | Rel ΔE: 0.00007263
+  [VQE] Iteration:    9 | Energy:  -4.45197343 Ha | Rel ΔE: 0.00000852
+  [VQE] Iteration:   10 | Energy:  -4.45198667 Ha | Rel ΔE: 0.00000297
+  [VQE] Iteration:   11 | Energy:  -4.45198836 Ha | Rel ΔE: 0.00000038
+  [VQE Converged] Rel ΔE (3.784e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7423 1.4618 0.5388 0.2567 0.2536]
+[DIIS] Extrapolating density (coeffs: [0.47 0.49 0.04])
+[Iteration 12] E = -539.64911770 Ha | ΔE = 2.925e-08 | Δρ = 2.653e-04
+  -> [Info] Energy converged, but Density (Δρ = 2.653e-04) is still sloshing. Continuing...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35163081 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37283889 Ha | Rel ΔE: 0.00484996
+  [VQE] Iteration:    2 | Energy:  -4.43788973 Ha | Rel ΔE: 0.01465806
+  [VQE] Iteration:    3 | Energy:  -4.43927860 Ha | Rel ΔE: 0.00031286
+  [VQE] Iteration:    4 | Energy:  -4.44644552 Ha | Rel ΔE: 0.00161183
+  [VQE] Iteration:    5 | Energy:  -4.44962984 Ha | Rel ΔE: 0.00071564
+  [VQE] Iteration:    6 | Energy:  -4.45131260 Ha | Rel ΔE: 0.00037804
+  [VQE] Iteration:    7 | Energy:  -4.45162515 Ha | Rel ΔE: 0.00007021
+  [VQE] Iteration:    8 | Energy:  -4.45194860 Ha | Rel ΔE: 0.00007265
+  [VQE] Iteration:    9 | Energy:  -4.45198658 Ha | Rel ΔE: 0.00000853
+  [VQE] Iteration:   10 | Energy:  -4.45199983 Ha | Rel ΔE: 0.00000298
+  [VQE] Iteration:   11 | Energy:  -4.45200153 Ha | Rel ΔE: 0.00000038
+  [VQE Converged] Rel ΔE (3.815e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7424 1.4617 0.5389 0.2567 0.2536]
+[DIIS] Extrapolating density (coeffs: [ 0.53  0.47 -0.  ])
+[Iteration 13] E = -539.64911765 Ha | ΔE = 4.771e-08 | Δρ = 1.607e-04
+  -> [Info] Energy converged, but Density (Δρ = 1.607e-04) is still sloshing. Continuing...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -4.35162300 Ha | Rel ΔE: N/A
+  [VQE] Iteration:    1 | Energy:  -4.37283498 Ha | Rel ΔE: 0.00485085
+  [VQE] Iteration:    2 | Energy:  -4.43788277 Ha | Rel ΔE: 0.01465739
+  [VQE] Iteration:    3 | Energy:  -4.43926951 Ha | Rel ΔE: 0.00031238
+  [VQE] Iteration:    4 | Energy:  -4.44643838 Ha | Rel ΔE: 0.00161227
+  [VQE] Iteration:    5 | Energy:  -4.44962236 Ha | Rel ΔE: 0.00071556
+  [VQE] Iteration:    6 | Energy:  -4.45130483 Ha | Rel ΔE: 0.00037797
+  [VQE] Iteration:    7 | Energy:  -4.45161738 Ha | Rel ΔE: 0.00007021
+  [VQE] Iteration:    8 | Energy:  -4.45194067 Ha | Rel ΔE: 0.00007262
+  [VQE] Iteration:    9 | Energy:  -4.45197860 Ha | Rel ΔE: 0.00000852
+  [VQE] Iteration:   10 | Energy:  -4.45199184 Ha | Rel ΔE: 0.00000298
+  [VQE] Iteration:   11 | Energy:  -4.45199352 Ha | Rel ΔE: 0.00000038
+  [VQE Converged] Rel ΔE (3.758e-07) is below threshold (1e-06)!
+  [Active Space Occupations]: [1.7467 1.7423 1.4618 0.5389 0.2567 0.2536]
+[DIIS] Extrapolating density (coeffs: [ 0.48  0.53 -0.01])
+[Iteration 14] E = -539.64911766 Ha | ΔE = 1.316e-08 | Δρ = 3.667e-05
+[Converged] Both Energy (ΔE < 1e-06) and Density (Δρ < 0.0001) criteria met!
+
+=== HOMO-LUMO Analysis ===
+[Classical DFT] HOMO = -0.191954 Ha, LUMO = -0.059907 Ha, Gap = 0.132047 Ha
+[Embedding] HOMO = -0.185161 Ha, LUMO = -0.070482 Ha, Gap = 0.114678 Ha
+
+Attempting to write HOMO/LUMO cube files and analyze PR...
+[Saved] Anthracene_B3LYP_HOMO_CAS_6e_6o.cube, Anthracene_B3LYP_LUMO_CAS_6e_6o.cube
+
+[Participation Ratio] HOMO = 18.55 (Effective orbitals participating)
+[Participation Ratio] LUMO = 19.49 (Effective orbitals participating)
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1304.737275136129
+  - computed part:      -4.451993516013
+  - ActiveSpaceTransformer extracted energy part: -1300.285281620116
+~ Nuclear repulsion energy (Hartree): 765.088157472122
+> Total ground state energy (Hartree): -539.649117664007
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.000 S^2: 0.000 M: -0.000
+
+>>> Generating Inline Density Difference Plot for Anthracene_B3LYP...
+  [Sanity Check] Total Density Mismatch Magnitude: 1.1138e-15
+[Saved] Anthracene_B3LYP_density_diff.png
+
+=== Quantum Eigenstate PR Analysis ===
+[Eigenstate PR] 3.0111 (Effective configurations participating)
+Top contributing configurations (>1% probability):
+  |000010111101> : Probability = 55.80%
+  |000110111001> : Probability = 12.60%
+  |001100110011> : Probability = 2.65%
+  |000101100001> : Probability = 2.57%
+  |011110111010> : Probability = 2.50%
+  |011101100010> : Probability = 2.25%
+  |001110111011> : Probability = 2.21%
+  |000100110001> : Probability = 2.20%
+  |001000110111> : Probability = 1.68%
+  |011001100110> : Probability = 1.59%
+  |000010110111> : Probability = 1.11%
+  |001000111101> : Probability = 1.11%
+  |001101100011> : Probability = 1.02%
+
+================ PROFILING SUMMARY ================
+DFT reference (SCF) time     : 47.83 s
+DFT energy evaluations time : 74.70 s
+DFT Fock build time         : 70.33 s
+Hybrid embedding overhead  : 897.47 s
+Quantum VQE time           : 48134.68 s
+--------------------------------------------------
+Total measured time        : 49225.01 s
+
+Memory snapshots (RSS, MB):
+DFT_reference_start_MB        :  5635.62 MB
+DFT_reference_end_MB          :  3577.18 MB
+Embedding_loop_total_start_MB :  6676.79 MB
+DFT_energy_start_MB           :  6676.89 MB
+DFT_energy_end_MB             :  6677.75 MB
+DFT_fock_start_MB             :  6677.75 MB
+DFT_fock_end_MB               :  6677.75 MB
+Embedding_loop_total_end_MB   :  6677.85 MB
+==================================================
+Job finished at: Fri Jun 12 11:51:42 IST 2026
