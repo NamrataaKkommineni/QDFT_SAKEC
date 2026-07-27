@@ -1,0 +1,50 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 541139
+SLURM_JOB_NAME = PLcpu_Tetracene_B3LYP
+SLURM_JOB_NODELIST = rpcn342
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = cpu
+SLURM_TASK_PID = 2535475
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 2535475
+==========================================
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+Job started at: Sun Jun  7 16:53:03 IST 2026
+Running on node: rpcn342
+Python path:
+/home/samritm/tejjan/envs/pl_gpu_env/bin/python
+/home/samritm/tejjan/envs/pl_gpu_env/bin/python
+Model name:          Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+
+>> [PennyLane] Initiating Native CPU Pipeline...
+  [*] Bridged 963 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+[Warning] VQE encountered issue (expected at least two wires representing the unoccupied orbitals; got 0); continuing with last results.
+
+================ PROFILING SUMMARY ================
+DFT (Energy Evaluator) time   : 6.60 s
+Classical Embedding Overhead  : 180.02 s
+Active Space (Quantum) time   : 0.00 s
+--------------------------------------------------
+Total measured time           : 186.61 s
+
+Memory snapshots (RSS, MB):
+DFT_start_MB                  :  6858.54 MB
+DFT_end_MB                    :  6858.54 MB
+Embedding_start_MB            :  6858.54 MB
+Embedding_end_MB              :  7975.35 MB
+Active Space_start_MB         :  7975.75 MB
+==================================================
+Job finished at: Sun Jun  7 17:01:11 IST 2026

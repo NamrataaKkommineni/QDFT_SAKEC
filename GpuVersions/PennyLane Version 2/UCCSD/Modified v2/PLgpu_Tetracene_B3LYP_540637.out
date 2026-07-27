@@ -1,0 +1,285 @@
+==========================================
+SLURM_CLUSTER_NAME = paramprabha
+SLURM_JOB_ACCOUNT = cdac
+SLURM_JOB_ID = 540637
+SLURM_JOB_NAME = PL_Tetracene_B3LYP
+SLURM_JOB_NODELIST = rpgpu023
+SLURM_JOB_USER = samritm
+SLURM_JOB_UID = 52002
+SLURM_JOB_PARTITION = gpu
+SLURM_TASK_PID = 788109
+SLURM_SUBMIT_DIR = /home/samritm/tejjan/PLv2/JuneRuns
+SLURM_CPUS_ON_NODE = 48
+SLURM_NTASKS = 1
+SLURM_TASK_PID = 788109
+==========================================
+Job started at: Tue Jun  9 23:58:38 IST 2026
+Node: rpgpu023
+CUDA_VISIBLE_DEVICES: 0
+>> Building PySCF molecule...
+>> Intercepting Qiskit Nature: Running gpu4pyscf on GPU...
+converged SCF energy = -693.151295379201
+>> Transferring GPU matrices back to CPU for Qiskit Mapper...
+
+
+=== Classical DFT Reference Energy (PySCF) ===
+Total DFT Energy: -693.15129538 Ha
+==============================================
+
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 963 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73050215 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73050215 Ha
+[Damping] Linear mix with alpha=0.530
+[Iteration 1] Embedding total energy = -693.24357663 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73415970 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73415970 Ha
+[Damping] Linear mix with alpha=0.433
+[Iteration 2] Embedding total energy = -693.19711742 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73547542 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73547542 Ha
+[Damping] Linear mix with alpha=0.375
+[Iteration 3] Embedding total energy = -693.18953691 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73612980 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73612980 Ha
+[Damping] Linear mix with alpha=0.335
+[Iteration 4] Embedding total energy = -693.24713515 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73479279 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73479279 Ha
+[Damping] Linear mix with alpha=0.306
+[Iteration 5] Embedding total energy = -693.19398174 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73555625 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73555625 Ha
+[Damping] Linear mix with alpha=0.283
+[Iteration 6] Embedding total energy = -693.18951039 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73603464 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73603464 Ha
+[Damping] Linear mix with alpha=0.265
+[Iteration 7] Embedding total energy = -693.24629577 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73500967 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73500967 Ha
+[Damping] Linear mix with alpha=0.250
+[Iteration 8] Embedding total energy = -693.19261519 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73557671 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73557671 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.2   0.34  0.45 -0.  ])
+[Iteration 9] Embedding total energy = -693.18948184 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73547364 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73547364 Ha
+[DIIS] Extrapolating density (coeffs: [0.24 0.35 0.37 0.05])
+[Iteration 10] Embedding total energy = -693.19001161 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73548411 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73548411 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.17  0.45  0.41 -0.03])
+[Iteration 11] Embedding total energy = -693.18996327 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73543883 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73543883 Ha
+[DIIS] Extrapolating density (coeffs: [0.09 0.39 0.51 0.02])
+[Iteration 12] Embedding total energy = -693.19017589 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73548755 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73548755 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.36  0.27  0.37 -0.01])
+[Iteration 13] Embedding total energy = -693.18994159 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546347 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546347 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.22  0.41  0.37 -0.  ])
+[Iteration 14] Embedding total energy = -693.19005953 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546684 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546684 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.17  0.36  0.47 -0.  ])
+[Iteration 15] Embedding total energy = -693.19004170 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546785 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546785 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 16] Embedding total energy = -693.19003729 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73547267 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73547267 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.3   0.36  0.34 -0.  ])
+[Iteration 17] Embedding total energy = -693.19001395 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546617 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546617 Ha
+[DIIS] Extrapolating density (coeffs: [0.32 0.33 0.34 0.  ])
+[Iteration 18] Embedding total energy = -693.19004525 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546916 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546916 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 19] Embedding total energy = -693.19003077 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546890 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546890 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 20] Embedding total energy = -693.19003211 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546933 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546933 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 21] Embedding total energy = -693.19002988 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546808 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546808 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 22] Embedding total energy = -693.19003605 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546913 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546913 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 23] Embedding total energy = -693.19003098 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546877 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546877 Ha
+[DIIS] Extrapolating density (coeffs: [0.33 0.33 0.33 0.  ])
+[Iteration 24] Embedding total energy = -693.19003274 Ha
+
+>> [PennyLane] Initiating Native GPU Pipeline...
+  [*] Bridged 999 Pauli terms on 12 qubits.
+  [*] Launching Native Adjoint L-BFGS-B Optimization...
+  --- Starting VQE Optimization Step ---
+  [VQE] Iteration:    0 | Energy:  -2.73546885 Ha | Rel ΔE: N/A
+  [*] VQE Complete! Final Energy: -2.73546885 Ha
+[DIIS] Extrapolating density (coeffs: [ 0.33  0.33  0.33 -0.  ])
+[Iteration 25] Embedding total energy = -693.19003225 Ha
+[Converged] change 4.979e-07 < 1e-06
+
+=== DFT Embedding + VQE Results ===
+=== GROUND STATE ENERGY ===
+ 
+* Electronic ground state energy (Hartree): -1805.880556729575
+  - computed part:      -3.949004534962
+  - ActiveSpaceTransformer extracted energy part: -1801.931552194613
+~ Nuclear repulsion energy (Hartree): 1112.690524483842
+> Total ground state energy (Hartree): -693.190032245733
+ 
+=== MEASURED OBSERVABLES ===
+ 
+  0:  # Particles: 6.000 S: 0.005 S^2: 0.005 M: -0.000
+
+================ PROFILING SUMMARY ================
+DFT (Energy Evaluator) time   : 167.59 s
+Classical Embedding Overhead  : 4566.62 s
+Active Space (Quantum) time   : 16168.05 s
+  --> Pure VQE Callback Time  : 20074.93 s
+--------------------------------------------------
+Total measured time           : 20902.26 s
+
+Memory snapshots (RSS, MB):
+DFT_start_MB                  :  8405.75 MB
+DFT_end_MB                    :  8405.96 MB
+Embedding_start_MB            :  8405.96 MB
+Embedding_end_MB              :  8405.67 MB
+Active Space_start_MB         :  8405.70 MB
+Active Space_end_MB           :  8406.52 MB
+==================================================
+Job finished at: Wed Jun 10 05:52:21 IST 2026

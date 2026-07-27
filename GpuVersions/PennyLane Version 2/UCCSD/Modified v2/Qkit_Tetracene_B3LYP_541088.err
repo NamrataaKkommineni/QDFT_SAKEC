@@ -1,0 +1,6 @@
+Qkit_Tetracene_B3LYP.py:384: DeprecationWarning: The class ``qiskit.primitives.estimator.Estimator`` is deprecated as of qiskit 1.2. It will be removed no earlier than 3 months after the release date. All implementations of the `BaseEstimatorV1` interface have been deprecated in favor of their V2 counterparts. The V2 alternative for the `Estimator` class is `StatevectorEstimator`.
+  estimator = Estimator()
+
+real	60m0.655s
+user	147m49.352s
+sys	27m37.521s
