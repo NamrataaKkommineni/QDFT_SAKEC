@@ -324,7 +324,6 @@ Unlike conventional UCCSD, q-UCCSD removes the long Jordan-Wigner Z-string ladde
 * Native PennyLane GPU implementation
 * Native PennyLane CPU implementation
 * Exact adjoint gradient integration
-* Active-space spin penalty Hamiltonian
 * Cross-platform benchmarking infrastructure
 * JAX-JIT architectural analysis
 * q-UCCSD implementation
@@ -332,19 +331,10 @@ Unlike conventional UCCSD, q-UCCSD removes the long Jordan-Wigner Z-string ladde
 
 ---
 
-## Ongoing Work
-
-* Additional GPU optimization
-* Larger molecular benchmarks
-* Cross-framework numerical validation
-* Improved q-UCCSD convergence studies
-
----
-
 # Future Outlook
 
 The current implementation is constrained primarily by CPU–GPU communication overhead during self-consistent embedding iterations.
 
-Future development will investigate deployment on the **NVIDIA GH200 Grace Hopper Superchip**, whose unified NVLink-C2C memory architecture removes the PCIe communication bottleneck between CPU and GPU.
+Future development can investigate deployment on the **NVIDIA GH200 Grace Hopper Superchip**, whose unified NVLink-C2C memory architecture removes the PCIe communication bottleneck between CPU and GPU.
 
 This architecture is expected to substantially improve hybrid quantum-classical embedding performance by allowing both processors to share a unified memory space, reducing data-transfer latency during iterative embedding calculations.
