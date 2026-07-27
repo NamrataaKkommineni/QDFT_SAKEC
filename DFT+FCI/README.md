@@ -272,9 +272,55 @@ do not require an explicit `ω` input unless it is inherently part of the functi
 
 ---
 
+# Validation & Benchmark Dataset
+
+The DFT+FCI implementations have been extensively benchmarked across a diverse set of molecular systems and exchange-correlation functionals.
+
+The benchmark database includes calculations for:
+
+- Benzene
+- Naphthalene
+- Anthracene
+- Phenanthrene
+- Tetracene
+- Pentacene
+- Pyrene
+- Chrysene
+- Triphenylene
+- Benz[a]anthracene
+- Perylene
+- Fluorene
+
+using multiple exchange-correlation functionals, including
+
+- Tuned CAM-B3LYP
+- B3LYP
+- CAM-B3LYP
+- LRC-ωPBE
+- LDA-RS
+
+The dataset contains
+
+- Exact DFT+FCI total energies
+- Ground-state energy comparisons
+- Experimental excitation energies
+- Reference CCSD(T) calculations
+- Functional performance comparisons
+- Active-space (CAS) studies
+- Runtime measurements
+- Comparisons against the corresponding QDFT (VQE+DFT) implementations
+
+The complete benchmark dataset is maintained separately as a Google Sheets document and is updated as additional benchmark systems become available.
+
+**DFT+FCI Validation Database (Google Sheets)**
+
+📊 https://docs.google.com/spreadsheets/d/1jqu6-lq_od3toY4zbfOZyQ7kjna7TH3r5ojPXu2AEIE
+
+---
+
 # Production Notes
 
-For production calculations requiring robust spin-state preservation, the preferred workflows are:
+For production calculations requiring robust spin-state preservation, the preferred workflows in `/Energy+Density` are:
 
 ```text
 FCI_spinHamiltonian.py
@@ -282,6 +328,8 @@ FCI_spinHamiltonian_LDA-RS.py
 FCI_tuned_spinHamiltonian.py
 ```
 
-These implementations enforce spin symmetry directly within the active-space Hamiltonian and generally offer superior computational efficiency compared to post-processing spin filtering approaches.
+These implementations enforce spin symmetry directly within the active-space Hamiltonian and generally provide superior computational efficiency compared with post-processing spin-filtering approaches.
 
-The DFT+FCI framework serves as the exact active-space benchmark layer of the broader QDFT ecosystem and should be used as the primary reference when assessing the accuracy of VQE-based embedding calculations.
+The DFT+FCI framework serves as the exact active-space benchmark layer of the broader QDFT ecosystem. Its primary role is to provide high-accuracy reference energies against which VQE-based embedding calculations can be validated.
+
+Users are encouraged to compare new calculations with the accompanying benchmark database to verify numerical consistency across different exchange-correlation functionals, active spaces, and molecular systems.
